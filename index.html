@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Catat keuangan via WhatsApp. Cukup ketik seperti chat teman: 20k jajan kopi. Otomatis tercatat, laporan bulanan, export CSV. Mulai Rp9.000/bulan.">
+    <title>Catat Uang via WA - Lupa Catat? Malas Buka App? Solusinya Cuma Chat!</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset & Base */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #ffffff;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Container */
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h3 {
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: clamp(28px, 6vw, 42px);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: clamp(22px, 5vw, 32px);
+            margin-bottom: 16px;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #444;
+        }
+
+        /* Highlight - Yellow Stabilo */
+        .highlight {
+            background: linear-gradient(180deg, transparent 50%, #FFF176 50%);
+            padding: 0 4px;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: #FFF9C4;
+            border-left: 4px solid #FFD600;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: #f0f0f0;
+            margin: 0 auto;
+            max-width: 200px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* CTA Button */
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25D366;
+            color: #fff;
+            padding: 18px 36px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            cursor: pointer;
+        }
+
+        .btn-cta:hover {
+            background: #20bd5a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-cta svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .btn-secondary {
+            background: #f5f5f5;
+            color: #1a1a1a;
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background: #eee;
+        }
+
+        /* Chat Demo */
+        .chat-demo {
+            background: #f8f9fa;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px auto;
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .chat-bubble {
+            padding: 14px 18px;
+            border-radius: 18px;
+            margin: 12px 0;
+            max-width: 85%;
+            font-size: 15px;
+        }
+
+        .chat-user {
+            background: #DCF8C6;
+            margin-left: auto;
+            border-bottom-right-radius: 4px;
+        }
+
+        .chat-bot {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-bottom-left-radius: 4px;
+        }
+
+        .chat-bot strong {
+            color: #25D366;
+        }
+
+        /* Problem Section */
+        .problem-list {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        .problem-list li {
+            padding: 16px 0;
+            padding-left: 40px;
+            position: relative;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .problem-list li:last-child {
+            border-bottom: none;
+        }
+
+        .problem-list li::before {
+            content: '😫';
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+
+        /* Solution/Feature List */
+        .feature-list {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        .feature-list li {
+            padding: 16px 0;
+            padding-left: 40px;
+            position: relative;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #25D366;
+            font-weight: 700;
+            font-size: 20px;
+            width: 28px;
+            height: 28px;
+            background: #E8F5E9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Image Grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .image-single {
+            width: 100%;
+            max-width: 350px;
+            margin: 24px auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Testimonial */
+        .testimonial-grid {
+            display: grid;
+            gap: 20px;
+            margin: 24px 0;
+        }
+
+        .testimonial-card {
+            background: #fafafa;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .testimonial-card img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+
+        /* Proof Section */
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 24px 0;
+        }
+
+        .proof-grid img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Pricing Table */
+        .pricing-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 24px 0;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .pricing-table th,
+        .pricing-table td {
+            padding: 16px 12px;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 14px;
+        }
+
+        .pricing-table th {
+            background: #fafafa;
+            font-weight: 600;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pricing-table .popular {
+            background: #FFFDE7;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: 700;
+            color: #25D366;
+        }
+
+        .price-period {
+            font-size: 12px;
+            color: #888;
+            font-weight: 400;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            background: #fafafa;
+            border-radius: 24px;
+            padding: 48px 24px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-wa {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #25D366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .floating-wa:hover {
+            transform: scale(1.1);
+        }
+
+        .floating-wa svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        /* Counter Badge */
+        .counter-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #E8F5E9;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #2E7D32;
+            margin-bottom: 24px;
+        }
+
+        .counter-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: #25D366;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            section {
+                padding: 48px 0;
+            }
+
+            .hero {
+                padding: 60px 0 48px;
+            }
+
+            .chat-demo {
+                padding: 20px;
+            }
+
+            .pricing-table th,
+            .pricing-table td {
+                padding: 12px 8px;
+                font-size: 13px;
+            }
+
+            .price {
+                font-size: 18px;
+            }
+
+            .final-cta {
+                padding: 36px 20px;
+            }
+
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Lazy loading placeholder */
+        img[loading="lazy"] {
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="counter-badge">
+                <span class="dot"></span>
+                <span>3.000+ user terdaftar</span>
+            </div>
+
+            <h1>
+                <span class="highlight">Lupa Catat</span> Pengeluaran?<br>
+                <span class="highlight">Malas Buka</span> Aplikasi?
+            </h1>
+
+            <p class="hero-subtitle">
+                Cukup chat di WhatsApp seperti ngobrol sama teman. Ketik <span class="highlight">"20k jajan kopi"</span>
+                — langsung tercatat otomatis!
+            </p>
+
+            <!-- Chat Demo -->
+            <div class="chat-demo">
+                <div class="chat-bubble chat-user">20k jajan kopi</div>
+                <div class="chat-bubble chat-bot">
+                    <strong>✅ Tercatat!</strong><br>
+                    Pengeluaran: Rp20.000<br>
+                    Kategori: Jajan<br>
+                    Saldo hari ini: -Rp45.000
+                </div>
+                <div class="chat-bubble chat-user">+2jt gaji bulanan</div>
+                <div class="chat-bubble chat-bot">
+                    <strong>✅ Tercatat!</strong><br>
+                    Pemasukan: Rp2.000.000<br>
+                    Saldo bulan ini: +Rp1.955.000
+                </div>
+            </div>
+
+            <a href="https://wa.me/6285194197119?text=Halo,%20saya%20mau%20mulai%20catat%20uang%20via%20WA"
+                class="btn-cta" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Mulai Catat via WA
+            </a>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Problem Section -->
+        <section>
+            <h2>Kenapa Catatan Keuangan Selalu <span class="highlight">Berantakan?</span></h2>
+
+            <ul class="problem-list">
+                <li><strong>Lupa catat</strong> — Beli kopi, makan siang, parkir... eh udah lupa dicatat</li>
+                <li><strong>Males buka aplikasi</strong> — Harus login, pilih kategori, isi form... ribet!</li>
+                <li><strong>Gak konsisten</strong> — Semangat 3 hari, lupa 1 minggu, data gak akurat</li>
+            </ul>
+
+            <div class="highlight-box">
+                💡 <strong>Solusinya?</strong> Catat langsung di WhatsApp — aplikasi yang sudah kamu buka tiap hari!
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Solution Section -->
+        <section>
+            <h2>Semudah <span class="highlight">Chat Teman</span></h2>
+
+            <ul class="feature-list">
+                <li><strong>Format super simple</strong> — Ketik <span class="highlight">"50k makan siang"</span> atau
+                    <span class="highlight">"+500k freelance"</span>
+                </li>
+                <li><strong>Catat banyak sekaligus</strong> — Bisa catat banyak transaksi dalam <span
+                        class="highlight">1 chat</span></li>
+                <li><strong>Cek saldo & rekap harian</strong> — Cukup ketik <span class="highlight">"saldo"</span> atau
+                    <span class="highlight">"rekap"</span>
+                </li>
+                <li><strong>Export ke CSV/Excel</strong> — Download laporan lengkap untuk analisis</li>
+                <li><strong>Dashboard Web</strong> — Cek detail transaksi & edit/delete via web</li>
+            </ul>
+
+            <div class="image-grid">
+                <img src="chat1-opt.jpg" alt="Contoh chat pencatatan uang di WhatsApp" loading="lazy">
+                <img src="chat2-opt.jpg" alt="Contoh laporan keuangan via WhatsApp" loading="lazy">
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Dashboard Preview -->
+        <section>
+            <h2>Dashboard Web yang <span class="highlight">Lengkap</span></h2>
+            <p>Cek detail transaksi, edit atau hapus catatan dengan mudah via dashboard web.</p>
+
+            <div class="image-grid">
+                <img src="web1-opt.jpg" alt="Dashboard web Catat Uang" loading="lazy">
+                <img src="web2-opt.jpg" alt="Laporan keuangan di dashboard web" loading="lazy">
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Social Proof -->
+        <section>
+            <h2>Sudah <span class="highlight">Terbukti</span> Membantu</h2>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <img src="testi1.JPG" alt="Testimoni pengguna" loading="lazy">
+                    <p class="testimonial-text">"Terima kasih, sangat membantu untuk catat keuangan"</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="testi2.JPG" alt="Testimoni pengguna" loading="lazy">
+                    <p class="testimonial-text">"Oke kak, sangat memudahkan untuk mantau pengeluaran bulanan"</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="testi3.JPG" alt="Testimoni pengguna" loading="lazy">
+                    <p class="testimonial-text">"Bisa pindah paket dengan mudah"</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 32px;">Bukti Pelanggan Berlangganan:</h3>
+            <div class="proof-grid">
+                <img src="pembelian1-opt.jpg" alt="Bukti pembayaran pelanggan" loading="lazy">
+                <img src="pembelian2-opt.jpg" alt="Bukti pembayaran pelanggan" loading="lazy">
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Pricing -->
+        <section>
+            <h2>Pilih Paket <span class="highlight">Sesuai Kebutuhan</span></h2>
+
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga</th>
+                        <th>Fitur</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Lite</strong></td>
+                        <td><span class="price">Rp9k</span><span class="price-period">/bln</span></td>
+                        <td>200 teks, 20 struk/bulan</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Starter</strong></td>
+                        <td><span class="price">Rp19k</span><span class="price-period">/bln</span></td>
+                        <td>450 teks, 90 struk, edit/delete via web</td>
+                    </tr>
+                    <tr class="popular">
+                        <td><strong>Premium ⭐</strong></td>
+                        <td><span class="price">Rp39k</span><span class="price-period">/bln</span></td>
+                        <td>1200 teks, 250 struk, export CSV</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro</strong></td>
+                        <td><span class="price">Rp89k</span><span class="price-period">/bln</span></td>
+                        <td>Unlimited teks & struk, export CSV, dukungan prioritas</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="text-align: center; color: #666; font-size: 14px;">
+                ✅ Bayar via Transfer/QRIS — Langsung aktif dalam 1 menit
+            </p>
+
+            <!-- Package Recommendation -->
+            <div style="margin-top: 32px; background: #f8f9fa; border-radius: 16px; padding: 24px;">
+                <h3 style="margin-bottom: 16px; font-size: 18px;">🎯 Rekomendasi Paket</h3>
+                <ul style="list-style: none; margin: 0; padding: 0;">
+                    <li style="padding: 12px 0; border-bottom: 1px solid #eee;">
+                        <strong style="color: #25D366;">Lite</strong> — Cocok untuk <span
+                            class="highlight">mahasiswa/pelajar</span>. Catat uang jajan & pengeluaran harian (~6
+                        catatan/hari)
+                    </li>
+                    <li style="padding: 12px 0; border-bottom: 1px solid #eee;">
+                        <strong style="color: #25D366;">Starter</strong> — Cocok untuk <span class="highlight">rumah
+                            tangga</span>. Kelola keuangan keluarga dengan mudah
+                    </li>
+                    <li style="padding: 12px 0;">
+                        <strong style="color: #25D366;">Premium</strong> — Cocok untuk <span class="highlight">UMKM,
+                            warung & freelance</span>. Fitur lengkap + export CSV
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <h2>Siap Rapikan <span class="highlight">Keuanganmu?</span></h2>
+            <p style="font-size: 18px; margin-bottom: 24px;">
+                Mulai sekarang dengan <span class="highlight">Rp9.000/bulan</span> saja!
+            </p>
+            <a href="https://wa.me/6285194197119?text=Halo,%20saya%20mau%20daftar%20paket%209k%20untuk%20catat%20uang%20via%20WA"
+                class="btn-cta" target="_blank" style="font-size: 20px; padding: 20px 40px;">
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width: 28px; height: 28px;">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Chat WA & Mulai Sekarang 🚀
+            </a>
+        </section>
+
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6285194197119?text=Halo,%20saya%20mau%20tanya%20tentang%20Catat%20Uang%20via%20WA"
+        class="floating-wa" target="_blank" aria-label="Chat WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+</body>
+
+</html>
