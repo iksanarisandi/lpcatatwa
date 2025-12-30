@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lpcatatwa.netlify.app/sitemap.xml
+Sitemap: https://wa.chatbotumkm.com/sitemap.xml
