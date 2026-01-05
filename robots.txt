@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://wa.chatbotumkm.com/sitemap.xml
+Sitemap: https://catatwa.de/sitemap.xml
