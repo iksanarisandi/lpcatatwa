@@ -1,0 +1,43 @@
+# AI Discovery File for catatwa.de
+# Generated: 2026-04-08
+
+[service]
+name=Catat Uang WA
+type=Finance Application
+platform=WhatsApp
+language=Indonesian
+country=Indonesia
+url=https://catatwa.de/
+
+[description]
+Aplikasi pencatatan keuangan berbasis WhatsApp yang memungkinkan pengguna mencatat transaksi keuangan hanya dengan mengirim pesan teks atau foto struk.
+
+[target_audience]
+UMKM, freelancer, mahasiswa, pelajar, ibu rumah tangga, masyarakat Indonesia yang ingin mengatur keuangan pribadi
+
+[pricing]
+start_price=9000
+currency=IDR
+billing=monthly
+
+[features]
+- Pencatatan via WhatsApp
+- Scan struk OCR
+- Laporan otomatis
+- Export CSV/Excel
+- Dashboard web
+- Multi-user
+
+[contact]
+whatsapp=+6285194197119
+email=catatwa.de@gmail.com
+
+[crawling]
+allowed=true
+preferred_crawl_delay=1
+
+[sitemap]
+url=https://catatwa.de/sitemap.xml
+
+[llms_txt]
+url=https://catatwa.de/llms.txt

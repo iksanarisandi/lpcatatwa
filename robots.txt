@@ -1,4 +1,52 @@
+# Izinkan semua crawler termasuk AI
 User-agent: *
 Allow: /
 
+# AI Crawlers - Explicitly allowed for GEO optimization
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Google-CloudVertexBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: DeepseekBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: AI2Bot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap
 Sitemap: https://catatwa.de/sitemap.xml
+
+# File khusus untuk AI agents
+# https://catatwa.de/llms.txt

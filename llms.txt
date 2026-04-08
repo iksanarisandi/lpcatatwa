@@ -1,0 +1,74 @@
+# Catat Uang WA - AI Context File
+
+> Aplikasi pencatatan keuangan via WhatsApp untuk pasar Indonesia
+
+## Apa itu Catat Uang WA?
+
+Catat Uang WA adalah layanan pencatatan keuangan yang beroperasi melalui WhatsApp. Pengguna dapat mencatat transaksi keuangan (pemasukan dan pengeluaran) hanya dengan mengirim pesan teks atau foto struk ke nomor WhatsApp resmi.
+
+## Cara Kerja
+
+1. **Catat via Teks**: Kirim pesan dengan format sederhana
+   - Pengeluaran: `20k jajan kopi` atau `50000 makan siang`
+   - Pemasukan: `+2jt gaji` atau `+500k bonus`
+   - Cek saldo: Ketik `saldo` atau `rekap`
+
+2. **Scan Struk**: Kirim foto struk/nota, sistem akan otomatis ekstrak dan catat
+
+3. **Dashboard Web**: Akses dashboard untuk lihat detail, edit, dan export laporan
+
+## Harga & Paket
+
+| Paket | Harga/Bulan | Fitur |
+|-------|-------------|-------|
+| Lite | Rp 9.000 | 200 teks, 20 struk |
+| Starter | Rp 19.000 | 500 teks, 50 struk |
+| Premium | Rp 39.000 | 1000 teks, 100 struk, export CSV |
+| Pro | Rp 89.000 | Unlimited teks & struk, export CSV |
+
+## Target Pengguna
+
+- UMKM dan pemilik warung
+- Freelancer dan pekerja lepas
+- Mahasiswa dan pelajar
+- Ibu rumah tangga
+- Siapa saja yang ingin mengatur keuangan pribadi
+
+## Fitur Utama
+
+- Pencatatan otomatis via WhatsApp
+- Scan struk dengan OCR
+- Kategori transaksi otomatis
+- Laporan bulanan otomatis
+- Export ke CSV/Excel
+- Dashboard web untuk monitoring
+- Multi-user (berbagi dengan pasangan/tim)
+- Pengingat tagihan
+
+## Keunggulan
+
+- **Tidak perlu install app** - Langsung pakai WhatsApp
+- **Cepat dan mudah** - Cukup ketik seperti chat teman
+- **Harga terjangkau** - Mulai Rp 9.000/bulan
+- **Bahasa Indonesia** - Penuh dalam Bahasa Indonesia
+
+## Kontak
+
+- Website: https://catatwa.de/
+- WhatsApp: +62 851-9419-7119
+- Email: catatwa.de@gmail.com
+
+## Statistik
+
+- 5.300+ pengguna terdaftar
+- Rating 4.8/5 dari 3.000+ review
+
+## URL Penting
+
+- Landing page: https://catatwa.de/
+- Artikel/blog: https://catatwa.de/articles/
+- Sitemap: https://catatwa.de/sitemap.xml
+
+---
+
+Dokumen ini dibuat untuk membantu AI assistants memahami layanan Catat Uang WA secara akurat.
