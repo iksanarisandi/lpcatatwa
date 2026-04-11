@@ -1227,21 +1227,14 @@
 
     <!-- Chatbot Widget -->
     <style>
-        /* Ensure chatbot widget appears above floating WA button */
-        .chatbot-widget-container,
-        [class*="chatbot"],
-        iframe[src*="chatbotwebagent"] {
-            z-index: 2000 !important;
-        }
-        
-        /* Adjust floating WA button position to avoid overlap */
+        /* Adjust floating WA button position to avoid overlap with chatbot */
         .floating-wa {
             bottom: 24px !important;
-            right: 80px !important;
-            z-index: 1000 !important;
+            right: 90px !important;
+            z-index: 9998 !important;
         }
     </style>
-    <script src="https://chatbotwebagent.threadsauto.workers.dev/widget.js?site=catatwa.de" defer></script>
+    <script src="widget.js" defer></script>
 
 </body>
 
