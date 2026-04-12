@@ -166,11 +166,11 @@
     '<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>';
 
   // --- State ---
-  let entries: any[] = [];
+  let entries = [];
   let currentIndex = 0;
-  let activeToast: HTMLElement | null = null;
-  let timeoutHide: number | null = null;
-  let timeoutNext: number | null = null;
+  let activeToast = null;
+  let timeoutHide = null;
+  let timeoutNext = null;
 
   // --- Fallback data jika API gagal ---
   const fallbackEntries = [
@@ -187,7 +187,7 @@
   ];
 
   // --- Fetch data ---
-  async function fetchData(): Promise<any[]> {
+  async function fetchData() {
     try {
       const res = await fetch(config.api);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -202,7 +202,7 @@
   }
 
   // --- Show toast ---
-  function showToast(entry: any) {
+  function showToast(entry) {
     removeToast();
 
     const toast = document.createElement('div');
@@ -249,7 +249,7 @@
     }
   }
 
-  function scheduleNext(delayMs?: number) {
+  function scheduleNext(delayMs) {
     if (timeoutNext) clearTimeout(timeoutNext);
     timeoutNext = window.setTimeout(() => {
       showNext();
@@ -264,7 +264,7 @@
     scheduleNext();
   }
 
-  function escapeHtml(str: string): string {
+  function escapeHtml(str) {
     const div = document.createElement('div');
     div.textContent = str;
     return div.innerHTML;
