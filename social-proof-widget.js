@@ -218,7 +218,7 @@
     `;
 
     // Close button
-    toast.querySelector('.sp-close')!.addEventListener('click', () => {
+    toast.querySelector('.sp-close').addEventListener('click', () => {
       removeToast();
       scheduleNext(2000); // show next after 2s
     });
