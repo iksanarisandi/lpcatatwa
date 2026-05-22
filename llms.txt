@@ -21,10 +21,10 @@ Catat Uang WA adalah layanan pencatatan keuangan yang beroperasi melalui WhatsAp
 
 | Paket | Harga/Bulan | Fitur |
 |-------|-------------|-------|
-| Lite | Rp 9.000 | 200 teks, 20 struk |
-| Starter | Rp 19.000 | 500 teks, 50 struk |
-| Premium | Rp 39.000 | 1000 teks, 100 struk, export CSV |
-| Pro | Rp 89.000 | Unlimited teks & struk, export CSV |
+| Lite | Rp 9.000 | 200 teks, 20 struk, edit/delete via web, catat utang & tabungan |
+| Starter | Rp 19.000 | 450 teks, 90 struk, edit/delete via web, export Excel, catat utang & tabungan, catat bersama (+1 nomor) |
+| Premium | Rp 39.000 | 1200 teks, 250 struk, export Excel, Analisis Keuangan, catat utang & tabungan, catat bersama (+2 nomor) |
+| Pro | Rp 89.000 | Unlimited teks & struk, export Excel, Analisis Keuangan, dukungan prioritas, catat utang & tabungan, catat bersama (+4 nomor) |
 
 ## Target Pengguna
 
