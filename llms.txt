@@ -8,9 +8,9 @@ Catat Uang WA adalah layanan pencatatan keuangan yang beroperasi melalui WhatsAp
 
 ## Cara Kerja
 
-1. **Catat via Teks**: Kirim pesan dengan format sederhana
-   - Pengeluaran: `20k jajan kopi` atau `50000 makan siang`
-   - Pemasukan: `+2jt gaji` atau `+500k bonus`
+1. **Catat via Teks**: Kirim pesan dengan format sederhana ATAU bahasa bebas
+   - Format rapi: `20k jajan kopi`, `+2jt gaji`
+   - Bahasa bebas (AI): `tadi beli kopi 15rb`, `bensin 50rb` — AI otomatis mengenali nominal & kategori
    - Cek saldo: Ketik `saldo` atau `rekap`
 
 2. **Scan Struk**: Kirim foto struk/nota, sistem akan otomatis ekstrak dan catat
@@ -37,6 +37,7 @@ Catat Uang WA adalah layanan pencatatan keuangan yang beroperasi melalui WhatsAp
 ## Fitur Utama
 
 - Pencatatan otomatis via WhatsApp
+- Catat pakai AI (bahasa bebas tanpa format, paham slang Indonesia)
 - Scan struk dengan OCR
 - Kategori transaksi otomatis
 - Laporan bulanan otomatis
