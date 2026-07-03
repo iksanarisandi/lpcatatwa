@@ -862,55 +862,26 @@
             }
         }
 
-        /* Voice Waveform Animation */
-        .voice-wave {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            height: 56px;
-            margin: 20px auto 10px;
-            max-width: 260px;
+        /* Voice Demo Video (YouTube Shorts — vertical 9:16, responsive) */
+        .voice-demo {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            aspect-ratio: 9 / 16;
+            margin: 8px auto 0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+            background: #000;
         }
 
-        .voice-wave .bar {
-            width: 6px;
-            background: linear-gradient(180deg, #25D366 0%, #1ebe5d 100%);
-            border-radius: 50px;
-            transform-origin: center;
-            animation: voiceWave 1.3s ease-in-out infinite;
-        }
-
-        .voice-wave .bar:nth-child(1) { height: 16px; animation-delay: 0s; }
-        .voice-wave .bar:nth-child(2) { height: 40px; animation-delay: 0.15s; }
-        .voice-wave .bar:nth-child(3) { height: 28px; animation-delay: 0.3s; }
-        .voice-wave .bar:nth-child(4) { height: 48px; animation-delay: 0.1s; }
-        .voice-wave .bar:nth-child(5) { height: 24px; animation-delay: 0.25s; }
-        .voice-wave .bar:nth-child(6) { height: 52px; animation-delay: 0.05s; }
-        .voice-wave .bar:nth-child(7) { height: 20px; animation-delay: 0.35s; }
-        .voice-wave .bar:nth-child(8) { height: 44px; animation-delay: 0.2s; }
-        .voice-wave .bar:nth-child(9) { height: 32px; animation-delay: 0.1s; }
-        .voice-wave .bar:nth-child(10) { height: 18px; animation-delay: 0.3s; }
-        .voice-wave .bar:nth-child(11) { height: 38px; animation-delay: 0.15s; }
-        .voice-wave .bar:nth-child(12) { height: 14px; animation-delay: 0.25s; }
-
-        @media (prefers-reduced-motion: reduce) {
-            .voice-wave .bar {
-                animation: none;
-                transform: scaleY(0.7);
-            }
-        }
-
-        @keyframes voiceWave {
-
-            0%,
-            100% {
-                transform: scaleY(0.35);
-            }
-
-            50% {
-                transform: scaleY(1);
-            }
+        .voice-demo iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
         }
 
         /* Lazy loading placeholder */
@@ -1040,10 +1011,16 @@
                 <h3 style="margin-bottom: 8px;">🎤 Catat Pakai Suara — Voice Note WA!</h3>
                 <p>Males ngetik? Tangan lagi sibuk, lagi nyetir, atau lagi antri di kasir? Sekarang cukup <strong>tekan tombol mic &amp; rekam voice note</strong> di WhatsApp, bilang aja <span class="highlight">"tadi beli bensin 50 ribu"</span> — AI otomatis transkrip &amp; langsung dicatat. <strong>Nggak perlu ngetik satu huruf pun!</strong></p>
 
-                <div class="voice-wave" aria-hidden="true">
-                    <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                <p style="text-align:center; font-size:13px; font-weight:600; color:#1a1a1a; margin:20px 0 4px;">▶ Tonton demo — catat pakai suara</p>
+                <div class="voice-demo">
+                    <iframe
+                        src="https://www.youtube.com/embed/HusIZrrWI3A?rel=0&loop=1&playlist=HusIZrrWI3A"
+                        title="Demo catat pengeluaran via WhatsApp pakai suara / voice note"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
                 </div>
-                <p style="text-align:center; font-size:13px; color:#25D366; font-weight:600; margin:0 0 16px;">🎙️ <em>"...baru aja makan siang 25rb di warteg..."</em><br>→ tercatat otomatis: <strong>pengeluaran Rp25.000, kategori Makan</strong></p>
+                <p style="text-align:center; font-size:13px; color:#25D366; font-weight:600; margin:14px 0 16px;">🎙️ <em>"...baru aja makan siang 25rb di warteg..."</em><br>→ tercatat otomatis: <strong>pengeluaran Rp25.000, kategori Makan</strong></p>
 
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:4px;">
                     <p style="font-size:13px; color:#1a1a1a; margin:0; padding:10px; background:#fff; border-radius:10px; text-align:center;">⚡ <strong>3x lebih cepat</strong> dari ngetik</p>
