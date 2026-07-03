@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Catat keuangan via WhatsApp. ✨ Kini pakai AI: catat dengan bahasa bebas tanpa format — ketik 'tadi beli kopi 15rb' langsung tercatat! Laporan bulanan, export CSV. Mulai Rp15.000/bulan.">
+        content="Catat keuangan via WhatsApp. 🎤 Kini pakai suara/voice note — cukup omongin, langsung tercatat! Plus AI bahasa bebas tanpa format. Export CSV. Mulai Rp15.000/bulan.">
     <meta name="keywords"
-        content="catat uang whatsapp, aplikasi catatan keuangan, pencatat pengeluaran, catat keuangan pakai ai, catat keuangan tanpa format, laporan keuangan otomatis, chatbot keuangan, aplikasi keuangan UMKM, catat pengeluaran harian, export laporan CSV, scan struk otomatis, aplikasi keuangan rumah tangga">
+        content="catat uang whatsapp, aplikasi catatan keuangan, pencatat pengeluaran, catat keuangan pakai ai, catat keuangan tanpa format, catat keuangan pakai suara, voice note keuangan, catat pengeluaran voice note whatsapp, input keuangan pakai suara, laporan keuangan otomatis, chatbot keuangan, aplikasi keuangan UMKM, catat pengeluaran harian, export laporan CSV, scan struk otomatis, aplikasi keuangan rumah tangga">
     <meta name="author" content="Catat Uang WA">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
@@ -16,7 +16,7 @@
     <!-- AI Chatbot Optimization (GEO) -->
     <meta name="ai-crawl" content="allowed">
     <meta name="llm-training" content="allowed">
-    <meta name="description-ai" content="Catat Uang WA adalah aplikasi pencatatan keuangan via WhatsApp. Pengguna dapat mencatat pengeluaran dan pemasukan dengan mengirim pesan teks (kini mendukung AI bahasa bebas tanpa format), foto struk, atau perintah singkat. Layanan berbayar mulai Rp15.000/bulan untuk pasar Indonesia.">
+    <meta name="description-ai" content="Catat Uang WA adalah aplikasi pencatatan keuangan via WhatsApp. Pengguna dapat mencatat pengeluaran dan pemasukan dengan mengirim voice note atau perintah suara, pesan teks (mendukung AI bahasa bebas tanpa format), foto struk, atau perintah singkat. Layanan berbayar mulai Rp15.000/bulan untuk pasar Indonesia.">
 
     <title>Catat Uang via WA - Lupa Catat? Malas Buka App? Solusinya Cuma Chat!</title>
 
@@ -32,7 +32,7 @@
     <meta property="og:url" content="https://catatwa.de/">
     <meta property="og:title" content="Catat Uang via WA - Aplikasi Pencatat Keuangan via WhatsApp">
     <meta property="og:description"
-        content="Catat keuangan langsung via WhatsApp. ✨ Kini pakai AI — ketik bebas tanpa format, langsung tercatat! Laporan otomatis, export CSV. Mulai Rp15.000/bulan.">
+        content="Catat keuangan langsung via WhatsApp. 🎤 Kini pakai suara/voice note — omongin saja, langsung tercatat! + AI bahasa bebas tanpa format. Export CSV. Mulai Rp15.000/bulan.">
     <meta property="og:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767738979/OG_IMAGE_nukjou.png">
 
     <!-- Twitter -->
@@ -40,7 +40,7 @@
     <meta name="twitter:url" content="https://catatwa.de/">
     <meta name="twitter:title" content="Catat Uang via WA - Aplikasi Pencatat Keuangan via WhatsApp">
     <meta name="twitter:description"
-        content="Catat keuangan langsung via WhatsApp. ✨ Pakai AI — ketik bebas tanpa format, langsung tercatat!">
+        content="Catat keuangan langsung via WhatsApp. 🎤 Pakai suara/voice note — omongin saja, langsung tercatat! + AI tanpa format.">
     <meta name="twitter:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767738979/OG_IMAGE_nukjou.png">
 
     <!-- JSON-LD Structured Data -->
@@ -86,6 +86,14 @@
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Ya. Catat Uang WA kini dilengkapi AI. Anda bisa mengetik menggunakan bahasa bebas tanpa format, contoh 'tadi beli kopi 15rb' atau 'bensin 50rb', dan AI akan otomatis mengenali nominal serta kategori transaksinya. AI memahami slang nominal Indonesia seperti rb, k, jt, ribu, dan juta. Fitur ini tersedia untuk semua pengguna."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah bisa catat keuangan pakai suara atau voice note?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ya. Catat Uang WA mendukung perintah suara. Cukup kirim voice note di WhatsApp dan ucapkan transaksimu, misalnya 'tadi beli bensin 50 ribu' atau 'gajian 5 juta masuk'. AI akan men-transkrip suara, mengenali nominal dan kategori, lalu mencatatnya otomatis tanpa perlu mengetik. AI memahami slang nominal Indonesia seperti rb, k, jt, ribu, dan juta. Fitur ini tersedia untuk semua pengguna."
                 }
             },
             {
@@ -854,6 +862,57 @@
             }
         }
 
+        /* Voice Waveform Animation */
+        .voice-wave {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            height: 56px;
+            margin: 20px auto 10px;
+            max-width: 260px;
+        }
+
+        .voice-wave .bar {
+            width: 6px;
+            background: linear-gradient(180deg, #25D366 0%, #1ebe5d 100%);
+            border-radius: 50px;
+            transform-origin: center;
+            animation: voiceWave 1.3s ease-in-out infinite;
+        }
+
+        .voice-wave .bar:nth-child(1) { height: 16px; animation-delay: 0s; }
+        .voice-wave .bar:nth-child(2) { height: 40px; animation-delay: 0.15s; }
+        .voice-wave .bar:nth-child(3) { height: 28px; animation-delay: 0.3s; }
+        .voice-wave .bar:nth-child(4) { height: 48px; animation-delay: 0.1s; }
+        .voice-wave .bar:nth-child(5) { height: 24px; animation-delay: 0.25s; }
+        .voice-wave .bar:nth-child(6) { height: 52px; animation-delay: 0.05s; }
+        .voice-wave .bar:nth-child(7) { height: 20px; animation-delay: 0.35s; }
+        .voice-wave .bar:nth-child(8) { height: 44px; animation-delay: 0.2s; }
+        .voice-wave .bar:nth-child(9) { height: 32px; animation-delay: 0.1s; }
+        .voice-wave .bar:nth-child(10) { height: 18px; animation-delay: 0.3s; }
+        .voice-wave .bar:nth-child(11) { height: 38px; animation-delay: 0.15s; }
+        .voice-wave .bar:nth-child(12) { height: 14px; animation-delay: 0.25s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .voice-wave .bar {
+                animation: none;
+                transform: scaleY(0.7);
+            }
+        }
+
+        @keyframes voiceWave {
+
+            0%,
+            100% {
+                transform: scaleY(0.35);
+            }
+
+            50% {
+                transform: scaleY(1);
+            }
+        }
+
         /* Lazy loading placeholder */
         img[loading="lazy"] {
             background: #f5f5f5;
@@ -867,8 +926,8 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="counter-badge" style="background:#FFF3E0; color:#E65100; margin-bottom:12px;">
-                <span>✨</span>
-                <span><strong>Baru:</strong> Catat Pakai AI — Bebas Format!</span>
+                <span>🎤</span>
+                <span><strong>Baru:</strong> Catat Pakai Suara — Voice Note WA!</span>
             </div>
             <div class="counter-badge">
                 <span class="dot"></span>
@@ -935,6 +994,7 @@
             <h2>Semudah <span class="highlight">Chat Teman</span></h2>
 
             <ul class="feature-list">
+                <li><strong>🎤 Catat pakai suara / voice note</strong> — Males ngetik? Cukup <span class="highlight">rekam voice note</span> di WA, bilang <span class="highlight">"tadi beli bensin 50rb"</span> — AI otomatis transkrip &amp; langsung dicatat!</li>
                 <li><strong>✨ Catat bebas pakai AI</strong> — Gak perlu ingat format! Ketik <span class="highlight">"tadi beli kopi 15rb"</span>, <span class="highlight">"bensin 50rb"</span>, atau <span class="highlight">"gajian 5jt"</span> — AI paham bahasa Indonesia &amp; slang, langsung dicatat.</li>
                 <li><strong>Format super simple</strong> — Ketik <span class="highlight">"50k makan siang"</span> atau
                     <span class="highlight">"+500k freelance"</span>
@@ -974,8 +1034,26 @@
         <section>
             <h2>Fitur <span class="highlight">Terbaru</span> <span style="background: #25D366; color: #fff; font-size: 12px; padding: 4px 12px; border-radius: 50px; vertical-align: middle; font-weight: 600;">BARU</span></h2>
 
-            <div style="background: linear-gradient(135deg, #E8F5E9 0%, #FFF8E1 100%); border: 2px solid #25D366; border-radius: 20px; padding: 24px; margin-bottom: 20px; position: relative;">
-                <span style="position:absolute; top:-12px; right:20px; background:#25D366; color:#fff; font-size:11px; padding:5px 14px; border-radius:50px; font-weight:700; box-shadow: 0 2px 8px rgba(37,211,102,0.3);">✨ AI BARU</span>
+            <!-- Perintah Suara via WA (Fitur Terbaru) -->
+            <div style="background: linear-gradient(135deg, #E8F5E9 0%, #FFF8E1 100%); border: 2px solid #25D366; border-radius: 20px; padding: 24px; margin-bottom: 20px; position: relative; overflow: hidden;">
+                <span style="position:absolute; top:-12px; right:20px; background:#25D366; color:#fff; font-size:11px; padding:5px 14px; border-radius:50px; font-weight:700; box-shadow: 0 2px 8px rgba(37,211,102,0.3);">🎤 PALING BARU</span>
+                <h3 style="margin-bottom: 8px;">🎤 Catat Pakai Suara — Voice Note WA!</h3>
+                <p>Males ngetik? Tangan lagi sibuk, lagi nyetir, atau lagi antri di kasir? Sekarang cukup <strong>tekan tombol mic &amp; rekam voice note</strong> di WhatsApp, bilang aja <span class="highlight">"tadi beli bensin 50 ribu"</span> — AI otomatis transkrip &amp; langsung dicatat. <strong>Nggak perlu ngetik satu huruf pun!</strong></p>
+
+                <div class="voice-wave" aria-hidden="true">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </div>
+                <p style="text-align:center; font-size:13px; color:#25D366; font-weight:600; margin:0 0 16px;">🎙️ <em>"...baru aja makan siang 25rb di warteg..."</em><br>→ tercatat otomatis: <strong>pengeluaran Rp25.000, kategori Makan</strong></p>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:4px;">
+                    <p style="font-size:13px; color:#1a1a1a; margin:0; padding:10px; background:#fff; border-radius:10px; text-align:center;">⚡ <strong>3x lebih cepat</strong> dari ngetik</p>
+                    <p style="font-size:13px; color:#1a1a1a; margin:0; padding:10px; background:#fff; border-radius:10px; text-align:center;">🙌 <strong>Bebas tangan</strong> (hands-free)</p>
+                </div>
+
+                <p style="font-size:13px; color:#25D366; font-weight:600; margin-top:16px; margin-bottom:0;">✓ Paham bahasa Indonesia natural &amp; slang (rb, k, jt, ribu, juta) • Tersedia untuk semua pengguna</p>
+            </div>
+
+            <div style="background: #f8f9fa; border-radius: 20px; padding: 24px; margin-bottom: 20px;">
                 <h3 style="margin-bottom: 8px;">✨ Catat Pakai AI — Bebas Format!</h3>
                 <p>Lupa format? <span class="highlight">Gak masalah!</span> Sekarang kamu bisa catat uang pakai <strong>bahasa bebas</strong> — ketik apa adanya seperti chat teman, AI otomatis kenal nominal &amp; kategorinya.</p>
                 <p style="font-size:14px; margin-top:12px;">Contoh: <span class="highlight">"tadi makan siang 25rb di warteg"</span> → tercatat pengeluaran Rp25.000, kategori Makan. Paham slang Indonesia: <strong>rb, k, jt, ribu, juta</strong>.</p>
@@ -1103,6 +1181,17 @@
                         Cukup chat ke nomor Catat Uang WA dengan format sederhana, contoh: <strong>"20k jajan
                             kopi"</strong> untuk pengeluaran atau <strong>"+2jt gaji"</strong> untuk pemasukan. Sistem
                         akan otomatis mencatat transaksi Anda.
+                    </p>
+                </details>
+
+                <details style="background: #fafafa; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px;">
+                    <summary
+                        style="font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Apakah bisa catat pakai suara / voice note?
+                        <span style="color: #25D366;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: #555; font-size: 14px;">
+                        Ya! 🎤 Kamu cukup <strong>kirim voice note</strong> di WhatsApp, bilang misalnya <strong>"tadi beli bensin 50 ribu"</strong> atau <strong>"gajian 5 juta masuk"</strong>. AI kami akan otomatis men-transkrip suaramu, mengenali nominal &amp; kategorinya, lalu mencatatnya — tanpa perlu ngetik. Cocok banget saat lagi nyetir, di kasir, atau males ngetik. Paham slang Indonesia (rb, k, jt). Tersedia untuk semua pengguna.
                     </p>
                 </details>
 
