@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aplikasi kas WhatsApp: catat kas masuk-keluar langsung lewat chat. Kasir & pemilik bisa input bareng, saldo update real-time. Tanpa install, mulai gratis.">
+    <title>Aplikasi Kas WhatsApp: Catat Kas Masuk-Keluar via Chat | Catat Uang WA</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://catatwa.de/articles/aplikasi-kas-whatsapp">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://catatwa.de/articles/aplikasi-kas-whatsapp">
+    <meta property="og:title" content="Aplikasi Kas WhatsApp: Catat Kas Masuk-Keluar via Chat">
+    <meta property="og:description"
+        content="Aplikasi kas WhatsApp: catat kas masuk-keluar langsung lewat chat. Kasir & pemilik bisa input bareng, saldo update real-time. Tanpa install, mulai gratis.">
+    <meta property="og:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+    <meta property="og:site_name" content="Catat Uang WA">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://catatwa.de/articles/aplikasi-kas-whatsapp">
+    <meta name="twitter:title" content="Aplikasi Kas WhatsApp: Catat Kas Masuk-Keluar via Chat">
+    <meta name="twitter:description"
+        content="Aplikasi kas WhatsApp: catat kas masuk-keluar langsung lewat chat. Kasir & pemilik bisa input bareng, saldo update real-time. Tanpa install, mulai gratis.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+
+    <!-- JSON-LD Structured Data: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Aplikasi Kas WhatsApp: Catat Kas Masuk-Keluar via Chat",
+        "description": "Aplikasi kas WhatsApp: catat kas masuk-keluar langsung lewat chat. Kasir & pemilik bisa input bareng, saldo update real-time. Tanpa install, mulai gratis.",
+        "url": "https://catatwa.de/articles/aplikasi-kas-whatsapp",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Catat Uang WA",
+            "url": "https://catatwa.de/"
+        },
+        "datePublished": "2026-07-15",
+        "dateModified": "2026-07-15"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Apakah aplikasi kas WhatsApp ini butuh install aplikasi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tidak. Aplikasi kas WhatsApp jalan 100% di dalam WhatsApp. Cukup chat nomor bot seperti chat teman, tidak perlu download atau install aplikasi tambahan."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bisakah kasir dan pemilik catat kas dari HP yang berbeda?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Paket Starter ke atas mendukung fitur multi-user. Kasir dan pemilik bisa mencatat kas dari HP masing-masing, dan semua data otomatis menyatu dalam satu laporan kas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bagaimana cara cek saldo kas lewat WhatsApp?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cukup ketik 'saldo' di chat bot dan sistem akan langsung menampilkan posisi kas terkini, dihitung otomatis dari semua kas masuk dikurangi kas keluar yang sudah dicatat."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah bisa catat kas pakai foto struk atau voice note?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Kamu bisa kirim foto struk dan sistem OCR akan membaca datanya secara otomatis, atau kirim voice note seperti 'tadi jualan 50 ribu' dan AI akan mencatatnya tanpa perlu mengetik."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #fff;
+            font-size: 17px
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 1.3
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 32px 0 16px
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 20px 0 8px
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #333
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #555
+        }
+
+        .highlight {
+            background: linear-gradient(180deg, transparent 50%, #FFF176 50%);
+            padding: 0 4px;
+            font-weight: 600
+        }
+
+        .cta-box {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: center
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px
+        }
+
+        .btn-cta:hover {
+            background: #20bd5a
+        }
+
+        ul,
+        ol {
+            margin: 16px 0 16px 24px
+        }
+
+        li {
+            margin-bottom: 12px
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px
+        }
+
+        .back-link:hover {
+            color: #25D366
+        }
+
+        .paket-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 15px
+        }
+
+        .paket-table th,
+        .paket-table td {
+            border: 1px solid #e5e5e5;
+            padding: 10px;
+            text-align: left
+        }
+
+        .paket-table th {
+            background: #f8f9fa;
+            font-weight: 600
+        }
+
+        details.faq {
+            border-bottom: 1px solid #eee;
+            padding: 14px 0
+        }
+
+        details.faq summary {
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none
+        }
+
+        details.faq summary::before {
+            content: "▸ ";
+            color: #25D366
+        }
+
+        details.faq[open] summary::before {
+            content: "▾ "
+        }
+
+        details.faq p {
+            margin-top: 10px;
+            color: #555
+        }
+
+        .related {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 32px 0
+        }
+
+        .related h2 {
+            margin-top: 0
+        }
+
+        .related ul {
+            margin: 8px 0 0
+        }
+
+        .related a {
+            color: #1a1a1a;
+            text-decoration: none
+        }
+
+        .related a:hover {
+            color: #25D366
+        }
+
+        .article-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            font-size: 14px;
+            color: #999
+        }
+
+        .article-footer a {
+            color: #25D366;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Kembali ke Beranda</a>
+
+        <article>
+            <h1>Aplikasi Kas WhatsApp: Catat Kas Masuk-Keluar via <span class="highlight">Chat</span></h1>
+
+            <p class="lead">Mau catat kas usaha tanpa repot buka aplikasi lain? Dengan <strong>aplikasi kas
+                    WhatsApp</strong>, kamu dan kasir cukup chat nomor bot untuk mencatat tiap kas masuk dan keluar —
+                saldo update real-time, semua tim bisa input bareng, tanpa install app tambahan.</p>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Coba gratis sekarang, langsung dari WhatsApp!</strong></p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20coba%20aplikasi%20kas%20via%20WhatsApp"
+                    class="btn-cta" target="_blank" rel="noopener">Mulai Catat Kas via Chat →</a>
+            </div>
+
+            <h2>Kesulitan Catat Kas di Toko yang Ramai</h2>
+            <p>Buat toko, warung, atau kuliner yang transaksinya cepat, mencatat kas itu gampang-gampang susah. Pas
+                ramai, fokusnya ke pembeli. Pas sepi, malesnya muncul. Akibatnya catatan kas jadi berantakan:</p>
+            <ul>
+                <li><strong>Kasir sibuk melayani, lupa nyatet.</strong> Akhir hari uang selisih.</li>
+                <li><strong>Pemilik gak tahu kas real-time.</strong> Harus tanya atau datang ke toko.</li>
+                <li><strong>Catat di kertas, buktinya hilang.</strong> Sulit ditelusuri ulang.</li>
+                <li><strong>Pakai app lain ribet.</strong> Harus buka aplikasi, login, ketuk-ketuk.</li>
+                <li><strong>Kas masuk dan keluar tercampur.</strong> Saldo akhir jadi gak jelas.</li>
+            </ul>
+            <p>Padahal, di toko yang ramai, WhatsApp hampir pasti sudah terbuka di HP kasir maupun pemilik. Jadi kenapa
+                tidak pakai <span class="highlight">WhatsApp langsung sebagai alat catat kas</span>?</p>
+
+            <h2>Kenapa Catat Kas Murni Lewat WhatsApp?</h2>
+            <p>Menggunakan WhatsApp sebagai aplikasi kas punya keunggulan langsung buat tim toko:</p>
+            <ul>
+                <li>✅ <strong>Gak perlu install app baru</strong> — WhatsApp sudah ada di HP semua orang.</li>
+                <li>✅ <strong>Catat seperti chat teman</strong> — ketik bebas atau voice note sambil jualan.</li>
+                <li>✅ <strong>Saldo real-time</strong> — langsung update tiap transaksi dicatat.</li>
+                <li>✅ <strong>Kasir &amp; pemilik satu data</strong> — input dari HP beda, laporannya menyatu.</li>
+                <li>✅ <strong>Cek kapan saja</strong> — ketik <code>saldo</code> atau <code>rekap</code> di WA.</li>
+            </ul>
+
+            <h2>Cara Kerja Aplikasi Kas WhatsApp</h2>
+            <p>Gampang banget, langsung jalan tanpa pelatihan:</p>
+            <ol>
+                <li><strong>Chat nomor bot.</strong> Buka WhatsApp, chat nomor bot resmi seperti chat biasa.</li>
+                <li><strong>Catat kas masuk atau keluar.</strong> Ketik <code>jual bakso 2 mangkok 40rb</code> untuk
+                    kas masuk, atau <code>beli gas 15rb</code> untuk kas keluar. Bisa juga kirim voice note
+                    <em>"tadi terima 100 ribu dari langganan"</em>. AI otomatis bedakan dan simpan.</li>
+                <li><strong>Cek posisi kas.</strong> Ketik <code>saldo</code> untuk lihat kas sekarang, atau
+                    <code>rekap</code> untuk ringkasan kas harian dan bulanan. Detail lengkapnya ada di dashboard web.</li>
+            </ol>
+            <p>Punya bukti transaksi? Kirim <strong>foto struk atau nota</strong> ke bot, sistem OCR akan membaca dan
+                mencatatnya otomatis sebagai kas keluar.</p>
+
+            <h2>Fitur untuk Kasir dan Pemilik Toko</h2>
+            <p>Walaupun jalan di chat, fiturnya cukup lengkap untuk operasional kas harian:</p>
+            <ul>
+                <li><strong>Catat teks/bahasa bebas (AI)</strong> — paham bahasa Indonesia &amp; slang.</li>
+                <li><strong>Scan struk OCR</strong> — foto nota, otomatis terekam.</li>
+                <li><strong>Catat suara/voice note</strong> — sibuk melayani tetap bisa catat.</li>
+                <li><strong>Multi-user</strong> — kasir input, pemilik pantau, satu laporan.</li>
+                <li><strong>Rekap harian &amp; bulanan</strong> — tutup buku otomatis.</li>
+                <li><strong>Pengingat tagihan &amp; utang-piutang</strong> — kas gak ada yang tertinggal.</li>
+            </ul>
+
+            <h2>Manfaat untuk Tim Toko</h2>
+            <p>Dengan kas dan pemilik catat bareng di satu sistem, <span class="highlight">selisih kas jauh lebih mudah
+                    ditelusuri</span>. Pemilik gak perlu datang ke toko cuma untuk tanya saldo — tinggal chat
+                <code>saldo</code> dari rumah. Kasir juga gak perlu repot buka aplikasi lain, cukup chat di WA yang
+                emang sudah dipakai tiap hari. Hasilnya, disiplin pencatatan naik dan kepercayaan antar tim makin kuat.</p>
+
+            <h2>Pilihan Paket untuk UMKM</h2>
+            <p>Pilih sesuai jumlah tim dan transaksi harian. Semua paket aktif dalam 1 menit setelah pembayaran:</p>
+            <table class="paket-table">
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga/Bulan</th>
+                        <th>Kuota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Free</strong></td>
+                        <td>Gratis</td>
+                        <td>10 teks, 3 struk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lite</strong></td>
+                        <td>Rp15.000</td>
+                        <td>45 teks, 15 struk, edit/hapus</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Starter</strong></td>
+                        <td>Rp29.000</td>
+                        <td>90 teks, 30 struk, export CSV, +1 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Premium</strong></td>
+                        <td>Rp59.000</td>
+                        <td>190 teks, 60 struk, Analisis Keuangan, +2 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro</strong></td>
+                        <td>Rp129.000</td>
+                        <td>380 teks, 115 struk, Analisis Keuangan, +4 nomor</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Untuk toko dengan satu kasir, <strong>Lite</strong> sudah cukup. Untuk tim dengan beberapa kasir, naik ke
+                <strong>Starter</strong> (multi-user pertama) atau <strong>Premium</strong> agar semua bisa input
+                bareng.</p>
+
+            <h2>Tips Memaksimalkan Kas via WhatsApp</h2>
+            <ul>
+                <li><strong>Ajarkan kasir format sederhana.</strong> Cukup ketik nominal dan keterangan.</li>
+                <li><strong>Catat saat itu juga.</strong> Jangan tunda sampai lupa nominalnya.</li>
+                <li><strong>Pakai voice note saat ramai.</strong> Catat tanpa ngetik sambil melayani.</li>
+                <li><strong>Cek <code>saldo</code> tiap akhir hari.</strong> Cocokkan dengan isi laci.</li>
+                <li><strong>Aktifkan multi-user.</strong> Biar pemilik pantau tanpa harus ke toko.</li>
+            </ul>
+
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <details class="faq">
+                <summary>Apakah aplikasi kas WhatsApp ini butuh install aplikasi?</summary>
+                <p>Tidak. Aplikasi kas WhatsApp jalan 100% di dalam WhatsApp. Cukup chat nomor bot seperti chat teman,
+                    tidak perlu download atau install aplikasi tambahan.</p>
+            </details>
+            <details class="faq">
+                <summary>Bisakah kasir dan pemilik catat kas dari HP yang berbeda?</summary>
+                <p>Bisa. Paket Starter ke atas mendukung fitur multi-user. Kasir dan pemilik bisa mencatat kas dari HP
+                    masing-masing, dan semua data otomatis menyatu dalam satu laporan kas.</p>
+            </details>
+            <details class="faq">
+                <summary>Bagaimana cara cek saldo kas lewat WhatsApp?</summary>
+                <p>Cukup ketik <code>saldo</code> di chat bot dan sistem akan langsung menampilkan posisi kas terkini,
+                    dihitung otomatis dari semua kas masuk dikurangi kas keluar yang sudah dicatat.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah bisa catat kas pakai foto struk atau voice note?</summary>
+                <p>Bisa. Kamu bisa kirim foto struk dan sistem OCR akan membaca datanya secara otomatis, atau kirim voice
+                    note seperti "tadi jualan 50 ribu" dan AI akan mencatatnya tanpa perlu mengetik.</p>
+            </details>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Siap catat kas usaha lewat chat?</strong><br>Mulai sekarang, cukup
+                    dari WhatsApp.</p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20daftar%20paket%20aplikasi%20kas%20WhatsApp"
+                    class="btn-cta" target="_blank" rel="noopener">Chat Bot WhatsApp →</a>
+            </div>
+
+            <div class="related">
+                <h2>Artikel Terkait</h2>
+                <ul>
+                    <li>→ <a href="aplikasi-kas-harian.html">Aplikasi Kas Harian yang Praktis untuk UMKM</a></li>
+                    <li>→ <a href="aplikasi-kas-masuk-dan-kas-keluar.html">Aplikasi Kas Masuk dan Kas Keluar</a></li>
+                    <li>→ <a href="laporan-arus-kas-otomatis-umkm.html">Cara Membuat Laporan Arus Kas Otomatis untuk
+                            UMKM</a></li>
+                    <li>→ <a href="aplikasi-kas-harian-usaha.html">Aplikasi Kas Harian Usaha: Pantau Kas Toko Tiap Hari</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="article-footer">
+                <p><strong>Catat Uang WA</strong> — catat keuangan pribadi &amp; usaha langsung dari WhatsApp. <a
+                        href="../">Kembali ke Beranda</a> · <a href="index.html">Lihat semua artikel</a></p>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

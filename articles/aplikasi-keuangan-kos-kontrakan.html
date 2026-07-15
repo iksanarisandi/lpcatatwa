@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aplikasi keuangan kos & kontrakan via WhatsApp. Catat iuran sewa, listrik air, dan piutang anak kos pakai suara. Pengingat tagih otomatis, mulai gratis.">
+    <title>Aplikasi Keuangan untuk Kos & Kontrakan | Catat Uang WA</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://catatwa.de/articles/aplikasi-keuangan-kos-kontrakan">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://catatwa.de/articles/aplikasi-keuangan-kos-kontrakan">
+    <meta property="og:title" content="Aplikasi Keuangan untuk Kos & Kontrakan">
+    <meta property="og:description"
+        content="Aplikasi keuangan kos & kontrakan via WhatsApp. Catat iuran sewa, listrik air, dan piutang anak kos pakai suara. Pengingat tagih otomatis, mulai gratis.">
+    <meta property="og:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+    <meta property="og:site_name" content="Catat Uang WA">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://catatwa.de/articles/aplikasi-keuangan-kos-kontrakan">
+    <meta name="twitter:title" content="Aplikasi Keuangan untuk Kos & Kontrakan">
+    <meta name="twitter:description"
+        content="Aplikasi keuangan kos & kontrakan via WhatsApp. Catat iuran sewa, listrik air, dan piutang anak kos pakai suara. Pengingat tagih otomatis, mulai gratis.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+
+    <!-- JSON-LD Structured Data: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Aplikasi Keuangan untuk Kos & Kontrakan",
+        "description": "Aplikasi keuangan kos & kontrakan via WhatsApp. Catat iuran sewa, listrik air, dan piutang anak kos pakai suara. Pengingat tagih otomatis, mulai gratis.",
+        "url": "https://catatwa.de/articles/aplikasi-keuangan-kos-kontrakan",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Catat Uang WA",
+            "url": "https://catatwa.de/"
+        },
+        "datePublished": "2026-07-15",
+        "dateModified": "2026-07-15"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Bisakah aplikasi ini mengingatkan tagihan sewa kos tiap bulan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Kamu bisa set pengingat tagihan untuk tiap kamar, dan sistem akan mengingatkan saat tanggal jatuh tempo tiba, sehingga tidak ada iuran sewa yang lupa ditagih."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bisa mencatat piutang anak kos yang membayar cicilan atau telat?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Kamu bisa catat sebagai piutang dan sistem akan mengingatkan kapan harus dilunasi. Cocok untuk anak kos yang bayarannya nyicil atau telat bayar."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah saya perlu install aplikasi tambahan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tidak. Cukup chat nomor bot WhatsApp seperti chat teman. Tidak ada aplikasi yang harus didownload atau diinstall di HP kamu."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bisa export laporan keuangan kos ke Excel?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Pakai paket Starter ke atas, kamu bisa export seluruh transaksi iuran, listrik, dan piutang ke CSV/Excel lewat dashboard web untuk laporan bulanan."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #fff;
+            font-size: 17px
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 1.3
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 32px 0 16px
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 20px 0 8px
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #333
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #555
+        }
+
+        .highlight {
+            background: linear-gradient(180deg, transparent 50%, #FFF176 50%);
+            padding: 0 4px;
+            font-weight: 600
+        }
+
+        .cta-box {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: center
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px
+        }
+
+        .btn-cta:hover {
+            background: #20bd5a
+        }
+
+        ul,
+        ol {
+            margin: 16px 0 16px 24px
+        }
+
+        li {
+            margin-bottom: 12px
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px
+        }
+
+        .back-link:hover {
+            color: #25D366
+        }
+
+        .paket-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 15px
+        }
+
+        .paket-table th,
+        .paket-table td {
+            border: 1px solid #e5e5e5;
+            padding: 10px;
+            text-align: left
+        }
+
+        .paket-table th {
+            background: #f8f9fa;
+            font-weight: 600
+        }
+
+        details.faq {
+            border-bottom: 1px solid #eee;
+            padding: 14px 0
+        }
+
+        details.faq summary {
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none
+        }
+
+        details.faq summary::before {
+            content: "▸ ";
+            color: #25D366
+        }
+
+        details.faq[open] summary::before {
+            content: "▾ "
+        }
+
+        details.faq p {
+            margin-top: 10px;
+            color: #555
+        }
+
+        .related {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 32px 0
+        }
+
+        .related h2 {
+            margin-top: 0
+        }
+
+        .related ul {
+            margin: 8px 0 0
+        }
+
+        .related a {
+            color: #1a1a1a;
+            text-decoration: none
+        }
+
+        .related a:hover {
+            color: #25D366
+        }
+
+        .article-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            font-size: 14px;
+            color: #999
+        }
+
+        .article-footer a {
+            color: #25D366;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Kembali ke Beranda</a>
+
+        <article>
+            <h1>Aplikasi <span class="highlight">Keuangan Kos & Kontrakan</span> di WhatsApp</h1>
+
+            <p class="lead">Punya kos atau kontrakan tapi iuran sewa, listrik, dan piutang anak kos berantakan? Dengan
+                <strong>aplikasi keuangan kos kontrakan</strong> berbasis WhatsApp, kamu bisa mencatat setiap iuran
+                bulanan, tagihan, dan piutang penghuni — cukup lewat chat, dengan pengingat otomatis biar gak ada yang
+                lupa ditagih.</p>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Coba gratis sekarang, langsung dari WhatsApp!</strong></p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20coba%20aplikasi%20keuangan%20kos%20%26%20kontrakan"
+                    class="btn-cta" target="_blank" rel="noopener">Mulai Catat Iuran Kos →</a>
+            </div>
+
+            <h2>Masalah Pencatatan Keuangan Kos & Kontrakan</h2>
+            <p>Usaha kos-kontrakan punya alur uang yang unik. Pemasukan rutin dari iuran sewa bulanan, tapi juga ada
+                tagihan listrik, air, sampah, dan sering kali piutang ke anak kos yang telat atau nyicil. Banyak pemilik
+                kos menghadapi masalah klasik berikut:</p>
+            <ul>
+                <li><strong>Iuran sewa telat ditagih.</strong> Lupa kamar mana yang belum bayar bulan ini, uang masuk
+                    jadi nunggak.</li>
+                <li><strong>Piutang anak kos menumpuk.</strong> Ada yang bayar setengah dulu atau telat, tapi gak
+                    diikuti, akhirnya lupa.</li>
+                <li><strong>Tagihan listrik & air gak tercatat.</strong> Uang masuk dari iuran, tapi pengeluaran
+                    tagihan gak dihitung, jadi gak tahu untung bersih.</li>
+                <li><strong>Bingung untung bulan ini.</strong> Omzet kelihatannya stabil, tapi sisa uang gak
+                    konsisten.</li>
+                <li><strong>Ribet pakai buku atau Excel.</strong> Catat tiap kamar tiap bulan manual, lama-lama males
+                    dan berantakan.</li>
+            </ul>
+            <p>Solusinya bukan menyewa admin khusus, tapi pakai alat yang <span class="highlight">catat iuran sekaligus
+                    ngingetin tagih</span> setiap bulan.</p>
+
+            <h2>Kenapa WhatsApp Cocok Buat Pemilik Kos</h2>
+            <p>Buat pemilik kos, WhatsApp udah jadi alat komunikasi dengan anak kos. Jadi catat keuangan di tempat yang
+                sama sangat masuk akal:</p>
+            <ul>
+                <li>✅ <strong>Gak perlu install app baru</strong> — WhatsApp sudah jadi alat komunikasi harianmu.</li>
+                <li>✅ <strong>Catat iuran sambil chat anak kos</strong> — sekali ketik atau voice note, langsung
+                    tercatat.</li>
+                <li>✅ <strong>Paham bahasa bebas</strong> — ketik <code>kamar 3 bayar sewa 500rb</code> atau
+                    <em>"listrik kos bulan ini 350 ribu"</em>, AI tetap paham.</li>
+                <li>✅ <strong>Pengingat tagihan otomatis</strong> — gak perlu ingat tanggal jatuh tempo tiap kamar.
+                </li>
+                <li>✅ <strong>Bisa dipakai bareng pasangan</strong> — kamu dan pasangan bisa catat di nomor bot yang
+                    sama.</li>
+            </ul>
+
+            <h2>Cara Kerja: Catat Keuangan Kos Lewat Chat</h2>
+            <p>Mulainya super cepat, cukup tiga langkah:</p>
+            <ol>
+                <li><strong>Chat nomor bot.</strong> Kirim pesan seperti chat biasa ke nomor WhatsApp resmi Catat Uang
+                    WA.</li>
+                <li><strong>Catat iuran & tagihan.</strong> Ketik <code>kamar 5 bayar sewa 600rb</code> atau kirim voice
+                    note <em>"bayar listrik kos 400 ribu"</em>. Sistem otomatis mengenali nominal dan kategori.</li>
+                <li><strong>Cek & rekap.</strong> Ketik <code>saldo</code> atau <code>rekap</code> untuk lihat total
+                    iuran masuk dan pengeluaran bulan ini. Detail lengkapnya bisa dicek di dashboard web.</li>
+            </ol>
+            <p>Ada anak kos telat bayar? Catat sebagai piutang, lalu set pengingat jatuh tempo. Sistem akan ngingetin
+                kamu saat waktunya tiba, jadi gak ada iuran yang lolos.</p>
+
+            <h2>Fitur Penting untuk Kos & Kontrakan</h2>
+            <p>Walaupun dicatat lewat chat, fiturnya lengkap layaknya aplikasi pembukuan modern:</p>
+            <ul>
+                <li><strong>Catat dengan AI (bahasa bebas)</strong> — paham gaya bahasa Indonesia & slang.</li>
+                <li><strong>Catat suara / voice note</strong> — tinggal cerita, gak perlu ngetik.</li>
+                <li><strong>Kategori otomatis</strong> — iuran sewa, listrik, air, sampah, perbaikan, terpisah rapi.
+                </li>
+                <li><strong>Utang & piutang + pengingat</strong> — andalan utama buat nagih iuran dan piutang anak kos.
+                </li>
+                <li><strong>Pengingat tagihan</strong> — set tanggal jatuh tempo tiap kamar, auto-ngingetin.</li>
+                <li><strong>Rekap harian & bulanan otomatis</strong> — total iuran masuk dikirim otomatis.</li>
+                <li><strong>Export CSV/Excel</strong> — untuk laporan pengeluaran dan pemasukan kos.</li>
+                <li><strong>Dashboard web</strong> — lihat detail, edit, dan hapus transaksi dengan mudah.</li>
+            </ul>
+
+            <h2>Manfaat Buat Pemilik Kos</h2>
+            <p>Dengan pencatatan rapi + pengingat otomatis, kos-kontrakan kamu jadi jauh lebih gampang dikontrol:</p>
+            <ul>
+                <li><strong>Iuran gak ada yang lupa ditagih.</strong> Pengingat otomatis bikin semua kamar ke tagih.
+                </li>
+                <li><strong>Piutang anak kos ke kontrol.</strong> Tahu siapa masih nyicil dan kapan harus dilunasi.</li>
+                <li><strong>Tahu untung bersih tiap bulan.</strong> Setelah dipotong listrik, air, dan perbaikan.</li>
+                <li><strong>Catat gak ribet.</strong> Voice note bikin input cepat walau sedang sibuk.</li>
+                <li><strong>Bisa dikelola bareng pasangan.</strong> Karena bisa pakai multi-nomor.</li>
+                <li><strong>Gak perlu install app apa pun.</strong> Cukup chat nomor bot seperti chat biasa.</li>
+                <li><strong>Tagihan listrik & air ikut tercatat.</strong> Bukan cuma iuran, semua biaya terdata.</li>
+                <li><strong>Cocok untuk kos dan kontrakan apa pun.</strong> Dari 5 kamar sampai puluhan kamar.</li>
+            </ul>
+            <p>Intinya, <span class="highlight">aplikasi keuangan kos kontrakan</span> ini bikin kamu tenang karena
+                setiap iuran ke tagih dan setiap rupiah tercatat — tanpa repot membuka buku besar.</p>
+
+            <h2>Contoh Alur Catat Iuran Kos Sebulan</h2>
+            <p>Biar lebih kebayang, bayangkan kamu punya kos 10 kamar, iuran Rp500.000 per kamar per bulan, plus
+                tagihan listrik dan air yang dibayar kamu dulu lalu ditagih ke anak kos. Tanpa catatan rapi, gampang
+                banget ada yang lolos.</p>
+            <p>Awal bulan, kamu set pengingat tagihan tiap kamar. Saat kamar 3 bayar, ketik <code>kamar 3 bayar sewa
+                    500rb</code>. Kamar 5 bayar setengah dulu? <code>kamar 5 bayar 250rb piutang 250rb jatuh tempo
+                    15</code>. Sistem bakal ngingetin kamu tanggal 15 buat ngutang sisanya ke kamar 5.</p>
+            <p>Saat tagihan listrik masuk Rp1.200.000, kamu catat <code>bayar listrik kos 1.2jt</code> sebagai
+                pengeluaran. Lalu di rekap, kamu bisa lihat: pemasukan iuran Rp5.000.000, dikurangi listrik, air,
+                sampah, dan perbaikan kunci rusak. Selisihnya adalah untung bersih bulan itu.</p>
+            <h3>Yang Bikin Aplikasi Keuangan Kos Kontrakan Ini Praktis</h3>
+            <ul>
+                <li><strong>Tiap kamar ke tagih.</strong> Pengingat otomatis sesuai tanggal jatuh tempo.</li>
+                <li><strong>Piutang anak kos ke kontrol.</strong> Tahu siapa masih nyicil dan berapa.</li>
+                <li><strong>Tagihan listrik & air masuk hitungan.</strong> Bukan cuma iuran doang.</li>
+                <li><strong>Bisa dikelola bareng pasangan.</strong> Multi-nomor di paket berbayar.</li>
+            </ul>
+            <p>Akhir bulan, kamu tinggal export laporan ke Excel untuk lihat performa kos, atau simpan sebagai arsip.
+                Gak perlu lagi buka buku tebal yang katanya mau dirapihin tapi gak pernah kelar.</p>
+
+            <h2>Tips Kelola Keuangan Kos yang Rapi</h2>
+            <ul>
+                <li><strong>Catat iuran begitu dibayar.</strong> Jangan ditunda, biar gak lupa kamar mana yang udah
+                    lunas.</li>
+                <li><strong>Set pengingat tiap tanggal jatuh tempo.</strong> Misal tiap tanggal 5 tiap bulan.</li>
+                <li><strong>Pisahkan iuran sewa dan tagihan.</strong> Biar tahu berapa pemasukan vs pengeluaran.</li>
+                <li><strong>Catat piutang dengan jelas.</strong> Nama penghuni + jumlah + tenggat pelunasan.</li>
+                <li><strong>Evaluasi tiap akhir bulan.</strong> Bandingkan iuran masuk vs tagihan, lihat sisa untung.
+                </li>
+            </ul>
+
+            <h2>Pilihan Paket untuk Kos & Kontrakan</h2>
+            <p>Pilih sesuai jumlah kamarmu. Semua paket bisa aktif dalam 1 menit setelah pembayaran:</p>
+            <table class="paket-table">
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga/Bulan</th>
+                        <th>Kuota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Free</strong></td>
+                        <td>Gratis</td>
+                        <td>10 teks, 3 struk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lite</strong></td>
+                        <td>Rp15.000</td>
+                        <td>45 teks, 15 struk, edit/hapus</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Starter</strong></td>
+                        <td>Rp29.000</td>
+                        <td>90 teks, 30 struk, export CSV, +1 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Premium</strong></td>
+                        <td>Rp59.000</td>
+                        <td>190 teks, 60 struk, Analisis Keuangan, +2 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro</strong></td>
+                        <td>Rp129.000</td>
+                        <td>380 teks, 115 struk, Analisis Keuangan, +4 nomor</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Untuk kos kecil (5-10 kamar), paket <strong>Starter</strong> sudah cukup. Untuk kos besar dengan banyak
+                transaksi iuran dan butuh dikelola bareng pasangan, naik ke <strong>Premium</strong> atau
+                <strong>Pro</strong>.</p>
+
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <details class="faq">
+                <summary>Bisakah aplikasi ini mengingatkan tagihan sewa kos tiap bulan?</summary>
+                <p>Bisa. Kamu bisa set pengingat tagihan untuk tiap kamar, dan sistem akan mengingatkan saat tanggal
+                    jatuh tempo tiba, sehingga tidak ada iuran sewa yang lupa ditagih.</p>
+            </details>
+            <details class="faq">
+                <summary>Bisa mencatat piutang anak kos yang membayar cicilan atau telat?</summary>
+                <p>Bisa. Kamu bisa catat sebagai piutang dan sistem akan mengingatkan kapan harus dilunasi. Cocok untuk
+                    anak kos yang bayarannya nyicil atau telat bayar.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah saya perlu install aplikasi tambahan?</summary>
+                <p>Tidak. Cukup chat nomor bot WhatsApp seperti chat teman. Tidak ada aplikasi yang harus didownload
+                    atau diinstall di HP kamu.</p>
+            </details>
+            <details class="faq">
+                <summary>Bisa export laporan keuangan kos ke Excel?</summary>
+                <p>Bisa. Pakai paket Starter ke atas, kamu bisa export seluruh transaksi iuran, listrik, dan piutang ke
+                    CSV/Excel lewat dashboard web untuk laporan bulanan.</p>
+            </details>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Mau iuran kos ketagih rapi tiap bulan tanpa lupa?</strong><br>Mulai
+                    catat sekarang, cukup dari WhatsApp.</p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20daftar%20paket%20catat%20keuangan%20untuk%20kos%20%26%20kontrakan%20saya"
+                    class="btn-cta" target="_blank" rel="noopener">Chat Bot WhatsApp →</a>
+            </div>
+
+            <div class="related">
+                <h2>Artikel Terkait</h2>
+                <ul>
+                    <li>→ <a href="aplikasi-utang-piutang-whatsapp.html">Aplikasi Utang Piutang Lewat WhatsApp</a></li>
+                    <li>→ <a href="aplikasi-pengingat-tagihan.html">Aplikasi Pengingat Tagihan Otomatis</a></li>
+                    <li>→ <a href="aplikasi-pembukuan-online.html">Aplikasi Pembukuan Online di WhatsApp</a></li>
+                    <li>→ <a href="aplikasi-pembukuan-toko.html">Aplikasi Pembukuan Toko Lewat WhatsApp</a></li>
+                </ul>
+            </div>
+
+            <div class="article-footer">
+                <p><strong>Catat Uang WA</strong> — catat keuangan pribadi & usaha langsung dari WhatsApp. <a
+                        href="../">Kembali ke Beranda</a> · <a href="index.html">Lihat semua artikel</a></p>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

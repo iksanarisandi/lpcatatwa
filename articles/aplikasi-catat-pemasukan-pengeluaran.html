@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aplikasi catat pemasukan dan pengeluaran otomatis lewat WhatsApp. Sistem pisah &amp; kategorikan uang masuk-keluar, rekap harian-bulanan. Mulai gratis!">
+    <title>Aplikasi Catat Pemasukan dan Pengeluaran Otomatis | Catat Uang WA</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://catatwa.de/articles/aplikasi-catat-pemasukan-pengeluaran">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://catatwa.de/articles/aplikasi-catat-pemasukan-pengeluaran">
+    <meta property="og:title" content="Aplikasi Catat Pemasukan dan Pengeluaran Otomatis">
+    <meta property="og:description"
+        content="Aplikasi catat pemasukan dan pengeluaran otomatis lewat WhatsApp. Sistem pisah & kategorikan uang masuk-keluar, rekap harian-bulanan. Mulai gratis!">
+    <meta property="og:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+    <meta property="og:site_name" content="Catat Uang WA">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://catatwa.de/articles/aplikasi-catat-pemasukan-pengeluaran">
+    <meta name="twitter:title" content="Aplikasi Catat Pemasukan dan Pengeluaran Otomatis">
+    <meta name="twitter:description"
+        content="Aplikasi catat pemasukan dan pengeluaran otomatis lewat WhatsApp. Sistem pisah & kategorikan uang masuk-keluar, rekap harian-bulanan. Mulai gratis!">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+
+    <!-- JSON-LD Structured Data: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Aplikasi Catat Pemasukan dan Pengeluaran Otomatis",
+        "description": "Aplikasi catat pemasukan dan pengeluaran otomatis lewat WhatsApp. Sistem pisah & kategorikan uang masuk-keluar, rekap harian-bulanan. Mulai gratis!",
+        "url": "https://catatwa.de/articles/aplikasi-catat-pemasukan-pengeluaran",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Catat Uang WA",
+            "url": "https://catatwa.de/"
+        },
+        "datePublished": "2026-07-15",
+        "dateModified": "2026-07-15"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Bagaimana aplikasi ini memisahkan pemasukan dan pengeluaran secara otomatis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Saat kamu chat transaksi ke bot WhatsApp, AI otomatis mengenali apakah itu uang masuk atau keluar dari kata kunci seperti 'jual', 'terima', 'beli', atau 'bayar'. Nominal dan kategori pun langsung dipisah tanpa perlu kamu pilih manual."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah saya perlu memilih kategori secara manual setiap transaksi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tidak. Sistem mengategorikan otomatis berdasarkan isi pesanmu, misalnya penjualan, belanja bahan, transportasi, atau tagihan. Kamu tetap bisa mengedit kategori kapan saja lewat dashboard web."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah aplikasi catat pemasukan pengeluaran ini gratis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ada paket Free gratis selamanya (10 teks & 3 struk per bulan). Untuk pemakaian harian dengan edit/hapus dan kuota besar, tersedia paket berbayar mulai Rp15.000/bulan."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bisakah saya lihat ringkasan pemasukan dan pengeluaran tiap bulan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Ketik 'rekap' di WhatsApp untuk melihat total pemasukan, pengeluaran, dan selisihnya dalam periode harian maupun bulanan. Rincian per kategori juga tersedia di dashboard web dan bisa di-export ke CSV/Excel."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #fff;
+            font-size: 17px
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 1.3
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 32px 0 16px
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 20px 0 8px
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #333
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #555
+        }
+
+        .highlight {
+            background: linear-gradient(180deg, transparent 50%, #FFF176 50%);
+            padding: 0 4px;
+            font-weight: 600
+        }
+
+        .cta-box {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: center
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px
+        }
+
+        .btn-cta:hover {
+            background: #20bd5a
+        }
+
+        ul,
+        ol {
+            margin: 16px 0 16px 24px
+        }
+
+        li {
+            margin-bottom: 12px
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px
+        }
+
+        .back-link:hover {
+            color: #25D366
+        }
+
+        .paket-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 15px
+        }
+
+        .paket-table th,
+        .paket-table td {
+            border: 1px solid #e5e5e5;
+            padding: 10px;
+            text-align: left
+        }
+
+        .paket-table th {
+            background: #f8f9fa;
+            font-weight: 600
+        }
+
+        details.faq {
+            border-bottom: 1px solid #eee;
+            padding: 14px 0
+        }
+
+        details.faq summary {
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none
+        }
+
+        details.faq summary::before {
+            content: "▸ ";
+            color: #25D366
+        }
+
+        details.faq[open] summary::before {
+            content: "▾ "
+        }
+
+        details.faq p {
+            margin-top: 10px;
+            color: #555
+        }
+
+        .related {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 32px 0
+        }
+
+        .related h2 {
+            margin-top: 0
+        }
+
+        .related ul {
+            margin: 8px 0 0
+        }
+
+        .related a {
+            color: #1a1a1a;
+            text-decoration: none
+        }
+
+        .related a:hover {
+            color: #25D366
+        }
+
+        .article-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            font-size: 14px;
+            color: #999
+        }
+
+        .article-footer a {
+            color: #25D366;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Kembali ke Beranda</a>
+
+        <article>
+            <h1><span class="highlight">Aplikasi Catat Pemasukan dan Pengeluaran</span> Otomatis</h1>
+
+            <p class="lead">Bingung uang masuk dan keluar bercampur jadi satu? Dengan <strong>aplikasi catat
+                    pemasukan dan pengeluaran</strong> berbasis WhatsApp, setiap transaksi otomatis dipisah dan
+                dikategorikan. Tidak perlu input manual, cukup chat — sistem yang kerja.</p>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Pisahkan pemasukan &amp; pengeluaran otomatis, dari WhatsApp!</strong>
+                </p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20coba%20aplikasi%20catat%20pemasukan%20dan%20pengeluaran%20otomatis"
+                    class="btn-cta" target="_blank" rel="noopener">Mulai Catat Otomatis →</a>
+            </div>
+
+            <h2>Kesulitan Pisahkan Uang Masuk dan Keluar</h2>
+            <p>Mencatat transaksi sebenarnya tidak sulit. Yang sulit adalah <span class="highlight">memisahkan dan
+                    mengelompokkannya</span> dengan rapi sehingga bisa dianalisa. Banyak pelaku usaha dan individu
+                mengalami hal berikut:</p>
+            <ul>
+                <li><strong>Catatan jadi satu tanpa kategori.</strong> Tidak tahu uang terbanyak keluar untuk apa.</li>
+                <li><strong>Pemasukan dan pengeluaran tertukar.</strong> Beli bahan dicatat sebagai pemasukan.</li>
+                <li><strong>Lama membuat rekap terpisah.</strong> Tiap akhir bulan harus sortir manual.</li>
+                <li><strong>Tidak tahu selisih (surplus/defisit).</strong> Tidak sadar pengeluaran melebihi pemasukan.</li>
+            </ul>
+            <p>Solusinya: biarkan sistem yang memisahkan dan mengategorikan otomatis, sementara kamu fokus transaksi.</p>
+
+            <h2>Kenapa WhatsApp Cara Paling Praktis</h2>
+            <p>Aplikasi pencatatan umumnya menyuruh kamu memilih dulu: ini pemasukan atau pengeluaran, lalu pilih
+                kategori, baru masukkan nominal. Ribet dan malas dipakai. WhatsApp membalik logikanya — kamu cukup
+                menceritakan transaksinya, sistem yang memilah:</p>
+            <ul>
+                <li>✅ <strong>Tanpa install aplikasi</strong> — pakai WhatsApp yang sudah ada.</li>
+                <li>✅ <strong>Catat seperti chat</strong> — ketik bebas, voice note, atau foto struk.</li>
+                <li>✅ <strong>Pisah &amp; kategori otomatis</strong> — AI yang nentuin.</li>
+                <li>✅ <strong>Jadi kebiasaan</strong> — catat tiap ada transaksi.</li>
+            </ul>
+
+            <h2>Cara Kerja Pencatatan Otomatis</h2>
+            <p>Hanya tiga langkah, langsung jalan tanpa daftar ribet:</p>
+            <ol>
+                <li><strong>Chat nomor bot.</strong> Kirim pesan ke nomor resmi Catat Uang WA seperti chat teman.</li>
+                <li><strong>Ceritakan transaksinya.</strong> Contoh: <code>jual kopi 3 cup 45rb</code> (otomatis jadi
+                    pemasukan) atau <code>beli gula 25 ribu</code> (otomatis jadi pengeluaran). Bisa juga kirim voice
+                    note <em>"tadi bayar listrik 200 ribu"</em> atau foto struk belanja.</li>
+                <li><strong>Cek ringkasan.</strong> Ketik <code>rekap</code> untuk lihat total pemasukan, pengeluaran,
+                    dan selisihnya. Detail per kategori bisa dicek di dashboard web.</li>
+            </ol>
+            <p>Sistem mengenali kata kunci seperti "jual", "terima", "bayar", "beli" untuk menentukan arah uang. Nominal
+                dan kategori dipilih otomatis sesuai konteks.</p>
+
+            <h2>Fitur Pisah &amp; Kategorikan Otomatis</h2>
+            <p>Di balik chat sederhana, sistem bekerja layaknya aplikasi keuangan modern:</p>
+            <ul>
+                <li><strong>Catat teks/bahasa bebas (AI)</strong> — paham slang dan gaya bahasa Indonesia.</li>
+                <li><strong>Kategori otomatis</strong> — misal penjualan, belanja bahan, transport, tagihan, gaji.</li>
+                <li><strong>Scan struk OCR</strong> — foto nota, data langsung terekam dengan kategorinya.</li>
+                <li><strong>Catat suara / voice note</strong> — tanpa mengetik, cukup ngomong.</li>
+                <li><strong>Rekap harian &amp; bulanan otomatis</strong> — total masuk, keluar, dan selisih.</li>
+                <li><strong>Utang-piutang + pengingat</strong> — lacak siapa yang masih berhutang.</li>
+                <li><strong>Tabungan &amp; export CSV/Excel</strong> — susun laporan formal sekali klik.</li>
+            </ul>
+
+            <h2>Manfaat untuk Keuangan Pribadi &amp; Usaha</h2>
+            <p>Pemisahan otomatis ini berguna baik untuk keuangan usaha maupun pribadi:</p>
+            <ul>
+                <li><strong>Usaha:</strong> tahu laba bersih setelah omzet dikurangi semua biaya operasional.</li>
+                <li><strong>Pribadi:</strong> ketahui kebocoran belanja, langganan, atau tagihan yang menyedot budget.</li>
+                <li><strong>Pisah pribadi vs usaha</strong> — buat dua kelompok agar tidak tertukar.</li>
+                <li><strong>Deteksi tren</strong> — lihat kategori mana yang naik tiap bulan.</li>
+            </ul>
+
+            <h2>Pilihan Paket Pencatatan</h2>
+            <p>Pilih sesuai kebutuhan harian. Semua paket dapat fitur pisah &amp; kategori otomatis:</p>
+            <table class="paket-table">
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga/Bulan</th>
+                        <th>Kuota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Free</strong></td>
+                        <td>Gratis</td>
+                        <td>10 teks, 3 struk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lite</strong></td>
+                        <td>Rp15.000</td>
+                        <td>45 teks, 15 struk, edit/hapus</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Starter</strong></td>
+                        <td>Rp29.000</td>
+                        <td>90 teks, 30 struk, export CSV, +1 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Premium</strong></td>
+                        <td>Rp59.000</td>
+                        <td>190 teks, 60 struk, Analisis Keuangan, +2 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro</strong></td>
+                        <td>Rp129.000</td>
+                        <td>380 teks, 115 struk, Analisis Keuangan, +4 nomor</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Untuk catatan harian ringan, <strong>Lite</strong> pas. Kalau butuh export laporan dan dipakai berdua,
+                pilih <strong>Starter</strong>. Untuk analisa mendalam dengan tim lebih besar, naik ke
+                <strong>Premium</strong> atau <strong>Pro</strong>.</p>
+
+            <h2>Tips Memaksimalkan Pemisahan Otomatis</h2>
+            <ul>
+                <li><strong>Catat lengkap.</strong> Sebut nominal dan keperluan, misal "bayar listrik 200 ribu".</li>
+                <li><strong>Pisahkan pribadi &amp; usaha.</strong> Pakai kategori berbeda agar laporan akurat.</li>
+                <li><strong>Cek rekap tiap minggu.</strong> Pastikan kategori tepat dan tidak ada transaksi bolong.</li>
+                <li><strong>Edit kalau perlu.</strong> Koreksi kategori lewat dashboard web dengan cepat.</li>
+            </ul>
+
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <details class="faq">
+                <summary>Bagaimana aplikasi ini memisahkan pemasukan dan pengeluaran secara otomatis?</summary>
+                <p>Saat kamu chat transaksi ke bot WhatsApp, AI otomatis mengenali apakah itu uang masuk atau keluar dari
+                    kata kunci seperti "jual", "terima", "beli", atau "bayar". Nominal dan kategori pun langsung dipisah
+                    tanpa perlu kamu pilih manual.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah saya perlu memilih kategori secara manual setiap transaksi?</summary>
+                <p>Tidak. Sistem mengategorikan otomatis berdasarkan isi pesanmu, misalnya penjualan, belanja bahan,
+                    transportasi, atau tagihan. Kamu tetap bisa mengedit kategori kapan saja lewat dashboard web.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah aplikasi catat pemasukan pengeluaran ini gratis?</summary>
+                <p>Ada paket Free gratis selamanya (10 teks & 3 struk per bulan). Untuk pemakaian harian dengan
+                    edit/hapus dan kuota besar, tersedia paket berbayar mulai Rp15.000/bulan.</p>
+            </details>
+            <details class="faq">
+                <summary>Bisakah saya lihat ringkasan pemasukan dan pengeluaran tiap bulan?</summary>
+                <p>Bisa. Ketik "rekap" di WhatsApp untuk melihat total pemasukan, pengeluaran, dan selisihnya dalam
+                    periode harian maupun bulanan. Rincian per kategori juga tersedia di dashboard web dan bisa
+                    di-export ke CSV/Excel.</p>
+            </details>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Siap pisahin pemasukan &amp; pengeluaran otomatis?<br>Cukup chat,
+                            langsung rapi.</strong></p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20daftar%20paket%20catat%20pemasukan%20dan%20pengeluaran"
+                    class="btn-cta" target="_blank" rel="noopener">Chat Bot WhatsApp →</a>
+            </div>
+
+            <div class="related">
+                <h2>Artikel Terkait</h2>
+                <ul>
+                    <li>→ <a href="aplikasi-catatan-keuangan-harian.html">Aplikasi Catatan Keuangan Harian Digital</a>
+                    </li>
+                    <li>→ <a href="aplikasi-kas-masuk-dan-kas-keluar.html">Aplikasi Kas Masuk dan Kas Keluar Otomatis</a>
+                    </li>
+                    <li>→ <a href="pisahkan-keuangan-pribadi-dan-usaha.html">Cara Pisahkan Keuangan Pribadi dan Usaha</a>
+                    </li>
+                    <li>→ <a href="cara-catat-pemasukan-pengeluaran-whatsapp.html">Cara Catat Pemasukan &amp;
+                            Pengeluaran lewat WhatsApp</a></li>
+                </ul>
+            </div>
+
+            <div class="article-footer">
+                <p><strong>Catat Uang WA</strong> — catat keuangan pribadi & usaha langsung dari WhatsApp. <a
+                        href="../">Kembali ke Beranda</a> · <a href="index.html">Lihat semua artikel</a></p>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

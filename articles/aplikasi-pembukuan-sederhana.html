@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aplikasi pembukuan sederhana untuk pemula. Catat pemasukan & pengeluaran lewat WhatsApp tanpa install app, tanpa Excel. Anti ribet, mulai gratis.">
+    <title>Aplikasi Pembukuan Sederhana untuk Pemula | Catat Uang WA</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://catatwa.de/articles/aplikasi-pembukuan-sederhana">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://catatwa.de/articles/aplikasi-pembukuan-sederhana">
+    <meta property="og:title" content="Aplikasi Pembukuan Sederhana untuk Pemula">
+    <meta property="og:description"
+        content="Aplikasi pembukuan sederhana untuk pemula. Catat pemasukan & pengeluaran lewat WhatsApp tanpa install app, tanpa Excel. Anti ribet, mulai gratis.">
+    <meta property="og:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+    <meta property="og:site_name" content="Catat Uang WA">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://catatwa.de/articles/aplikasi-pembukuan-sederhana">
+    <meta name="twitter:title" content="Aplikasi Pembukuan Sederhana untuk Pemula">
+    <meta name="twitter:description"
+        content="Aplikasi pembukuan sederhana untuk pemula. Catat pemasukan & pengeluaran lewat WhatsApp tanpa install app, tanpa Excel. Anti ribet, mulai gratis.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+
+    <!-- JSON-LD Structured Data: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Aplikasi Pembukuan Sederhana untuk Pemula",
+        "description": "Aplikasi pembukuan sederhana untuk pemula. Catat pemasukan & pengeluaran lewat WhatsApp tanpa install app, tanpa Excel. Anti ribet, mulai gratis.",
+        "url": "https://catatwa.de/articles/aplikasi-pembukuan-sederhana",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Catat Uang WA",
+            "url": "https://catatwa.de/"
+        },
+        "datePublished": "2026-07-15",
+        "dateModified": "2026-07-15"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Apakah aplikasi pembukuan sederhana ini cocok untuk pemula sekali?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sangat cocok. Kamu tidak perlu paham akuntansi atau Excel. Cukup chat nomor bot WhatsApp seperti chat teman, ketik misalnya 'jual kopi 25 ribu', dan transaksi langsung tercatat otomatis."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah saya perlu install aplikasi tambahan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tidak. Semua pencatatan dilakukan langsung di WhatsApp yang sudah ada di HP kamu. Tidak ada aplikasi baru yang harus didownload atau dipelajari."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah ada paket gratis untuk mulai?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ada. Paket Free gratis selamanya dengan kuota 10 teks dan 3 struk per bulan, cocok untuk coba-coba. Kalau butuh kuota lebih besar, ada paket berbayar mulai Rp15.000/bulan."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bisakah saya melihat dan mengedit data yang sudah dicatat?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Semua transaksi tersimpan rapi dan bisa kamu cek, edit, atau hapus lewat dashboard web kapan saja. Hasil catatan juga bisa di-export ke CSV atau Excel."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #fff;
+            font-size: 17px
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 1.3
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 32px 0 16px
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 20px 0 8px
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #333
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #555
+        }
+
+        .highlight {
+            background: linear-gradient(180deg, transparent 50%, #FFF176 50%);
+            padding: 0 4px;
+            font-weight: 600
+        }
+
+        .cta-box {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: center
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px
+        }
+
+        .btn-cta:hover {
+            background: #20bd5a
+        }
+
+        ul,
+        ol {
+            margin: 16px 0 16px 24px
+        }
+
+        li {
+            margin-bottom: 12px
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px
+        }
+
+        .back-link:hover {
+            color: #25D366
+        }
+
+        .paket-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 15px
+        }
+
+        .paket-table th,
+        .paket-table td {
+            border: 1px solid #e5e5e5;
+            padding: 10px;
+            text-align: left
+        }
+
+        .paket-table th {
+            background: #f8f9fa;
+            font-weight: 600
+        }
+
+        details.faq {
+            border-bottom: 1px solid #eee;
+            padding: 14px 0
+        }
+
+        details.faq summary {
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none
+        }
+
+        details.faq summary::before {
+            content: "▸ ";
+            color: #25D366
+        }
+
+        details.faq[open] summary::before {
+            content: "▾ "
+        }
+
+        details.faq p {
+            margin-top: 10px;
+            color: #555
+        }
+
+        .related {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 32px 0
+        }
+
+        .related h2 {
+            margin-top: 0
+        }
+
+        .related ul {
+            margin: 8px 0 0
+        }
+
+        .related a {
+            color: #1a1a1a;
+            text-decoration: none
+        }
+
+        .related a:hover {
+            color: #25D366
+        }
+
+        .article-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            font-size: 14px;
+            color: #999
+        }
+
+        .article-footer a {
+            color: #25D366;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Kembali ke Beranda</a>
+
+        <article>
+            <h1>Aplikasi Pembukuan <span class="highlight">Sederhana</span> untuk Pemula</h1>
+
+            <p class="lead">baru mulai usaha dan bingung mau catat keuangan pakai apa? <strong>Aplikasi pembukuan
+                    sederhana</strong> lewat WhatsApp ini dirancang khusus untuk pemula — minim fitur, anti ribet, cukup
+                chat seperti chat teman. Tanpa install app, tanpa belajar Excel.</p>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Coba gratis sekarang, langsung dari WhatsApp!</strong></p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20coba%20aplikasi%20pembukuan%20sederhana%20untuk%20pemula"
+                    class="btn-cta" target="_blank" rel="noopener">Mulai Catat Keuangan →</a>
+            </div>
+
+            <h2>Kenapa Pemula Sering Kapok Mau Catat Keuangan?</h2>
+            <p>Niatnya mau rapih, tapi akhirnya ditinggal. Itu keluhan yang paling sering muncul saat pemula dicoba
+                mencatat keuangan usaha. Biasanya bukan karena malas, tapi karena alatnya terlalu rumit:</p>
+            <ul>
+                <li><strong>Excel terlalu teknis.</strong> Beli buku, akhirnya lupa nemuin rumusnya.</li>
+                <li><strong>Aplikasi pembukuan umum penuh menu.</strong> Buka app, langsung pusing lihat banyak tombol.</li>
+                <li><strong>Susah konsisten.</strong> Catat pagi, sore sudah males karena prosesnya panjang.</li>
+                <li><strong>Takut salah input.</strong> Sekali salah kolom, semua laporan ikut berantakan.</li>
+            </ul>
+            <p>Pemula butuh yang <span class="highlight">sederhana, cepat, dan dipakai setiap hari</span>. Karena
+               -whatever kita pakai tiap hari adalah WhatsApp, maka catat keuangan paling enak dilakukan di situ.</p>
+
+            <h2>Kenapa WhatsApp adalah Tempat Terbaik untuk Pemula</h2>
+            <p>Membiasakan diri mencatat keuangan itu yang sulit. Tapi kalau catatannya dilakukan di aplikasi yang sudah
+                kamu buka puluhan kali sehari, kebiasaan itu jauh lebih mudah terbentuk. Beberapa keunggulannya:</p>
+            <ul>
+                <li>✅ <strong>Gak perlu install app baru</strong> — WhatsApp sudah ada di HP, tinggal chat.</li>
+                <li>✅ <strong>Catat seperti ngobrol</strong> — ketik bebas atau kirim voice note, AI yang proses.</li>
+                <li>✅ <strong>Tidak ada menu yang membingungkan</strong> — cukup chat, langsung tercatat.</li>
+                <li>✅ <strong>Mudah diingat</strong> — WA dibuka tiap hari, catat jadi otomatis.</li>
+                <li>✅ <strong>Aman dari lupa</strong> — setiap transaksi langsung tersimpan permanen.</li>
+            </ul>
+
+            <h2>Cara Kerja: Tiga Langkah Sederhana</h2>
+            <p>Tidak ada tutorial panjang. Begitu chat, kamu sudah bisa langsung memakai:</p>
+            <ol>
+                <li><strong>Chat nomor bot.</strong> Buka WhatsApp, kirim pesan ke nomor bot resmi seperti chat biasa.</li>
+                <li><strong>Catat transaksi.</strong> Ketik <code>jual kopi 3 cup 45rb</code> atau kirim voice note
+                    <em>"tadi beli bahan kue 50 ribu"</em>. Sistem otomatis mengenali nominal, kategori, dan jenis
+                    transaksi.</li>
+                <li><strong>Cek & rekap.</strong> Ketik <code>saldo</code> atau <code>rekap</code> untuk lihat
+                    ringkasan harian dan bulanan. Detail lengkap bisa dicek di dashboard web.</li>
+            </ol>
+            <p>Kamu juga bisa kirim <strong>foto struk atau nota</strong>, lalu sistem akan otomatis membaca isinya dan
+                mencatatnya. Cocok untuk pemilik warung, toko, atau jasa yang sering dapat bukti fisik.</p>
+
+            <h2>Fitur yang Tepat-saja, Tidak Berlebihan</h2>
+            <p>Untuk pemula, fitur berlimpah justru jadi beban. Di sini kamu dapat fitur yang benar-benar dipakai:</p>
+            <ul>
+                <li><strong>Catat dengan AI (bahasa bebas)</strong> — ketik "jualan 25rb" pun dikenali.</li>
+                <li><strong>Scan struk otomatis</strong> — foto nota, data langsung terekam.</li>
+                <li><strong>Catat via suara</strong> — kirim voice note, gak perlu mengetik.</li>
+                <li><strong>Rekap harian & bulanan otomatis</strong> — ringkasan dikirim tanpa kamu minta.</li>
+                <li><strong>Utang & piutang + pengingat</strong> — jangan sampai lupa tagih atau dilunasi.</li>
+                <li><strong>Export CSV/Excel</strong> — saat butuh laporan, tinggal download.</li>
+            </ul>
+
+            <h2>Pilihan Paket, Mulai dari Gratis</h2>
+            <p>Pemula disarankan mulai dari paket Free dulu. Kalau sudah terbiasa, baru naik ke paket berbayar. Semua
+                paket aktif dalam 1 menit setelah pembayaran:</p>
+            <table class="paket-table">
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga/Bulan</th>
+                        <th>Kuota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Free</strong></td>
+                        <td>Gratis</td>
+                        <td>10 teks, 3 struk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lite</strong></td>
+                        <td>Rp15.000</td>
+                        <td>45 teks, 15 struk, edit/hapus</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Starter</strong></td>
+                        <td>Rp29.000</td>
+                        <td>90 teks, 30 struk, export CSV, +1 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Premium</strong></td>
+                        <td>Rp59.000</td>
+                        <td>190 teks, 60 struk, Analisis Keuangan, +2 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro</strong></td>
+                        <td>Rp129.000</td>
+                        <td>380 teks, 115 struk, Analisis Keuangan, +4 nomor</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Untuk pemula yang baru belajar rajin catat, <strong>Lite</strong> sudah paling pas. Begitu usaha mulai
+                ramai dan butuh analisa untung-rugi, naik ke <strong>Premium</strong> atau <strong>Pro</strong>.</p>
+
+            <h2>Tips Memulai Pencatatan untuk Pemula</h2>
+            <ul>
+                <li><strong>Mulai dari paket Free.</strong> Belajar dulu, gak perlu langsung berbayar.</li>
+                <li><strong>Catat setiap transaksi, sekecil apa pun.</strong> Kebiasaan kecil ini yang bikin keuangan
+                    rapih.</li>
+                <li><strong>Manfaatkan voice note.</strong> Sedang sibuk? Cukup ngomong, catat jalan terus.</li>
+                <li><strong>Cek rekap tiap akhir hari.</strong> Tahu posisi kas sebelum tidur bikin tenang.</li>
+                <li><strong>Pisahkan uang pribadi dan usaha.</strong> Bikin catatan terpisah biar gak tertukar.</li>
+            </ul>
+
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <details class="faq">
+                <summary>Apakah aplikasi pembukuan sederhana ini cocok untuk pemula sekali?</summary>
+                <p>Sangat cocok. Kamu tidak perlu paham akuntansi atau Excel. Cukup chat nomor bot WhatsApp seperti chat
+                    teman, ketik misalnya "jual kopi 25 ribu", dan transaksi langsung tercatat otomatis.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah saya perlu install aplikasi tambahan?</summary>
+                <p>Tidak. Semua pencatatan dilakukan langsung di WhatsApp yang sudah ada di HP kamu. Tidak ada aplikasi
+                    baru yang harus didownload atau dipelajari.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah ada paket gratis untuk mulai?</summary>
+                <p>Ada. Paket Free gratis selamanya dengan kuota 10 teks dan 3 struk per bulan, cocok untuk coba-coba.
+                    Kalau butuh kuota lebih besar, ada paket berbayar mulai Rp15.000/bulan.</p>
+            </details>
+            <details class="faq">
+                <summary>Bisakah saya melihat dan mengedit data yang sudah dicatat?</summary>
+                <p>Bisa. Semua transaksi tersimpan rapi dan bisa kamu cek, edit, atau hapus lewat dashboard web kapan
+                    saja. Hasil catatan juga bisa di-export ke CSV atau Excel.</p>
+            </details>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Siap mulai catat keuangan tanpa ribet?</strong><br>Cukup dari
+                    WhatsApp, langsung jalan.</p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20daftar%20paket%20pembukuan%20sederhana%20via%20WhatsApp"
+                    class="btn-cta" target="_blank" rel="noopener">Chat Bot WhatsApp →</a>
+            </div>
+
+            <div class="related">
+                <h2>Artikel Terkait</h2>
+                <ul>
+                    <li>→ <a href="aplikasi-pembukuan-gratis-vs-berbayar.html">Aplikasi Pembukuan Gratis vs Berbayar:
+                            Mana yang Cocok?</a></li>
+                    <li>→ <a href="aplikasi-laporan-keuangan-sederhana-umkm.html">Aplikasi Laporan Keuangan Sederhana
+                            untuk UMKM</a></li>
+                    <li>→ <a href="pembukuan-tanpa-excel-whatsapp.html">Pembukuan Tanpa Excel, Cukup dari WhatsApp</a>
+                    </li>
+                    <li>→ <a href="aplikasi-keuangan-umkm-pemula.html">Aplikasi Keuangan UMKM untuk Pemula</a></li>
+                </ul>
+            </div>
+
+            <div class="article-footer">
+                <p><strong>Catat Uang WA</strong> — catat keuangan pribadi & usaha langsung dari WhatsApp. <a
+                        href="../">Kembali ke Beranda</a> · <a href="index.html">Lihat semua artikel</a></p>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

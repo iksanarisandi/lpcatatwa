@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aplikasi kas masuk dan kas keluar via WhatsApp. Catat arus kas harian, pantau saldo berjalan real-time tanpa Excel. Mulai gratis, tanpa install app.">
+    <title>Aplikasi Kas Masuk dan Kas Keluar | Catat Uang WA</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://catatwa.de/articles/aplikasi-kas-masuk-dan-kas-keluar">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://catatwa.de/articles/aplikasi-kas-masuk-dan-kas-keluar">
+    <meta property="og:title" content="Aplikasi Kas Masuk dan Kas Keluar">
+    <meta property="og:description"
+        content="Aplikasi kas masuk dan kas keluar via WhatsApp. Catat arus kas harian, pantau saldo berjalan real-time tanpa Excel. Mulai gratis, tanpa install app.">
+    <meta property="og:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+    <meta property="og:site_name" content="Catat Uang WA">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://catatwa.de/articles/aplikasi-kas-masuk-dan-kas-keluar">
+    <meta name="twitter:title" content="Aplikasi Kas Masuk dan Kas Keluar">
+    <meta name="twitter:description"
+        content="Aplikasi kas masuk dan kas keluar via WhatsApp. Catat arus kas harian, pantau saldo berjalan real-time tanpa Excel. Mulai gratis, tanpa install app.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+
+    <!-- JSON-LD Structured Data: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Aplikasi Kas Masuk dan Kas Keluar",
+        "description": "Aplikasi kas masuk dan kas keluar via WhatsApp. Catat arus kas harian, pantau saldo berjalan real-time tanpa Excel. Mulai gratis, tanpa install app.",
+        "url": "https://catatwa.de/articles/aplikasi-kas-masuk-dan-kas-keluar",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Catat Uang WA",
+            "url": "https://catatwa.de/"
+        },
+        "datePublished": "2026-07-15",
+        "dateModified": "2026-07-15"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Apa beda kas masuk dan kas keluar di aplikasi ini?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Kas masuk adalah uang yang masuk ke kas usaha, misalnya hasil penjualan atau pelunasan piutang. Kas keluar adalah uang yang keluar, misalnya beli stok, bayar gaji, atau bayar sewa. Aplikasi ini otomatis membedakan dan menghitung saldo berjalan dari selisih keduanya."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bagaimana cara melihat saldo berjalan secara real-time?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cukup ketik 'saldo' di chat bot WhatsApp dan sistem akan langsung menampilkan saldo kas berjalan saat ini, dihitung otomatis dari semua kas masuk dikurangi kas keluar yang sudah kamu catat."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah saya perlu install aplikasi tambahan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tidak. Aplikasi ini jalan 100% di WhatsApp. Cukup chat nomor bot seperti chat teman, tidak ada aplikasi yang harus didownload atau diinstall."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bisakah data kas masuk dan kas keluar di-export?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Mulai paket Starter, kamu bisa export laporan kas ke CSV atau Excel lewat dashboard web, siap dipakai untuk laporan ke bank, koperasi, atau perpajakan."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #fff;
+            font-size: 17px
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 1.3
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 32px 0 16px
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 20px 0 8px
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #333
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #555
+        }
+
+        .highlight {
+            background: linear-gradient(180deg, transparent 50%, #FFF176 50%);
+            padding: 0 4px;
+            font-weight: 600
+        }
+
+        .cta-box {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: center
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px
+        }
+
+        .btn-cta:hover {
+            background: #20bd5a
+        }
+
+        ul,
+        ol {
+            margin: 16px 0 16px 24px
+        }
+
+        li {
+            margin-bottom: 12px
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px
+        }
+
+        .back-link:hover {
+            color: #25D366
+        }
+
+        .paket-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 15px
+        }
+
+        .paket-table th,
+        .paket-table td {
+            border: 1px solid #e5e5e5;
+            padding: 10px;
+            text-align: left
+        }
+
+        .paket-table th {
+            background: #f8f9fa;
+            font-weight: 600
+        }
+
+        details.faq {
+            border-bottom: 1px solid #eee;
+            padding: 14px 0
+        }
+
+        details.faq summary {
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none
+        }
+
+        details.faq summary::before {
+            content: "▸ ";
+            color: #25D366
+        }
+
+        details.faq[open] summary::before {
+            content: "▾ "
+        }
+
+        details.faq p {
+            margin-top: 10px;
+            color: #555
+        }
+
+        .related {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 32px 0
+        }
+
+        .related h2 {
+            margin-top: 0
+        }
+
+        .related ul {
+            margin: 8px 0 0
+        }
+
+        .related a {
+            color: #1a1a1a;
+            text-decoration: none
+        }
+
+        .related a:hover {
+            color: #25D366
+        }
+
+        .article-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            font-size: 14px;
+            color: #999
+        }
+
+        .article-footer a {
+            color: #25D366;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Kembali ke Beranda</a>
+
+        <article>
+            <h1>Aplikasi Kas Masuk dan <span class="highlight">Kas Keluar</span></h1>
+
+            <p class="lead">Setiap rupiah yang masuk dan keluar dari kas usaha harus tercatat agar kamu tahu saldo
+                berjalannya. Dengan <strong>aplikasi kas masuk dan kas keluar</strong> berbasis WhatsApp, kamu bisa
+                catat cashflow harian cuma dengan chat — tanpa Excel, tanpa install app tambahan.</p>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Coba gratis sekarang, langsung dari WhatsApp!</strong></p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20coba%20aplikasi%20catat%20kas%20masuk%20dan%20kas%20keluar"
+                    class="btn-cta" target="_blank" rel="noopener">Mulai Catat Kas Masuk-Keluar →</a>
+            </div>
+
+            <h2>Kenapa Pencatatan Kas Masuk-Keluar Sering Berantakan?</h2>
+            <p>Dasar dari pembukuan usaha itu sederhana: uang masuk dikurangi uang keluar sama dengan saldo. Tapi di
+                praktiknya, banyak pemilik usaha kecil gagal mencatatnya dengan rapi. Masalahnya hampir selalu sama:</p>
+            <ul>
+                <li><strong>Kas masuk dicatat, kas keluar lupa.</strong> Uang seakan-akan hilang padahal cuma gak
+                    tercatat.</li>
+                <li><strong>Saldo harus dihitung manual.</strong> Capek banget kalau transaksinya banyak.</li>
+                <li><strong>Beli pribadi &amp; usaha campur.</strong> Akhirnya gak jelas mana uang toko, mana uang
+                    pribadi.</li>
+                <li><strong>Excel ribet dibuka tiap transaksi.</strong> Apalagi pas lagi ramai pembeli.</li>
+                <li><strong>Gak tahu posisi kas hari ini.</strong> Akhirnya nekat beli stok tanpa tahu kas cukup atau
+                    tidak.</li>
+            </ul>
+            <p>Padahal, kalau <span class="highlight">kas masuk dan kas keluar tercatat real-time</span>, kamu tinggal
+                lihat saldo dan ambil keputusan bisnis dengan tenang.</p>
+
+            <h2>Kenapa Catat Cashflow di WhatsApp?</h2>
+            <p>Aplikasi pembukuan tradisional bikin kamu harus buka app lain, login, ketuk-ketuk. Itu bikin males. Kalau
+                catatannya ada di WhatsApp, alat yang memang sudah kamu buka tiap jam, kebiasaan mencatat jadi natural:</p>
+            <ul>
+                <li>✅ <strong>Gak perlu install app baru</strong> — WhatsApp sudah ada di HP.</li>
+                <li>✅ <strong>Catat seperti chat teman</strong> — ketik bebas atau voice note.</li>
+                <li>✅ <strong>Saldo berjalan otomatis</strong> — gak perlu hitung manual.</li>
+                <li>✅ <strong>Rekap kas masuk-keluar otomatis</strong> — harian, mingguan, bulanan.</li>
+                <li>✅ <strong>Bisa bareng tim</strong> — kasir catat, pemilik pantau saldo.</li>
+            </ul>
+
+            <h2>Cara Kerja Aplikasi Kas Masuk dan Kas Keluar</h2>
+            <p>Cuma tiga langkah, gak perlu belajar akuntansi:</p>
+            <ol>
+                <li><strong>Chat nomor bot.</strong> Buka WhatsApp, chat nomor bot resmi seperti chat biasa.</li>
+                <li><strong>Catat kas masuk atau keluar.</strong> Ketik <code>jual nasi 2 porsi 30rb</code> untuk kas
+                    masuk, atau <code>beli minyak 18rb</code> untuk kas keluar. Bisa juga voice note
+                    <em>"tadi bayar listrik 200 ribu"</em>. AI otomatis bedakan mana masuk mana keluar.</li>
+                <li><strong>Cek saldo berjalan.</strong> Ketik <code>saldo</code> untuk lihat posisi kas sekarang, atau
+                    <code>rekap</code> untuk ringkasan kas masuk dan kas keluar periode tertentu.</li>
+            </ol>
+            <p>Mau catat dari nota? Kirim <strong>foto struk</strong>, sistem OCR akan membaca dan memasukkannya sebagai
+                kas keluar secara otomatis.</p>
+
+            <h2>Fitur Penting untuk Pencatatan Cashflow</h2>
+            <p>Meski dicatat lewat chat, fiturnya setara aplikasi pembukuan modern:</p>
+            <ul>
+                <li><strong>Catat teks/bahasa bebas (AI)</strong> — paham bahasa Indonesia dan slang.</li>
+                <li><strong>Scan struk OCR</strong> — foto nota, otomatis tercatat.</li>
+                <li><strong>Catat suara/voice note</strong> — tanpa ngetik, pas sibuk.</li>
+                <li><strong>Kategori otomatis</strong> — penjualan, stok, operasional, dan lainnya.</li>
+                <li><strong>Rekap harian &amp; bulanan</strong> — pantau arus kas dari waktu ke waktu.</li>
+                <li><strong>Export CSV/Excel</strong> — laporan siap untuk bank atau koperasi.</li>
+            </ul>
+
+            <h2>Manfaat Pantau Kas Masuk-Keluar Setiap Hari</h2>
+            <p>Usaha yang rutin mencatat kas masuk dan kas keluar akan lebih sehat karena kamu selalu tahu posisi kas
+                yang sebenarnya. Kamu bisa <span class="highlight">hindari beli stok berlebih</span> saat kas menipis,
+                atau justru melihat peluang ekspansi saat saldo menumpuk. Selain itu, data cashflow yang rapi sangat
+                membantu saat mengajukan kredit modal kerja ke bank atau lembaga pembiayaan.</p>
+
+            <h2>Pilihan Paket untuk UMKM</h2>
+            <p>Pilih sesuai banyaknya transaksi kas per bulan. Semua paket aktif dalam 1 menit setelah pembayaran:</p>
+            <table class="paket-table">
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga/Bulan</th>
+                        <th>Kuota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Free</strong></td>
+                        <td>Gratis</td>
+                        <td>10 teks, 3 struk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lite</strong></td>
+                        <td>Rp15.000</td>
+                        <td>45 teks, 15 struk, edit/hapus</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Starter</strong></td>
+                        <td>Rp29.000</td>
+                        <td>90 teks, 30 struk, export CSV, +1 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Premium</strong></td>
+                        <td>Rp59.000</td>
+                        <td>190 teks, 60 struk, Analisis Keuangan, +2 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro</strong></td>
+                        <td>Rp129.000</td>
+                        <td>380 teks, 115 struk, Analisis Keuangan, +4 nomor</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Untuk usaha yang baru rajin mencatat, <strong>Lite</strong> sudah cukup. Kalau transaksi harian padat dan
+                butuh export laporan, naik ke <strong>Starter</strong> atau <strong>Premium</strong>.</p>
+
+            <h2>Tips Mengelola Kas Masuk dan Kas Keluar</h2>
+            <ul>
+                <li><strong>Catat saat itu juga.</strong> Jangan tunda, makin lama makin rawan lupa.</li>
+                <li><strong>Pisahkan kas pribadi &amp; usaha.</strong> Bikin catatan terpisah biar saldo jelas.</li>
+                <li><strong>Cek saldo sebelum beli stok besar.</strong> Hindari kehabisan kas mendadak.</li>
+                <li><strong>Pakai voice note saat ramai.</strong> Catat tanpa ngetik sambil melayani pembeli.</li>
+                <li><strong>Export laporan tiap bulan.</strong> Simpan sebagai arsip keuangan usaha.</li>
+            </ul>
+
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <details class="faq">
+                <summary>Apa beda kas masuk dan kas keluar di aplikasi ini?</summary>
+                <p>Kas masuk adalah uang yang masuk ke kas usaha, misalnya hasil penjualan atau pelunasan piutang. Kas
+                    keluar adalah uang yang keluar, misalnya beli stok, bayar gaji, atau bayar sewa. Aplikasi ini
+                    otomatis membedakan dan menghitung saldo berjalan dari selisih keduanya.</p>
+            </details>
+            <details class="faq">
+                <summary>Bagaimana cara melihat saldo berjalan secara real-time?</summary>
+                <p>Cukup ketik <code>saldo</code> di chat bot WhatsApp dan sistem akan langsung menampilkan saldo kas
+                    berjalan saat ini, dihitung otomatis dari semua kas masuk dikurangi kas keluar yang sudah kamu
+                    catat.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah saya perlu install aplikasi tambahan?</summary>
+                <p>Tidak. Aplikasi ini jalan 100% di WhatsApp. Cukup chat nomor bot seperti chat teman, tidak ada
+                    aplikasi yang harus didownload atau diinstall.</p>
+            </details>
+            <details class="faq">
+                <summary>Bisakah data kas masuk dan kas keluar di-export?</summary>
+                <p>Bisa. Mulai paket Starter, kamu bisa export laporan kas ke CSV atau Excel lewat dashboard web, siap
+                    dipakai untuk laporan ke bank, koperasi, atau perpajakan.</p>
+            </details>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Siap kelola kas masuk &amp; keluar usaha kamu?</strong><br>Mulai
+                    sekarang, cukup dari WhatsApp.</p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20daftar%20paket%20aplikasi%20kas%20masuk%20dan%20kas%20keluar"
+                    class="btn-cta" target="_blank" rel="noopener">Chat Bot WhatsApp →</a>
+            </div>
+
+            <div class="related">
+                <h2>Artikel Terkait</h2>
+                <ul>
+                    <li>→ <a href="aplikasi-kas-harian.html">Aplikasi Kas Harian yang Praktis untuk UMKM</a></li>
+                    <li>→ <a href="laporan-arus-kas-otomatis-umkm.html">Cara Membuat Laporan Arus Kas Otomatis untuk
+                            UMKM</a></li>
+                    <li>→ <a href="aplikasi-kas-whatsapp.html">Aplikasi Kas WhatsApp: Catat Kas via Chat</a></li>
+                    <li>→ <a href="aplikasi-kas-harian-usaha.html">Aplikasi Kas Harian Usaha: Pantau Kas Toko Tiap Hari</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="article-footer">
+                <p><strong>Catat Uang WA</strong> — catat keuangan pribadi &amp; usaha langsung dari WhatsApp. <a
+                        href="../">Kembali ke Beranda</a> · <a href="index.html">Lihat semua artikel</a></p>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aplikasi kas harian usaha: pantau kas toko tiap hari secara real-time. Kasir & pemilik catat via WhatsApp, tutup buku harian otomatis. Mulai gratis.">
+    <title>Aplikasi Kas Harian Usaha: Pantau Kas Toko Tiap Hari | Catat Uang WA</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://catatwa.de/articles/aplikasi-kas-harian-usaha">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://catatwa.de/articles/aplikasi-kas-harian-usaha">
+    <meta property="og:title" content="Aplikasi Kas Harian Usaha: Pantau Kas Toko Tiap Hari">
+    <meta property="og:description"
+        content="Aplikasi kas harian usaha: pantau kas toko tiap hari secara real-time. Kasir & pemilik catat via WhatsApp, tutup buku harian otomatis. Mulai gratis.">
+    <meta property="og:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+    <meta property="og:site_name" content="Catat Uang WA">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://catatwa.de/articles/aplikasi-kas-harian-usaha">
+    <meta name="twitter:title" content="Aplikasi Kas Harian Usaha: Pantau Kas Toko Tiap Hari">
+    <meta name="twitter:description"
+        content="Aplikasi kas harian usaha: pantau kas toko tiap hari secara real-time. Kasir & pemilik catat via WhatsApp, tutup buku harian otomatis. Mulai gratis.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+
+    <!-- JSON-LD Structured Data: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Aplikasi Kas Harian Usaha: Pantau Kas Toko Tiap Hari",
+        "description": "Aplikasi kas harian usaha: pantau kas toko tiap hari secara real-time. Kasir & pemilik catat via WhatsApp, tutup buku harian otomatis. Mulai gratis.",
+        "url": "https://catatwa.de/articles/aplikasi-kas-harian-usaha",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Catat Uang WA",
+            "url": "https://catatwa.de/"
+        },
+        "datePublished": "2026-07-15",
+        "dateModified": "2026-07-15"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Bagaimana cara pantau kas toko secara real-time lewat aplikasi ini?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cukup ketik 'saldo' di chat bot WhatsApp dan sistem akan menampilkan posisi kas toko terkini. Pemilik bisa pantau dari rumah, sementara kasir terus mencatat tiap transaksi lewat HP-nya masing-masing."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah aplikasi kas harian usaha ini butuh install aplikasi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tidak. Aplikasi ini jalan 100% di WhatsApp. Cukup chat nomor bot seperti chat teman, tidak perlu download atau install aplikasi tambahan di HP kasir maupun pemilik."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bisakah beberapa kasir mencatat kas di toko yang sama?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Paket Starter ke atas mendukung tambah nomor (multi-user), sehingga beberapa kasir bisa mencatat dari HP mereka sendiri dan seluruh transaksi menyatu dalam satu laporan kas toko."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah ada laporan tutup buku harian secara otomatis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ada. Setiap transaksi yang dicatat sepanjang hari otomatis direkap menjadi ringkasan kas masuk, kas keluar, dan saldo akhir hari, yang bisa dicek lewat chat atau dashboard web."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #fff;
+            font-size: 17px
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 1.3
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 32px 0 16px
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 20px 0 8px
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #333
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #555
+        }
+
+        .highlight {
+            background: linear-gradient(180deg, transparent 50%, #FFF176 50%);
+            padding: 0 4px;
+            font-weight: 600
+        }
+
+        .cta-box {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: center
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px
+        }
+
+        .btn-cta:hover {
+            background: #20bd5a
+        }
+
+        ul,
+        ol {
+            margin: 16px 0 16px 24px
+        }
+
+        li {
+            margin-bottom: 12px
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px
+        }
+
+        .back-link:hover {
+            color: #25D366
+        }
+
+        .paket-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 15px
+        }
+
+        .paket-table th,
+        .paket-table td {
+            border: 1px solid #e5e5e5;
+            padding: 10px;
+            text-align: left
+        }
+
+        .paket-table th {
+            background: #f8f9fa;
+            font-weight: 600
+        }
+
+        details.faq {
+            border-bottom: 1px solid #eee;
+            padding: 14px 0
+        }
+
+        details.faq summary {
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none
+        }
+
+        details.faq summary::before {
+            content: "▸ ";
+            color: #25D366
+        }
+
+        details.faq[open] summary::before {
+            content: "▾ "
+        }
+
+        details.faq p {
+            margin-top: 10px;
+            color: #555
+        }
+
+        .related {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 32px 0
+        }
+
+        .related h2 {
+            margin-top: 0
+        }
+
+        .related ul {
+            margin: 8px 0 0
+        }
+
+        .related a {
+            color: #1a1a1a;
+            text-decoration: none
+        }
+
+        .related a:hover {
+            color: #25D366
+        }
+
+        .article-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            font-size: 14px;
+            color: #999
+        }
+
+        .article-footer a {
+            color: #25D366;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Kembali ke Beranda</a>
+
+        <article>
+            <h1>Aplikasi Kas Harian Usaha: Pantau Kas Toko Tiap <span class="highlight">Hari</span></h1>
+
+            <p class="lead">Kas toko harus dipantau tiap hari supaya gak ada uang yang hilang. Dengan <strong>aplikasi
+                    kas harian usaha</strong> berbasis WhatsApp, kasir catat penjualan langsung lewat chat dan pemilik
+                bisa lihat saldo kas real-time dari mana saja — tanpa install app, tanpa menunggu laporan akhir bulan.</p>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Coba gratis sekarang, langsung dari WhatsApp!</strong></p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20coba%20aplikasi%20kas%20harian%20untuk%20toko%20dan%20usaha"
+                    class="btn-cta" target="_blank" rel="noopener">Mulai Pantau Kas Toko →</a>
+            </div>
+
+            <h2>Mengapa Pantau Kas Toko Tiap Hari Itu Wajib?</h2>
+            <p>Kas toko berbeda dengan laba. Kamu bisa untung di kertas, tapi kalau kasnya habis, operasional tetap
+                berhenti. Itu sebabnya pantau kas harian jadi kebiasaan wajib pemilik toko. Sayangnya, banyak yang gagal
+                karena alatnya ribet:</p>
+            <ul>
+                <li><strong>Kasir lupa catat karena sibuk.</strong> Akhir hari kas selisih, bingung cari sumbernya.</li>
+                <li><strong>Pemilik gak tahu posisi kas.</strong> Harus telfon atau datang ke toko tiap mau cek.</li>
+                <li><strong>Nota menumpuk, gak diinput.</strong> Rekap harian jadi tarikan semalam.</li>
+                <li><strong>Excel cuma dibuka akhir bulan.</strong> Saat ada masalah, sudah telat.</li>
+                <li><strong>Belanja stok asal tebak.</strong> Tanpa data kas real-time, keputusan jadi nekat.</li>
+            </ul>
+            <p>Solusinya sederhana: pakai alat yang <span class="highlight">dibuka kasir dan pemilik tiap hari</span> —
+                yaitu WhatsApp.</p>
+
+            <h2>Kenapa Catat Kas Toko di WhatsApp?</h2>
+            <p>WhatsApp adalah aplikasi yang paling sering dibuka di toko. Manfaatkan sebagai alat catat kas bikin
+                kebiasaan ini gampang sekali dibangun:</p>
+            <ul>
+                <li>✅ <strong>Gak perlu install app baru</strong> — WhatsApp sudah ada di HP kasir &amp; pemilik.</li>
+                <li>✅ <strong>Catat seperti chat</strong> — ketik bebas, foto struk, atau voice note.</li>
+                <li>✅ <strong>Saldo real-time</strong> — tiap transaksi langsung menggerakkan saldo kas.</li>
+                <li>✅ <strong>Multi-user</strong> — beberapa kasir input, pemilik pantau dari rumah.</li>
+                <li>✅ <strong>Rekap harian otomatis</strong> — tutup buku tiap akhir hari tanpa repot.</li>
+            </ul>
+
+            <h2>Cara Kerja Aplikasi Kas Harian Usaha</h2>
+            <p>Gampang banget, langsung jalan tanpa pelatihan panjang:</p>
+            <ol>
+                <li><strong>Chat nomor bot.</strong> Buka WhatsApp, chat nomor bot resmi seperti chat biasa.</li>
+                <li><strong>Catat kas masuk &amp; keluar.</strong> Ketik <code>jual sembako 75rb</code> untuk kas masuk,
+                    atau <code>beli tepung 25rb</code> untuk kas keluar. Bisa juga voice note
+                    <em>"tadi setoran langganan 200 ribu"</em>. AI otomatis kenali nominal, arah, dan kategori.</li>
+                <li><strong>Pantau kas toko.</strong> Ketik <code>saldo</code> untuk lihat kas sekarang, atau
+                    <code>rekap</code> untuk ringkasan kas harian dan bulanan toko. Detail lengkap di dashboard web.</li>
+            </ol>
+            <p>Untuk transaksi yang ada buktinya, kirim <strong>foto struk</strong> ke bot, dan sistem OCR akan membaca
+                serta mencatatnya otomatis sebagai kas keluar.</p>
+
+            <h2>Fitur Penting untuk Toko dan Usaha Harian</h2>
+            <p>Walaupun jalan di chat, fiturnya cukup untuk operasional toko sehari-hari:</p>
+            <ul>
+                <li><strong>Catat teks/bahasa bebas (AI)</strong> — paham bahasa Indonesia &amp; slang kasir.</li>
+                <li><strong>Scan struk OCR</strong> — foto nota, otomatis terekam.</li>
+                <li><strong>Catat suara/voice note</strong> — sibuk melayani tetap bisa catat.</li>
+                <li><strong>Multi-user (kasir realtime)</strong> — beberapa HP, satu laporan kas.</li>
+                <li><strong>Utang-piutang + pengingat tagihan</strong> — kas toko gak ada yang tertinggal.</li>
+                <li><strong>Rekap harian &amp; bulanan + export CSV/Excel</strong> — laporan siap kapan saja.</li>
+            </ul>
+
+            <h2>Manfaat Pantau Kas Toko Real-time</h2>
+            <p>Pemilik toko yang memantau kas real-time bisa ambil keputusan lebih cepat dan tepat. Kamu tahu kapan kas
+                cukup untuk restock, kapan harus tunda belanja besar, dan <span class="highlight">deteksi selisih kas
+                    sebelum makin besar</span>. Kasir juga jadi lebih disiplin karena setiap transaksi tercatat saat itu
+                juga. Saat butuh tambahan modal, laporan kas harian yang rapi jadi bukti paling meyakinkan untuk bank
+                atau supplier.</p>
+
+            <h2>Pilihan Paket untuk Toko dan Usaha</h2>
+            <p>Pilih sesuai skala toko kamu. Semua paket aktif dalam 1 menit setelah pembayaran:</p>
+            <table class="paket-table">
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga/Bulan</th>
+                        <th>Kuota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Free</strong></td>
+                        <td>Gratis</td>
+                        <td>10 teks, 3 struk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lite</strong></td>
+                        <td>Rp15.000</td>
+                        <td>45 teks, 15 struk, edit/hapus</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Starter</strong></td>
+                        <td>Rp29.000</td>
+                        <td>90 teks, 30 struk, export CSV, +1 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Premium</strong></td>
+                        <td>Rp59.000</td>
+                        <td>190 teks, 60 struk, Analisis Keuangan, +2 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro</strong></td>
+                        <td>Rp129.000</td>
+                        <td>380 teks, 115 struk, Analisis Keuangan, +4 nomor</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Untuk toko dengan satu kasir, <strong>Lite</strong> sudah pas. Untuk toko dengan beberapa kasir yang
+                butuh input bareng, pilih <strong>Starter</strong>, <strong>Premium</strong>, atau <strong>Pro</strong>
+                sesuai jumlah tim.</p>
+
+            <h2>Tips Memantau Kas Toko Tiap Hari</h2>
+            <ul>
+                <li><strong>Catat saat transaksi terjadi.</strong> Jangan tunda, kasir gampang lupa nominal.</li>
+                <li><strong>Tutup buku tiap akhir hari.</strong> Ketik <code>saldo</code> lalu cocokkan dengan laci.</li>
+                <li><strong>Aktifkan multi-user.</strong> Biar semua kasir input dan pemilik pantau dari rumah.</li>
+                <li><strong>Pakai voice note saat ramai.</strong> Catat cepat tanpa ngetik.</li>
+                <li><strong>Export laporan tiap bulan.</strong> Simpan sebagai arus kas toko bulanan.</li>
+            </ul>
+
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <details class="faq">
+                <summary>Bagaimana cara pantau kas toko secara real-time lewat aplikasi ini?</summary>
+                <p>Cukup ketik <code>saldo</code> di chat bot WhatsApp dan sistem akan menampilkan posisi kas toko
+                    terkini. Pemilik bisa pantau dari rumah, sementara kasir terus mencatat tiap transaksi lewat
+                    HP-nya masing-masing.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah aplikasi kas harian usaha ini butuh install aplikasi?</summary>
+                <p>Tidak. Aplikasi ini jalan 100% di WhatsApp. Cukup chat nomor bot seperti chat teman, tidak perlu
+                    download atau install aplikasi tambahan di HP kasir maupun pemilik.</p>
+            </details>
+            <details class="faq">
+                <summary>Bisakah beberapa kasir mencatat kas di toko yang sama?</summary>
+                <p>Bisa. Paket Starter ke atas mendukung tambah nomor (multi-user), sehingga beberapa kasir bisa
+                    mencatat dari HP mereka sendiri dan seluruh transaksi menyatu dalam satu laporan kas toko.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah ada laporan tutup buku harian secara otomatis?</summary>
+                <p>Ada. Setiap transaksi yang dicatat sepanjang hari otomatis direkap menjadi ringkasan kas masuk, kas
+                    keluar, dan saldo akhir hari, yang bisa dicek lewat chat atau dashboard web.</p>
+            </details>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Siap pantau kas toko tiap hari?</strong><br>Mulai sekarang, cukup
+                    dari WhatsApp.</p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20daftar%20paket%20aplikasi%20kas%20harian%20usaha"
+                    class="btn-cta" target="_blank" rel="noopener">Chat Bot WhatsApp →</a>
+            </div>
+
+            <div class="related">
+                <h2>Artikel Terkait</h2>
+                <ul>
+                    <li>→ <a href="aplikasi-kas-harian.html">Aplikasi Kas Harian yang Praktis untuk UMKM</a></li>
+                    <li>→ <a href="aplikasi-kas-masuk-dan-kas-keluar.html">Aplikasi Kas Masuk dan Kas Keluar</a></li>
+                    <li>→ <a href="laporan-arus-kas-otomatis-umkm.html">Cara Membuat Laporan Arus Kas Otomatis untuk
+                            UMKM</a></li>
+                    <li>→ <a href="aplikasi-kas-whatsapp.html">Aplikasi Kas WhatsApp: Catat Kas via Chat</a></li>
+                </ul>
+            </div>
+
+            <div class="article-footer">
+                <p><strong>Catat Uang WA</strong> — catat keuangan pribadi &amp; usaha langsung dari WhatsApp. <a
+                        href="../">Kembali ke Beranda</a> · <a href="index.html">Lihat semua artikel</a></p>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

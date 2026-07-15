@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aplikasi pembukuan untuk reseller lewat WhatsApp. Catat modal, margin, dan keuntungan per barang otomatis dari chat. Tanpa install app, mulai gratis.">
+    <title>Aplikasi Pembukuan untuk Reseller | Catat Uang WA</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://catatwa.de/articles/aplikasi-pembukuan-reseller">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://catatwa.de/articles/aplikasi-pembukuan-reseller">
+    <meta property="og:title" content="Aplikasi Pembukuan untuk Reseller">
+    <meta property="og:description"
+        content="Aplikasi pembukuan untuk reseller lewat WhatsApp. Catat modal, margin, dan keuntungan per barang otomatis dari chat. Tanpa install app, mulai gratis.">
+    <meta property="og:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+    <meta property="og:site_name" content="Catat Uang WA">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://catatwa.de/articles/aplikasi-pembukuan-reseller">
+    <meta name="twitter:title" content="Aplikasi Pembukuan untuk Reseller">
+    <meta name="twitter:description"
+        content="Aplikasi pembukuan untuk reseller lewat WhatsApp. Catat modal, margin, dan keuntungan per barang otomatis dari chat. Tanpa install app, mulai gratis.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+
+    <!-- JSON-LD Structured Data: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Aplikasi Pembukuan untuk Reseller",
+        "description": "Aplikasi pembukuan untuk reseller lewat WhatsApp. Catat modal, margin, dan keuntungan per barang otomatis dari chat. Tanpa install app, mulai gratis.",
+        "url": "https://catatwa.de/articles/aplikasi-pembukuan-reseller",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Catat Uang WA",
+            "url": "https://catatwa.de/"
+        },
+        "datePublished": "2026-07-15",
+        "dateModified": "2026-07-15"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Apakah aplikasi pembukuan reseller WhatsApp ini gratis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ada paket Free yang gratis selamanya (10 teks & 3 struk per bulan) untuk coba-coba. Untuk pencatatan reseller harian, tersedia paket berbayar mulai Rp15.000/bulan dengan kuota jauh lebih besar."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah saya perlu install aplikasi tambahan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tidak. Cukup chat nomor bot WhatsApp seperti chat teman. Tidak ada aplikasi yang harus didownload atau diinstall di HP kamu."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bisakah catat penjualan reseller pakai suara?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Kamu cukup kirim voice note ke bot, contohnya 'jual 2 sepatu margin 40 ribu', dan sistem akan otomatis mencatatnya tanpa perlu mengetik."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah data reseller saya aman dan bisa diakses kapan saja?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ya. Semua transaksi reseller tersimpan rapi dan bisa kamu cek kapan saja melalui dashboard web, termasuk edit, hapus, dan export laporan ke CSV/Excel."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #fff;
+            font-size: 17px
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 1.3
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 32px 0 16px
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 20px 0 8px
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #333
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #555
+        }
+
+        .highlight {
+            background: linear-gradient(180deg, transparent 50%, #FFF176 50%);
+            padding: 0 4px;
+            font-weight: 600
+        }
+
+        .cta-box {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: center
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px
+        }
+
+        .btn-cta:hover {
+            background: #20bd5a
+        }
+
+        ul,
+        ol {
+            margin: 16px 0 16px 24px
+        }
+
+        li {
+            margin-bottom: 12px
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px
+        }
+
+        .back-link:hover {
+            color: #25D366
+        }
+
+        .paket-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 15px
+        }
+
+        .paket-table th,
+        .paket-table td {
+            border: 1px solid #e5e5e5;
+            padding: 10px;
+            text-align: left
+        }
+
+        .paket-table th {
+            background: #f8f9fa;
+            font-weight: 600
+        }
+
+        details.faq {
+            border-bottom: 1px solid #eee;
+            padding: 14px 0
+        }
+
+        details.faq summary {
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none
+        }
+
+        details.faq summary::before {
+            content: "▸ ";
+            color: #25D366
+        }
+
+        details.faq[open] summary::before {
+            content: "▾ "
+        }
+
+        details.faq p {
+            margin-top: 10px;
+            color: #555
+        }
+
+        .related {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 32px 0
+        }
+
+        .related h2 {
+            margin-top: 0
+        }
+
+        .related ul {
+            margin: 8px 0 0
+        }
+
+        .related a {
+            color: #1a1a1a;
+            text-decoration: none
+        }
+
+        .related a:hover {
+            color: #25D366
+        }
+
+        .article-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            font-size: 14px;
+            color: #999
+        }
+
+        .article-footer a {
+            color: #25D366;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Kembali ke Beranda</a>
+
+        <article>
+            <h1>Aplikasi Pembukuan untuk <span class="highlight">Reseller</span></h1>
+
+            <p class="lead">Jualan reseller tapi modal dan margin per barangnya gak pernah dihitung benar? Dengan
+                <strong>aplikasi pembukuan untuk reseller</strong> berbasis WhatsApp, kamu bisa mencatat modal, harga
+                jual, dan keuntungan tiap barang otomatis hanya dari chat — tanpa install aplikasi, tanpa pusing ngolah
+                angka di Excel.</p>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Coba gratis sekarang, langsung dari WhatsApp!</strong></p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20coba%20aplikasi%20pembukuan%20reseller%20lewat%20WhatsApp"
+                    class="btn-cta" target="_blank" rel="noopener">Mulai Pembukuan Reseller →</a>
+            </div>
+
+            <h2>Masalah Pembukuan yang Sering Dialami Reseller</h2>
+            <p>Reseller adalah bisnis jualan barang orang lain dengan margin tipis. Sayangnya, pencatatannya nyaris
+                selalu berantakan karena alasan klasik berikut:</p>
+            <ul>
+                <li><strong>Modal per barang gak dihitung.</strong> Beli grosir besar, tapi harga modal tiap potong
+                    lupa dicatat, jadi gak tahu untung aslinya.</li>
+                <li><strong>Margin beda-beda per pembeli.</strong> Ada yang dapat harga reseller, ada yang eceran —
+                    lupa dicatat, akhirnya bingung.</li>
+                <li><strong>Barang belum lunas ikut dikirim.</strong> Utang pelanggan atau sisa bayar ke supplier
+                    gak tercatat.</li>
+                <li><strong>Ongkir &amp; biaya admin marketplace gak dihitung.</strong> Ujungnya untung tipis ludes
+                    tanpa disadari.</li>
+                <li><strong>Campur modal jualan &amp; uang pribadi.</strong> Akhirnya gak kelihatan berapa beneran
+                    laba bersih.</li>
+            </ul>
+            <p>Solusinya bukan bikin spreadsheet rumit, tapi pakai cara yang <span class="highlight">bisa dicatat tiap
+                    ada transaksi</span>. Cara paling natural untuk reseller adalah chat WhatsApp — kan orderan juga
+                masuk dari sana.</p>
+
+            <h2>Kenapa WhatsApp Cocok untuk Pembukuan Reseller</h2>
+            <p>Memilih <strong>aplikasi pembukuan untuk reseller</strong> berbasis WhatsApp punya keunggulan yang sangat
+                pas:</p>
+            <ul>
+                <li>✅ <strong>Gak perlu install app baru</strong> — WhatsApp sudah jadi tempat orderan masuk.</li>
+                <li>✅ <strong>Catat seperti chat biasa</strong> — ketik bebas atau kirim voice note sambil balas
+                    pelanggan.</li>
+                <li>✅ <strong>Otomatis kecatat</strong> — gak perlu input manual di Excel tiap malam.</li>
+                <li>✅ <strong>Selalu ingat</strong> — karena orderan lewat WA, catat jadi kebiasaan otomatis.</li>
+                <li>✅ <strong>Bisa bareng dropshipper/mitra</strong> — catat di nomor yang sama biar sinkron.</li>
+            </ul>
+
+            <h2>Cara Kerja Pembukuan Reseller Lewat WhatsApp</h2>
+            <p>Mulainya sangat cepat, cukup tiga langkah:</p>
+            <ol>
+                <li><strong>Chat nomor bot.</strong> Kirim pesan seperti chat biasa ke nomor WhatsApp resmi.</li>
+                <li><strong>Catat transaksi.</strong> Ketik <code>beli modal 10 dress 350rb</code> atau <code>jual
+                        dress margin 40rb</code>. Bisa juga kirim voice note <em>"tadi jual 2 sepatu untung 80 ribu"
+                    </em>. Sistem otomatis mengenali nominal dan kategori.</li>
+                <li><strong>Cek &amp; rekap.</strong> Ketik <code>saldo</code> atau <code>rekap</code> untuk melihat
+                    total modal, penjualan, dan keuntungan. Detail lengkap bisa dicek di dashboard web.</li>
+            </ol>
+            <p>Kamu juga bisa mengirim <strong>foto invoice dari supplier atau struk ongkir</strong>, lalu sistem
+                otomatis membaca dan mencatatnya. Cocok untuk reseller yang punya banyak nota pembelian dan biaya
+                kirim.</p>
+
+            <h2>Fitur Penting untuk Reseller</h2>
+            <p>Walaupun dicatat lewat chat, fiturnya lengkap layaknya aplikasi pembukuan modern:</p>
+            <ul>
+                <li><strong>Catat dengan AI (bahasa bebas)</strong> — paham gaya bahasa Indonesia &amp; slang jualan.</li>
+                <li><strong>Scan struk otomatis</strong> — kirim foto invoice supplier, data langsung terekam.</li>
+                <li><strong>Catat via suara</strong> — cukup voice note, tanpa mengetik, walau sedang repot orderan.</li>
+                <li><strong>Utang &amp; piutang + pengingat</strong> — pelanggan belum lunas gak lupa ditagih.</li>
+                <li><strong>Rekap harian &amp; bulanan otomatis</strong> — ringkasan penjualan dan untung dikirim
+                    otomatis.</li>
+                <li><strong>Export CSV/Excel</strong> — untuk laporan ke mitra, supplier, atau perhitungan pajak.</li>
+                <li><strong>Dashboard web</strong> — cek detail per barang, edit, dan hapus transaksi dengan mudah.</li>
+                <li><strong>Multi-user</strong> — kamu dan admin bisa input di nomor yang sama.</li>
+            </ul>
+
+            <h2>Manfaat Rutin Mencatat Keuangan Reseller</h2>
+            <p>Reseller yang catatannya rapi punya keunggulan nyata:</p>
+            <ul>
+                <li><strong>Tahu untung per barang</strong> — bukan cuma omzet, tapi laba bersih tiap produk kelihatan.
+                </li>
+                <li><strong>Modal terkontrol</strong> — tahu berapa modal tertanam dan kapan harus order ulang.</li>
+                <li><strong>Ongkir &amp; biaya admin tercatat</strong> — margin tipis gak diam-diam ludes.</li>
+                <li><strong>Punya data lengkap</strong> — saat urus kredit modal atau ajak mitra baru, laporannya siap.
+                </li>
+            </ul>
+
+            <h2>Tips Pembukuan Reseller biar Untung Terlihat</h2>
+            <ul>
+                <li><strong>Catat modal tiap beli stok.</strong> Sekali catat, untung per barang otomatis kelihatan.</li>
+                <li><strong>Jangan lupa ongkir &amp; biaya admin.</strong> Ini sering bikin margin tipis hilang.</li>
+                <li><strong>Catat langsung saat jualan.</strong> Jangan ditunda, makin lama makin lupa marginnya.</li>
+                <li><strong>Evaluasi rekap bulanan.</strong> Lihat produk mana yang paling untung, fokuskan ke sana.</li>
+            </ul>
+
+            <h2>Pilihan Paket untuk Reseller</h2>
+            <p>Pilih sesuai volume jualan. Semua paket bisa aktif dalam 1 menit setelah pembayaran:</p>
+            <table class="paket-table">
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga/Bulan</th>
+                        <th>Kuota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Free</strong></td>
+                        <td>Gratis</td>
+                        <td>10 teks, 3 struk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lite</strong></td>
+                        <td>Rp15.000</td>
+                        <td>45 teks, 15 struk, edit/hapus</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Starter</strong></td>
+                        <td>Rp29.000</td>
+                        <td>90 teks, 30 struk, export CSV, +1 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Premium</strong></td>
+                        <td>Rp59.000</td>
+                        <td>190 teks, 60 struk, Analisis Keuangan, +2 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro</strong></td>
+                        <td>Rp129.000</td>
+                        <td>380 teks, 115 struk, Analisis Keuangan, +4 nomor</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Untuk reseller yang baru mulai rajin mencatat, paket <strong>Lite</strong> sudah sangat cukup. Untuk
+                jualan dengan banyak produk dan butuh analisa untung per barang, naik ke <strong>Premium</strong> atau
+                <strong>Pro</strong>.</p>
+
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <details class="faq">
+                <summary>Apakah aplikasi pembukuan reseller WhatsApp ini gratis?</summary>
+                <p>Ada paket Free yang gratis selamanya (10 teks &amp; 3 struk per bulan) untuk coba-coba. Untuk
+                    pencatatan reseller harian, tersedia paket berbayar mulai Rp15.000/bulan dengan kuota jauh lebih
+                    besar.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah saya perlu install aplikasi tambahan?</summary>
+                <p>Tidak. Cukup chat nomor bot WhatsApp seperti chat teman. Tidak ada aplikasi yang harus didownload
+                    atau diinstall di HP kamu.</p>
+            </details>
+            <details class="faq">
+                <summary>Bisakah catat penjualan reseller pakai suara?</summary>
+                <p>Bisa. Kamu cukup kirim voice note ke bot, contohnya "jual 2 sepatu margin 40 ribu", dan sistem akan
+                    otomatis mencatatnya tanpa perlu mengetik.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah data reseller saya aman dan bisa diakses kapan saja?</summary>
+                <p>Ya. Semua transaksi reseller tersimpan rapi dan bisa kamu cek kapan saja melalui dashboard web,
+                    termasuk edit, hapus, dan export laporan ke CSV/Excel.</p>
+            </details>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Siap rapihin pembukuan reseller kamu?</strong><br>Mulai
+                    sekarang, cukup dari WhatsApp.</p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20daftar%20paket%20pembukuan%20reseller"
+                    class="btn-cta" target="_blank" rel="noopener">Chat Bot WhatsApp →</a>
+            </div>
+
+            <div class="related">
+                <h2>Artikel Terkait</h2>
+                <ul>
+                    <li>→ <a href="aplikasi-pembukuan-online-shop.html">Aplikasi Pembukuan Online Shop via WhatsApp</a>
+                    </li>
+                    <li>→ <a href="aplikasi-pembukuan-dropshipper.html">Aplikasi Pembukuan untuk Dropshipper</a></li>
+                    <li>→ <a href="aplikasi-catat-keuangan-jualan.html">Aplikasi Catat Keuangan Jualan via WhatsApp</a>
+                    </li>
+                    <li>→ <a href="cara-catat-penjualan-harian-whatsapp.html">Cara Mencatat Penjualan Harian Lewat
+                            WhatsApp</a></li>
+                </ul>
+            </div>
+
+            <div class="article-footer">
+                <p><strong>Catat Uang WA</strong> — catat keuangan pribadi &amp; usaha langsung dari WhatsApp. <a
+                        href="../">Kembali ke Beranda</a> · <a href="index.html">Lihat semua artikel</a></p>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

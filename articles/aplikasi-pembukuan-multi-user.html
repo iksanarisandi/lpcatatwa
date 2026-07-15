@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aplikasi pembukuan multi user via WhatsApp untuk tim dan karyawan. Kasir, karyawan, dan pemilik catat dari nomor masing-masing. Tanpa install app, mulai gratis.">
+    <title>Aplikasi Pembukuan Multi User untuk Tim & Karyawan | Catat Uang WA">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://catatwa.de/articles/aplikasi-pembukuan-multi-user">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://catatwa.de/articles/aplikasi-pembukuan-multi-user">
+    <meta property="og:title" content="Aplikasi Pembukuan Multi User untuk Tim & Karyawan">
+    <meta property="og:description"
+        content="Aplikasi pembukuan multi user via WhatsApp untuk tim dan karyawan. Kasir, karyawan, dan pemilik catat dari nomor masing-masing. Tanpa install app, mulai gratis.">
+    <meta property="og:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+    <meta property="og:site_name" content="Catat Uang WA">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://catatwa.de/articles/aplikasi-pembukuan-multi-user">
+    <meta name="twitter:title" content="Aplikasi Pembukuan Multi User untuk Tim & Karyawan">
+    <meta name="twitter:description"
+        content="Aplikasi pembukuan multi user via WhatsApp untuk tim dan karyawan. Kasir, karyawan, dan pemilik catat dari nomor masing-masing. Tanpa install app, mulai gratis.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+
+    <!-- JSON-LD Structured Data: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Aplikasi Pembukuan Multi User untuk Tim & Karyawan",
+        "description": "Aplikasi pembukuan multi user via WhatsApp untuk tim dan karyawan. Kasir, karyawan, dan pemilik catat dari nomor masing-masing. Tanpa install app, mulai gratis.",
+        "url": "https://catatwa.de/articles/aplikasi-pembukuan-multi-user",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Catat Uang WA",
+            "url": "https://catatwa.de/"
+        },
+        "datePublished": "2026-07-15",
+        "dateModified": "2026-07-15"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Apakah aplikasi pembukuan multi user ini gratis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ada paket Free yang gratis selamanya (10 teks & 3 struk per bulan) untuk coba-coba. Untuk fitur multi user dan pemakaian toko harian, tersedia paket berbayar mulai Rp29.000/bulan yang sudah mendukung penambahan nomor karyawan."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bagaimana cara membagi peran antara pemilik dan karyawan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pemilik akun mendaftarkan nomor WhatsApp karyawan seperti kasir atau admin. Karyawan cukup chat nomor bot yang sama untuk mencatat penjualan dan pengeluaran, sementara pemilik tetap bisa melihat, mengedit, dan menghapus transaksi melalui dashboard web."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Berapa banyak karyawan yang bisa saya tambahkan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Jumlahnya tergantung paket. Paket Starter mendukung +1 nomor, Premium +2 nomor, dan Pro +4 nomor tambahan di luar nomor pemilik. Cocok untuk toko dengan beberapa kasir atau cabang kecil."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah saya perlu install aplikasi tambahan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tidak. Cukup chat nomor bot WhatsApp seperti chat teman. Tidak ada aplikasi yang harus didownload atau diinstall di HP kamu maupun HP karyawan."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah datanya aman dan bisa diakses kapan saja?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ya. Semua transaksi tersimpan rapi dan bisa kamu cek kapan saja melalui dashboard web, termasuk edit, hapus, dan export laporan ke CSV/Excel."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #fff;
+            font-size: 17px
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 1.3
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 32px 0 16px
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 20px 0 8px
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #333
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #555
+        }
+
+        .highlight {
+            background: linear-gradient(180deg, transparent 50%, #FFF176 50%);
+            padding: 0 4px;
+            font-weight: 600
+        }
+
+        .cta-box {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: center
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px
+        }
+
+        .btn-cta:hover {
+            background: #20bd5a
+        }
+
+        ul,
+        ol {
+            margin: 16px 0 16px 24px
+        }
+
+        li {
+            margin-bottom: 12px
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px
+        }
+
+        .back-link:hover {
+            color: #25D366
+        }
+
+        .paket-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 15px
+        }
+
+        .paket-table th,
+        .paket-table td {
+            border: 1px solid #e5e5e5;
+            padding: 10px;
+            text-align: left
+        }
+
+        .paket-table th {
+            background: #f8f9fa;
+            font-weight: 600
+        }
+
+        details.faq {
+            border-bottom: 1px solid #eee;
+            padding: 14px 0
+        }
+
+        details.faq summary {
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none
+        }
+
+        details.faq summary::before {
+            content: "▸ ";
+            color: #25D366
+        }
+
+        details.faq[open] summary::before {
+            content: "▾ "
+        }
+
+        details.faq p {
+            margin-top: 10px;
+            color: #555
+        }
+
+        .related {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 32px 0
+        }
+
+        .related h2 {
+            margin-top: 0
+        }
+
+        .related ul {
+            margin: 8px 0 0
+        }
+
+        .related a {
+            color: #1a1a1a;
+            text-decoration: none
+        }
+
+        .related a:hover {
+            color: #25D366
+        }
+
+        .article-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            font-size: 14px;
+            color: #999
+        }
+
+        .article-footer a {
+            color: #25D366;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Kembali ke Beranda</a>
+
+        <article>
+            <h1>Aplikasi Pembukuan <span class="highlight">Multi User</span> untuk Tim & Karyawan</h1>
+
+            <p class="lead">Punya toko dengan beberapa kasir atau karyawan, tapi pembukuan hanya dipegang satu orang?
+                Dengan <strong>aplikasi pembukuan multi user</strong> berbasis WhatsApp, pemilik dan karyawan bisa
+                mencatat penjualan serta pengeluaran dari nomor masing-masing — tanpa install app, tanpa pelatihan
+                rumit.</p>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Coba gratis sekarang, langsung dari WhatsApp!</strong></p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20coba%20aplikasi%20pembukuan%20multi%20user%20untuk%20karyawan"
+                    class="btn-cta" target="_blank" rel="noopener">Mulai Pembukuan Tim →</a>
+            </div>
+
+            <h2>Tantangan Pembukuan saat Usaha Punya Karyawan</h2>
+            <p>Saat usaha masih sendiri, mencatat keuangan relatif gampang. Tapi begitu ada kasir, admin, atau karyawan
+                lain, masalah mulai bermunculan. Penjualan diterima banyak orang, tapi catatan tetap dipegang satu
+                orang. Akibatnya:</p>
+            <ul>
+                <li><strong>Pemilik kelelahan merekap.</strong> Setiap hari harus tanya kasir, "Tadi jualan berapa?"</li>
+                <li><strong>Transaksi tertinggal.</strong> Yang dicatat hanya yang disampaikan, sisanya hilang.</li>
+                <li><strong>Susah pantau kasir.</strong> Tidak ada bukti catatan real-time dari tiap shift.</li>
+                <li><strong>Rentan selisih.</strong> Kas fisik dengan catatan sering tidak cocok di akhir hari.</li>
+                <li><strong>Karyawan gak ikut mencatat.</strong> Karena aplikasi pembukuan terlalu ribet untuk mereka
+                    pelajari.</li>
+            </ul>
+            <p>Solusinya adalah alat yang <span class="highlight">bisa dipakai semua orang dengan mudah</span>, lewat
+                aplikasi yang sudah mereka kuasai: WhatsApp.</p>
+
+            <h2>Kenapa WhatsApp Cocok untuk Pembukuan Tim</h2>
+            <p>Menambahkan beban "belajar aplikasi baru" ke karyawan biasanya berakhir gagal. Tapi kalau alatnya
+                WhatsApp, hambatan itu hilang:</p>
+            <ul>
+                <li>👥 <strong>Gak perlu install app baru</strong> — karyawan sudah pakai WhatsApp tiap hari.</li>
+                <li>👥 <strong>Catat dari nomor masing-masing</strong> — tiap kasir chat bot yang sama.</li>
+                <li>👥 <strong>Catat seperti chat teman</strong> — ketik bebas atau kirim voice note.</li>
+                <li>👥 <strong>Tinggal chat, bukan input form</strong> — minim pelatihan, langsung jalan.</li>
+                <li>👥 <strong>Pemilik tetap kontrol penuh</strong> — semua transaksi bisa diedit dari dashboard web.</li>
+            </ul>
+
+            <h2>Cara Kerja Pembukuan Multi User</h2>
+            <p>Gampang banget, hanya tiga langkah:</p>
+            <ol>
+                <li><strong>Daftarkan nomor karyawan.</strong> Pemilik akun mendaftarkan nomor WhatsApp kasir atau
+                    karyawan lewat dashboard atau chat bot.</li>
+                <li><strong>Karyawan mencatat transaksi.</strong> Tiap karyawan chat nomor bot yang sama — ketik
+                    <code>jual 2 kopi 36rb</code> atau kirim foto struk. Transaksi otomatis masuk ke pembukuan
+                    usaha.</li>
+                <li><strong>Pemilik memantau & merekap.</strong> Cek <code>rekap</code> kapan saja, lihat siapa catat
+                    apa, dan lakukan edit/hapus lewat dashboard web kalau perlu.</li>
+            </ol>
+            <p>Karena setiap transaksi tercatat dari nomor yang berbeda, pemilik bisa tahu persis transaksi mana yang
+                diinput oleh kasir A atau kasir B. Transparan dan akuntabel.</p>
+
+            <h2>Pembagian Peran: Pemilik vs Karyawan</h2>
+            <p>Dalam sistem multi user, pembagian peran penting supaya operasional tetap tertata:</p>
+            <ul>
+                <li><strong>Pemilik (admin).</strong> Mendaftarkan karyawan, melihat seluruh transaksi, mengedit atau
+                    menghapus data, serta mengexport laporan untuk evaluasi bulanan.</li>
+                <li><strong>Karyawan / kasir.</strong> Mencatat penjualan dan pengeluaran kecil operasional langsung
+                    lewat chat — cepat, tanpa buka dashboard.</li>
+                <li><strong>Multi cabang kecil.</strong> Tiap cabang atau shift bisa punya nomor sendiri sehingga
+                    rekap per cabang jelas.</li>
+            </ul>
+            <p>Dengan begini, karyawan fokus ke input harian, sementara pemilik fokus ke analisa dan keputusan usaha.</p>
+
+            <h2>Fitur Penting untuk Pembukuan Tim</h2>
+            <p>Selain multi user, fitur lainnya menunjang operasional toko harian:</p>
+            <ul>
+                <li><strong>Catat teks / bahasa bebas (AI)</strong> — paham gaya bahasa Indonesia & slang kasir.</li>
+                <li><strong>Scan struk OCR</strong> — foto nota pembelian modal, otomatis terekam.</li>
+                <li><strong>Catat via suara</strong> — voice note untuk kasir yang lagi sibuk.</li>
+                <li><strong>Kategori otomatis & rekap harian-bulanan</strong> — omzet shift langsung kelihatan.</li>
+                <li><strong>Export CSV/Excel & dashboard web</strong> — laporan rapi untuk evaluasi tim.</li>
+                <li><strong>Utang-piutang + pengingat & tabungan</strong> — kelola bon langganan dan target nabung.</li>
+            </ul>
+
+            <h2>Pilihan Paket Multi User untuk Tim</h2>
+            <p>Pilih sesuai jumlah karyawan. Semua paket bisa aktif dalam 1 menit setelah pembayaran:</p>
+            <table class="paket-table">
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga/Bulan</th>
+                        <th>Kuota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Free</strong></td>
+                        <td>Gratis</td>
+                        <td>10 teks, 3 struk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lite</strong></td>
+                        <td>Rp15.000</td>
+                        <td>45 teks, 15 struk, edit/hapus</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Starter</strong></td>
+                        <td>Rp29.000</td>
+                        <td>90 teks, 30 struk, export CSV, +1 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Premium</strong></td>
+                        <td>Rp59.000</td>
+                        <td>190 teks, 60 struk, Analisis Keuangan, +2 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro</strong></td>
+                        <td>Rp129.000</td>
+                        <td>380 teks, 115 struk, Analisis Keuangan, +4 nomor</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Untuk toko dengan satu kasir, paket <strong>Starter</strong> sudah mendukung +1 nomor karyawan. Untuk
+                toko dengan beberapa kasir atau cabang kecil yang butuh analisa performa, naik ke <strong>Premium</strong>
+                atau <strong>Pro</strong> dengan +2 sampai +4 nomor.</p>
+
+            <h2>Tips Menerapkan Pembukuan Bareng Karyawan</h2>
+            <ul>
+                <li><strong>Arahkan semua input lewat chat.</strong> Gak perlu aplikasi terpisah, cukup chat bot.</li>
+                <li><strong>Biasakan catat tiap transaksi.</strong> Minta kasir input saat transaksi terjadi, bukan
+                    akhir shift.</li>
+                <li><strong>Pakai kategori yang seragam.</strong> Sepakati istilah kategori biar rekapnya rapi.</li>
+                <li><strong>Cek rekap tiap akhir hari.</strong> Bandingkan catatan dengan kas fisik supaya gak selisih.</li>
+                <li><strong>Evaluasi karyawan lewat dashboard.</strong> Lihat tren penjualan per kasir atau per shift.</li>
+            </ul>
+
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <details class="faq">
+                <summary>Apakah aplikasi pembukuan multi user ini gratis?</summary>
+                <p>Ada paket Free yang gratis selamanya (10 teks & 3 struk per bulan) untuk coba-coba. Untuk fitur multi
+                    user dan pemakaian toko harian, tersedia paket berbayar mulai Rp29.000/bulan yang sudah mendukung
+                    penambahan nomor karyawan.</p>
+            </details>
+            <details class="faq">
+                <summary>Bagaimana cara membagi peran antara pemilik dan karyawan?</summary>
+                <p>Pemilik akun mendaftarkan nomor WhatsApp karyawan seperti kasir atau admin. Karyawan cukup chat nomor
+                    bot yang sama untuk mencatat penjualan dan pengeluaran, sementara pemilik tetap bisa melihat,
+                    mengedit, dan menghapus transaksi melalui dashboard web.</p>
+            </details>
+            <details class="faq">
+                <summary>Berapa banyak karyawan yang bisa saya tambahkan?</summary>
+                <p>Jumlahnya tergantung paket. Paket Starter mendukung +1 nomor, Premium +2 nomor, dan Pro +4 nomor
+                    tambahan di luar nomor pemilik. Cocok untuk toko dengan beberapa kasir atau cabang kecil.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah saya perlu install aplikasi tambahan?</summary>
+                <p>Tidak. Cukup chat nomor bot WhatsApp seperti chat teman. Tidak ada aplikasi yang harus didownload atau
+                    diinstall di HP kamu maupun HP karyawan.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah datanya aman dan bisa diakses kapan saja?</summary>
+                <p>Ya. Semua transaksi tersimpan rapi dan bisa kamu cek kapan saja melalui dashboard web, termasuk edit,
+                    hapus, dan export laporan ke CSV/Excel.</p>
+            </details>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Siap rapihin pembukuan bareng tim?</strong><br>Karyawan catat,
+                    pemilik pantau — semua dari WhatsApp.</p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20daftar%20paket%20pembukuan%20multi%20user%20untuk%20toko"
+                    class="btn-cta" target="_blank" rel="noopener">Chat Bot WhatsApp →</a>
+            </div>
+
+            <div class="related">
+                <h2>Artikel Terkait</h2>
+                <ul>
+                    <li>→ <a href="aplikasi-keuangan-multi-user.html">Catat Keuangan Bersama Tim Menggunakan WhatsApp</a>
+                    </li>
+                    <li>→ <a href="aplikasi-pembukuan-toko.html">Aplikasi Pembukuan untuk Toko</a></li>
+                    <li>→ <a href="aplikasi-kas-whatsapp.html">Aplikasi Kas Harian Berbasis WhatsApp</a></li>
+                    <li>→ <a href="aplikasi-keuangan-whatsapp.html">Aplikasi Keuangan Berbasis WhatsApp</a></li>
+                </ul>
+            </div>
+
+            <div class="article-footer">
+                <p><strong>Catat Uang WA</strong> — catat keuangan pribadi & usaha langsung dari WhatsApp. <a
+                        href="../">Kembali ke Beranda</a> · <a href="index.html">Lihat semua artikel</a></p>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

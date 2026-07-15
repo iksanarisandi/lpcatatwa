@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aplikasi pembukuan jualan makanan & kuliner via WhatsApp. Catat penjualan, HPP bahan, dan untung per menu lewat chat atau suara. Rekap otomatis, mulai gratis.">
+    <title>Aplikasi Pembukuan Kuliner & Penjual Makanan | Catat Uang WA</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://catatwa.de/articles/aplikasi-pembukuan-kuliner">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://catatwa.de/articles/aplikasi-pembukuan-kuliner">
+    <meta property="og:title" content="Aplikasi Pembukuan Kuliner & Penjual Makanan">
+    <meta property="og:description"
+        content="Aplikasi pembukuan jualan makanan & kuliner via WhatsApp. Catat penjualan, HPP bahan, dan untung per menu lewat chat atau suara. Rekap otomatis, mulai gratis.">
+    <meta property="og:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+    <meta property="og:site_name" content="Catat Uang WA">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://catatwa.de/articles/aplikasi-pembukuan-kuliner">
+    <meta name="twitter:title" content="Aplikasi Pembukuan Kuliner & Penjual Makanan">
+    <meta name="twitter:description"
+        content="Aplikasi pembukuan jualan makanan & kuliner via WhatsApp. Catat penjualan, HPP bahan, dan untung per menu lewat chat atau suara. Rekap otomatis, mulai gratis.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+
+    <!-- JSON-LD Structured Data: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Aplikasi Pembukuan Kuliner & Penjual Makanan",
+        "description": "Aplikasi pembukuan jualan makanan & kuliner via WhatsApp. Catat penjualan, HPP bahan, dan untung per menu lewat chat atau suara. Rekap otomatis, mulai gratis.",
+        "url": "https://catatwa.de/articles/aplikasi-pembukuan-kuliner",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Catat Uang WA",
+            "url": "https://catatwa.de/"
+        },
+        "datePublished": "2026-07-15",
+        "dateModified": "2026-07-15"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Bisakah aplikasi ini membantu menghitung HPP bahan baku tiap menu?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Kamu bisa mencatat belanja bahan baku sebagai modal dan menjualnya per porsi. Lalu lewat rekap di dashboard web, kamu bisa lihat berapa modal vs omzet untuk estimasi HPP dan margin tiap menu."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah saya bisa lihat untung per menu?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Dengan mencatat tiap penjualan lengkap dengan nama menu, kamu bisa export laporan ke CSV/Excel dan lihat menu mana yang paling laku dan paling ngasih untung besar."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bisakah catat suara dipakai saat masak?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa banget. Saat tangan sibuk masak, kamu cukup kirim voice note seperti 'jual 3 porsi ayam geprek 45 ribu' dan sistem akan otomatis mencatatnya tanpa mengetik."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah saya perlu install aplikasi tambahan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tidak. Cukup chat nomor bot WhatsApp seperti chat teman. Tidak ada aplikasi yang harus didownload atau diinstall di HP kamu."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #fff;
+            font-size: 17px
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 1.3
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 32px 0 16px
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 20px 0 8px
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #333
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #555
+        }
+
+        .highlight {
+            background: linear-gradient(180deg, transparent 50%, #FFF176 50%);
+            padding: 0 4px;
+            font-weight: 600
+        }
+
+        .cta-box {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: center
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px
+        }
+
+        .btn-cta:hover {
+            background: #20bd5a
+        }
+
+        ul,
+        ol {
+            margin: 16px 0 16px 24px
+        }
+
+        li {
+            margin-bottom: 12px
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px
+        }
+
+        .back-link:hover {
+            color: #25D366
+        }
+
+        .paket-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 15px
+        }
+
+        .paket-table th,
+        .paket-table td {
+            border: 1px solid #e5e5e5;
+            padding: 10px;
+            text-align: left
+        }
+
+        .paket-table th {
+            background: #f8f9fa;
+            font-weight: 600
+        }
+
+        details.faq {
+            border-bottom: 1px solid #eee;
+            padding: 14px 0
+        }
+
+        details.faq summary {
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none
+        }
+
+        details.faq summary::before {
+            content: "▸ ";
+            color: #25D366
+        }
+
+        details.faq[open] summary::before {
+            content: "▾ "
+        }
+
+        details.faq p {
+            margin-top: 10px;
+            color: #555
+        }
+
+        .related {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 32px 0
+        }
+
+        .related h2 {
+            margin-top: 0
+        }
+
+        .related ul {
+            margin: 8px 0 0
+        }
+
+        .related a {
+            color: #1a1a1a;
+            text-decoration: none
+        }
+
+        .related a:hover {
+            color: #25D366
+        }
+
+        .article-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            font-size: 14px;
+            color: #999
+        }
+
+        .article-footer a {
+            color: #25D366;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Kembali ke Beranda</a>
+
+        <article>
+            <h1>Aplikasi <span class="highlight">Pembukuan Jualan Makanan</span> & Kuliner</h1>
+
+            <p class="lead">Jualan makanan tapi gak yakin tiap menu untung berapa? Dengan <strong>aplikasi pembukuan
+                    jualan makanan</strong> berbasis WhatsApp, kamu bisa mencatat penjualan, modal bahan baku (HPP), dan
+                <strong>untung per menu</strong> — cukup lewat chat teks atau suara, tanpa install aplikasi tambahan.</p>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Coba gratis sekarang, langsung dari WhatsApp!</strong></p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20coba%20aplikasi%20pembukuan%20jualan%20makanan%20%26%20kuliner"
+                    class="btn-cta" target="_blank" rel="noopener">Mulai Catat Penjualan →</a>
+            </div>
+
+            <h2>Masalah Pencatatan Keuangan Usaha Kuliner</h2>
+            <p>Usaha kuliner punya tantangan unik: bahan baku cepat basi, harga bahan naik-turun, dan banyak menu yang
+                dijual sekaligus. Sayangnya banyak penjual makanan menghadapi masalah klasik berikut:</p>
+            <ul>
+                <li><strong>Gak tahu untung per menu.</strong> Nasi goreng laris, tapi setelah dipotong HPP bahan,
+                    ternyata tipis. Sayur sop kelihatan sepi, padahal marginnya tebal.</li>
+                <li><strong>Modal bahan baku gak terkontrol.</strong> Belanja bahan tiap hari, tapi gak dicatat, jadi
+                    gak tahu berapa modal sebenarnya.</li>
+                <li><strong>Susah catat saat ramai.</strong> Pas jam makan siang, pembeli numpuk, gak sempat nulis
+                    buku.</li>
+                <li><strong>Bahan sisa dan wastage gak terhitung.</strong> Sisa bahan basi ikut menggerus untung tanpa
+                    sadar.</li>
+                <li><strong>Piutang langganan atau catering tertinggal.</strong> Ada yang makan dikatat dulu, tapi lupa
+                    ditagih.</li>
+            </ul>
+            <p>Solusinya bukan berhenti masak untuk nulis buku, tapi pakai alat yang <span class="highlight">catat
+                    sambil masak</span> dan otomatis ngasih tahu untung per menu.</p>
+
+            <h2>Kenapa WhatsApp Cocok Buat Penjual Makanan</h2>
+            <p>Buat pelaku kuliner, tangan biasanya sibuk masak, bikin adonan, atau packing pesanan. Pencatatan lewat
+                WhatsApp punya keunggulan yang sangat pas:</p>
+            <ul>
+                <li>✅ <strong>Gak perlu install app baru</strong> — WhatsApp sudah ada di HP kamu.</li>
+                <li>✅ <strong>Voice note saat tangan sibuk</strong> — cerita aja, gak perlu ngetik.</li>
+                <li>✅ <strong>Paham bahasa bebas</strong> — ketik <code>jual 3 porsi ayam geprek 45rb</code> atau
+                    <em>"belanja bahan 80 ribu"</em>, AI tetap paham.</li>
+                <li>✅ <strong>Scan struk belanja bahan</strong> — foto nota pasar/supermarket, langsung terekam.</li>
+                <li>✅ <strong>Bisa dipakai bareng karyawan</strong> — kasir dan kamu catat di nomor bot yang sama.</li>
+                <li>✅ <strong>Rekap otomatis tiap hari</strong> — total omzet dan estimasi untung langsung masuk.</li>
+                <li>✅ <strong>Gak perlu rumus Excel</strong> — ketik bebas, AI yang ngerti.</li>
+                <li>✅ <strong>Aman dan tercadang</strong> — datanya tetap aman walau HP hilang atau ganti.</li>
+            </ul>
+            <p>Singkatnya, semua kebutuhan administrasi kuliner kamu bisa diatur dari satu chat yang sama, tanpa harus
+                berhenti masak atau nunggu malem untuk nulis buku.</p>
+
+            <h2>Cara Kerja: Catat Jualan Makanan Lewat Chat</h2>
+            <p>Mulainya super cepat, cukup tiga langkah:</p>
+            <ol>
+                <li><strong>Chat nomor bot.</strong> Kirim pesan seperti chat biasa ke nomor WhatsApp resmi Catat Uang
+                    WA.</li>
+                <li><strong>Catat penjualan & modal bahan.</strong> Ketik <code>jual 5 porsi bakso 75rb</code> atau
+                    kirim voice note <em>"belanja bahan baku 100 ribu pagi tadi"</em>. Sistem otomatis mengenali nominal
+                    dan kategori.</li>
+                <li><strong>Cek untung & rekap.</strong> Ketik <code>saldo</code> atau <code>rekap</code> untuk lihat
+                    total omzet dan estimasi untung. Detail per menu bisa dicek di dashboard web.</li>
+            </ol>
+            <p>Untuk mengetahui HPP tiap menu, catat semua belanja bahan sebagai modal. Lalu bandingkan dengan omzet
+                penjualan tiap menu — selisihnya adalah margin kamu.</p>
+
+            <h2>Fitur Penting untuk Usaha Kuliner</h2>
+            <p>Walaupun dicatat lewat chat, fiturnya lengkap layaknya aplikasi pembukuan modern:</p>
+            <ul>
+                <li><strong>Catat dengan AI (bahasa bebas)</strong> — paham gaya bahasa Indonesia & slang.</li>
+                <li><strong>Catat suara / voice note</strong> — andalan utama pas jam sibuk masak.</li>
+                <li><strong>Scan struk otomatis</strong> — foto nota belanja bahan, data langsung terekam.</li>
+                <li><strong>Kategori otomatis</strong> — omzet per menu, modal bahan, gas, listrik, terpisah rapi.</li>
+                <li><strong>Rekap harian & bulanan otomatis</strong> — total omzet dan estimasi untung dikirim otomatis.
+                </li>
+                <li><strong>Utang & piutang + pengingat</strong> — jangan sampai lupa tagih langganan atau catering.
+                </li>
+                <li><strong>Export CSV/Excel</strong> — untuk analisa HPP dan untung per menu.</li>
+                <li><strong>Dashboard web</strong> — lihat detail, edit, dan hapus transaksi dengan mudah.</li>
+            </ul>
+
+            <h2>Manfaat Buat Penjual Makanan</h2>
+            <p>Dengan pencatatan rapi, usaha kuliner kamu jadi jauh lebih gampang dikontrol:</p>
+            <ul>
+                <li><strong>Tahu menu paling untung.</strong> Fokus produksi ke menu dengan margin tebal.</li>
+                <li><strong>HPP bahan terkontrol.</strong> Tahu kapan harus naik harga jual saat bahan mahal.</li>
+                <li><strong>Piutang catering ke tagih.</strong> Pengingat otomatis bikin gak ragu nagih pesanan besar.
+                </li>
+                <li><strong>Catat gak keteteran.</strong> Voice note bikin input tetap jalan walau lagi ramai.</li>
+                <li><strong>Bisa dievaluasi tiap bulan.</strong> Lihat tren menu best seller dan sesuaikan stok bahan.
+                </li>
+                <li><strong>Gak perlu install app tambahan.</strong> Semua jalan dari WhatsApp yang udah ada.</li>
+                <li><strong>Bisa catat sambil masak.</strong> Voice note jadi penyelamat saat jam ramai.</li>
+                <li><strong>Cocok untuk skala apa pun.</strong> Dari rumahan sampai warung makan dan catering.</li>
+            </ul>
+            <p>Intinya, <span class="highlight">aplikasi pembukuan jualan makanan</span> ini bikin kamu yakin tiap
+                menu yang dijual benar-benar menguntungkan, bukan cuma laku di angka.</p>
+
+            <h2>Contoh Sederhana Hitung HPP & Margin Menu</h2>
+            <p>Misal kamu jual nasi goreng Rp15.000 per porsi. Banyak penjual pikir untungnya Rp15.000. Padahal, kalau
+                dihitung HPP-nya: nasi Rp2.000, telur Rp2.500, bumbu & minyak Rp1.500, gas dan kemasan Rp1.000. Total
+                HPP sekitar Rp7.000 per porsi. Artinya untung bersih kamu Rp8.000 — bukan Rp15.000.</p>
+            <p>Nah, <span class="highlight">aplikasi pembukuan jualan makanan</span> bantu kamu melacak ini. Kamu catat
+                semua belanja bahan sebagai modal, lalu tiap penjualan dicatat dengan nama menu. Di rekap bulanan,
+                kamu bisa lihat total modal vs total omzet per menu.</p>
+            <h3>Langkah Praktisnya</h3>
+            <ul>
+                <li><strong>Catat tiap belanja bahan.</strong> Beras, telur, minyak, gas — semua jadi modal.</li>
+                <li><strong>Tulis nama menu tiap jual.</strong> <code>jual nasi goreng 15rb</code>, bukan cuma angka.
+                </li>
+                <li><strong>Estimasi porsi per bahan.</strong> 1 kg beras = berapa porsi?</li>
+                <li><strong>Hitung wastage.</strong> Sisa bahan basi juga masuk biaya.</li>
+                <li><strong>Bandingkan omzet vs modal per menu.</strong> Lihat menu yang marginnya paling tebal.</li>
+            </ul>
+            <p>Dengan begini, kamu bisa putuskan menu mana yang harus naik harga, menu mana yang bisa dihapus karena
+                rugi, dan menu mana yang harus dipromosikan lebih karena untungnya besar.</p>
+
+            <h2>Tips Hitung Untung Per Menu yang Akurat</h2>
+            <ul>
+                <li><strong>Catat semua belanja bahan sebagai modal.</strong> Termasuk bumbu, gas, dan minyak.</li>
+                <li><strong>Tulis nama menu tiap jual.</strong> Biar omzet per menu bisa direkap.</li>
+                <li><strong>Hitung wastage (sisa bahan basi).</strong> Ini sering bikin untung bocor tanpa sadar.</li>
+                <li><strong>Evaluasi HPP tiap awal bulan.</strong> Sesuaikan harga jual kalau bahan naik.</li>
+                <li><strong>Manfaatkan voice note saat jam ramai.</strong> Lebih cepat dan gak mengganggu masak.</li>
+            </ul>
+
+            <h2>Pilihan Paket untuk Usaha Kuliner</h2>
+            <p>Pilih sesuai skala usahamu. Semua paket bisa aktif dalam 1 menit setelah pembayaran:</p>
+            <table class="paket-table">
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga/Bulan</th>
+                        <th>Kuota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Free</strong></td>
+                        <td>Gratis</td>
+                        <td>10 teks, 3 struk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lite</strong></td>
+                        <td>Rp15.000</td>
+                        <td>45 teks, 15 struk, edit/hapus</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Starter</strong></td>
+                        <td>Rp29.000</td>
+                        <td>90 teks, 30 struk, export CSV, +1 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Premium</strong></td>
+                        <td>Rp59.000</td>
+                        <td>190 teks, 60 struk, Analisis Keuangan, +2 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro</strong></td>
+                        <td>Rp129.000</td>
+                        <td>380 teks, 115 struk, Analisis Keuangan, +4 nomor</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Untuk penjual makanan rumahan yang baru rajin mencatat, paket <strong>Starter</strong> sudah pas. Untuk
+                warung makan atau catering dengan transaksi padat dan butuh analisa untung per menu, naik ke
+                <strong>Premium</strong> atau <strong>Pro</strong>.</p>
+
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <details class="faq">
+                <summary>Bisakah aplikasi ini membantu menghitung HPP bahan baku tiap menu?</summary>
+                <p>Bisa. Kamu bisa mencatat belanja bahan baku sebagai modal dan menjualnya per porsi. Lalu lewat rekap
+                    di dashboard web, kamu bisa lihat berapa modal vs omzet untuk estimasi HPP dan margin tiap menu.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah saya bisa lihat untung per menu?</summary>
+                <p>Bisa. Dengan mencatat tiap penjualan lengkap dengan nama menu, kamu bisa export laporan ke CSV/Excel
+                    dan lihat menu mana yang paling laku dan paling ngasih untung besar.</p>
+            </details>
+            <details class="faq">
+                <summary>Bisakah catat suara dipakai saat masak?</summary>
+                <p>Bisa banget. Saat tangan sibuk masak, kamu cukup kirim voice note seperti "jual 3 porsi ayam geprek
+                    45 ribu" dan sistem akan otomatis mencatatnya tanpa mengetik.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah saya perlu install aplikasi tambahan?</summary>
+                <p>Tidak. Cukup chat nomor bot WhatsApp seperti chat teman. Tidak ada aplikasi yang harus didownload
+                    atau diinstall di HP kamu.</p>
+            </details>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Mau tahu pasti untung per menu makananmu?</strong><br>Mulai catat
+                    sekarang, cukup dari WhatsApp.</p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20daftar%20paket%20catat%20keuangan%20untuk%20usaha%20kuliner"
+                    class="btn-cta" target="_blank" rel="noopener">Chat Bot WhatsApp →</a>
+            </div>
+
+            <div class="related">
+                <h2>Artikel Terkait</h2>
+                <ul>
+                    <li>→ <a href="aplikasi-pembukuan-warung.html">Aplikasi Pembukuan Warung dengan Rekap Otomatis</a>
+                    </li>
+                    <li>→ <a href="aplikasi-catat-keuangan-jualan.html">Aplikasi Catat Keuangan Jualan Harian</a></li>
+                    <li>→ <a href="cara-catat-penjualan-harian-whatsapp.html">Cara Catat Penjualan Harian via WhatsApp</a>
+                    </li>
+                    <li>→ <a href="aplikasi-pembukuan-toko.html">Aplikasi Pembukuan Toko Lewat WhatsApp</a></li>
+                </ul>
+            </div>
+
+            <div class="article-footer">
+                <p><strong>Catat Uang WA</strong> — catat keuangan pribadi & usaha langsung dari WhatsApp. <a
+                        href="../">Kembali ke Beranda</a> · <a href="index.html">Lihat semua artikel</a></p>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aplikasi pembukuan WhatsApp dengan rekap otomatis harian & bulanan. Catat transaksi usaha lewat chat, dapat ringkasan laba, saldo, dan arus kas. Mulai gratis!">
+    <title>Aplikasi Pembukuan WhatsApp dengan Rekap Otomatis Harian & Bulanan | Catat Uang WA</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://catatwa.de/articles/aplikasi-pembukuan-whatsapp">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://catatwa.de/articles/aplikasi-pembukuan-whatsapp">
+    <meta property="og:title" content="Aplikasi Pembukuan WhatsApp dengan Rekap Otomatis Harian & Bulanan">
+    <meta property="og:description"
+        content="Aplikasi pembukuan WhatsApp dengan rekap otomatis harian & bulanan. Catat transaksi usaha lewat chat, dapat ringkasan laba, saldo, dan arus kas. Mulai gratis!">
+    <meta property="og:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+    <meta property="og:site_name" content="Catat Uang WA">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://catatwa.de/articles/aplikasi-pembukuan-whatsapp">
+    <meta name="twitter:title" content="Aplikasi Pembukuan WhatsApp dengan Rekap Otomatis Harian & Bulanan">
+    <meta name="twitter:description"
+        content="Aplikasi pembukuan WhatsApp dengan rekap otomatis harian & bulanan. Catat transaksi usaha lewat chat, dapat ringkasan laba, saldo, dan arus kas. Mulai gratis!">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+
+    <!-- JSON-LD Structured Data: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Aplikasi Pembukuan WhatsApp dengan Rekap Otomatis Harian & Bulanan",
+        "description": "Aplikasi pembukuan WhatsApp dengan rekap otomatis harian & bulanan. Catat transaksi usaha lewat chat, dapat ringkasan laba, saldo, dan arus kas. Mulai gratis!",
+        "url": "https://catatwa.de/articles/aplikasi-pembukuan-whatsapp",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Catat Uang WA",
+            "url": "https://catatwa.de/"
+        },
+        "datePublished": "2026-07-15",
+        "dateModified": "2026-07-15"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Apakah aplikasi pembukuan WhatsApp ini bisa buat rekap otomatis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ya. Setiap transaksi yang kamu catat lewat chat akan otomatis masuk ke rekap harian dan bulanan. Kamu cukup ketik 'rekap' atau 'saldo' di WhatsApp untuk melihat ringkasan pemasukan, pengeluaran, dan laba tanpa menyusunnya manual."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah rekap bulanannya dikirim otomatis atau harus diminta?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ringkasan rekap harian dan bulanan bisa kamu minta kapan saja lewat chat. Detail lengkap per kategori dan per transaksi juga tersedia rapi di dashboard web untuk diedit maupun di-export."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah aplikasi pembukuan WhatsApp ini gratis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ada paket Free gratis selamanya (10 teks & 3 struk per bulan). Untuk rekap ekspor dan volume transaksi lebih besar, tersedia paket berbayar mulai Rp15.000/bulan."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bisakah data rekap di-export untuk laporan ke bank atau koperasi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Paket Starter ke atas mendukung export rekap ke CSV/Excel, sehingga kamu bisa langsung mengirim laporan keuangan yang rapi ke bank, koperasi, atau untuk urusan pajak."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #fff;
+            font-size: 17px
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 1.3
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 32px 0 16px
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 20px 0 8px
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #333
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #555
+        }
+
+        .highlight {
+            background: linear-gradient(180deg, transparent 50%, #FFF176 50%);
+            padding: 0 4px;
+            font-weight: 600
+        }
+
+        .cta-box {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: center
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px
+        }
+
+        .btn-cta:hover {
+            background: #20bd5a
+        }
+
+        ul,
+        ol {
+            margin: 16px 0 16px 24px
+        }
+
+        li {
+            margin-bottom: 12px
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px
+        }
+
+        .back-link:hover {
+            color: #25D366
+        }
+
+        .paket-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 15px
+        }
+
+        .paket-table th,
+        .paket-table td {
+            border: 1px solid #e5e5e5;
+            padding: 10px;
+            text-align: left
+        }
+
+        .paket-table th {
+            background: #f8f9fa;
+            font-weight: 600
+        }
+
+        details.faq {
+            border-bottom: 1px solid #eee;
+            padding: 14px 0
+        }
+
+        details.faq summary {
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none
+        }
+
+        details.faq summary::before {
+            content: "▸ ";
+            color: #25D366
+        }
+
+        details.faq[open] summary::before {
+            content: "▾ "
+        }
+
+        details.faq p {
+            margin-top: 10px;
+            color: #555
+        }
+
+        .related {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 32px 0
+        }
+
+        .related h2 {
+            margin-top: 0
+        }
+
+        .related ul {
+            margin: 8px 0 0
+        }
+
+        .related a {
+            color: #1a1a1a;
+            text-decoration: none
+        }
+
+        .related a:hover {
+            color: #25D366
+        }
+
+        .article-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            font-size: 14px;
+            color: #999
+        }
+
+        .article-footer a {
+            color: #25D366;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Kembali ke Beranda</a>
+
+        <article>
+            <h1>Aplikasi <span class="highlight">Pembukuan WhatsApp</span> dengan Rekap Otomatis Harian &amp; Bulanan</h1>
+
+            <p class="lead">Mencatat transaksi siang-malam tapi tetap bingung berapa untung sebenarnya? Dengan
+                <strong>aplikasi pembukuan WhatsApp</strong>, setiap transaksi yang kamu chat otomatis dirangkum jadi
+                laporan harian dan bulanan. Tidak perlu kumpulkan struk atau ketik Excel tiap akhir bulan.</p>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Coba rekap otomatis langsung dari WhatsApp!</strong></p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20coba%20aplikasi%20pembukuan%20WhatsApp%20dengan%20rekap%20otomatis"
+                    class="btn-cta" target="_blank" rel="noopener">Mulai Catat &amp; Rekap →</a>
+            </div>
+
+            <h2>Masalah Catat Manual Tanpa Rekap</h2>
+            <p>Banyak pemilik usaha sudah rajin mencatat penjualan di buku atau notes HP. Tapi begitu ditanya "berapa
+                omzet bulan ini?" atau "pengeluaran terbesar untuk apa?", jawabannya masih tebakan. Sebab catatan
+                manual <span class="highlight">tidak otomatis terangkum</span>. Berikut masalah yang muncul:</p>
+            <ul>
+                <li><strong>Catatan menumpuk tanpa ringkasan.</strong> Ribuan baris, tapi tidak tahu totalnya.</li>
+                <li><strong>Lama bikin rekap bulanan.</strong> Harus hitung manual, makan waktu berjam-jam.</li>
+                <li><strong>Sering salah hitung.</strong> Lupa satu transaksi, total jadi meleset.</li>
+                <li><strong>Tidak bisa evaluasi cepat.</strong> Tidak tahu tren naik atau turun sampai bulan berjalan.</li>
+            </ul>
+            <p>Solusinya adalah mencatat di tempat yang sekaligus <span class="highlight">merangkum otomatis</span> —
+                yaitu aplikasi pembukuan berbasis WhatsApp.</p>
+
+            <h2>Kenapa Rekap Otomatis Harian &amp; Bulanan Itu Penting</h2>
+            <p>Rekap otomatis membuat kamu selalu tahu kondisi keuangan usaha secara real-time, tanpa effort tambahan.
+                Dua periode rekap yang paling berguna:</p>
+            <ul>
+                <li>✅ <strong>Rekap harian</strong> — tahu pemasukan, pengeluaran, dan saldo setiap akhir hari. Langsung
+                    ketahuan kalau ada transaksi yang belum dicatat.</li>
+                <li>✅ <strong>Rekap bulanan</strong> — lihat total omzet, biaya, dan laba bersih tiap bulan. Cocok untuk
+                    evaluasi dan bahan keputusan bisnis.</li>
+            </ul>
+            <p>Dengan dua rekap ini, kamu jadi pemilik usaha yang <span class="highlight">selalu pegang data</span>,
+                bukan sekedar ikiran.</p>
+
+            <h2>Cara Kerja Aplikasi Pembukuan WhatsApp</h2>
+            <p>Mulainya cepat, cukup tiga langkah dan tidak perlu install aplikasi:</p>
+            <ol>
+                <li><strong>Chat nomor bot.</strong> Kirim pesan seperti chat biasa ke nomor resmi Catat Uang WA.</li>
+                <li><strong>Catat transaksi.</strong> Ketik <code>jual kopi 3 cup 45rb</code>, kirim voice note
+                    <em>"tadi bayar sewa 500 ribu"</em>, atau foto struk belanja bahan. Sistem otomatis kenali nominal
+                    dan kategori.</li>
+                <li><strong>Minta rekap.</strong> Ketik <code>rekap</code> untuk ringkasan bulan berjalan atau
+                    <code>saldo</code> untuk lihat sisa kas. Rincian per kategori bisa dicek di dashboard web.</li>
+            </ol>
+            <p>Setiap transaksi langsung masuk ke akumulasi harian dan bulanan. Kamu tidak perlu menyusun laporan
+                apapun secara manual.</p>
+
+            <h2>Fitur Rekap &amp; Pencatatan Lengkap</h2>
+            <p>Di balik kesederhanaan chat, sistem menyimpan dan mengelola data seperti aplikasi pembukuan modern:</p>
+            <ul>
+                <li><strong>Rekap harian &amp; bulanan otomatis</strong> — ringkasan pemasukan, pengeluaran, dan laba.</li>
+                <li><strong>Catat teks/bahasa bebas (AI)</strong> — paham slang dan singkatan Indonesia.</li>
+                <li><strong>Scan struk OCR</strong> — foto nota, data langsung terekam.</li>
+                <li><strong>Catat suara / voice note</strong> — cukup ngomong, tanpa mengetik.</li>
+                <li><strong>Kategori &amp; multi-user</strong> — pemisah otomatis dan bisa dipakai bareng tim.</li>
+                <li><strong>Utang-piutang + pengingat tagihan</strong> — jangan sampai tertinggal.</li>
+                <li><strong>Export CSV/Excel &amp; dashboard web</strong> — untuk laporan formal dan edit detail.</li>
+            </ul>
+
+            <h2>Manfaat untuk Berbagai Jenis Usaha</h2>
+            <p>Rekap otomatis terbukti membantu banyak jenis usaha kecil menengah:</p>
+            <ul>
+                <li><strong>Warung &amp; toko kelontong</strong> — tahu omzet harian tanpa tutup buku manual.</li>
+                <li><strong>Kuliner &amp; jualan online</strong> — pantain laba per produk lewat kategori otomatis.</li>
+                <li><strong>Jasa &amp; freelancer</strong> — lacak penerimaan fee dan biaya operasional tiap bulan.</li>
+                <li><strong>Reseller &amp; dropshipper</strong> — hitung margin setelah modal dan ongkir.</li>
+            </ul>
+
+            <h2>Pilihan Paket Pembukuan</h2>
+            <p>Pilih sesuai kebutuhan. Semua paket sudah dapat fitur rekap otomatis:</p>
+            <table class="paket-table">
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga/Bulan</th>
+                        <th>Kuota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Free</strong></td>
+                        <td>Gratis</td>
+                        <td>10 teks, 3 struk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lite</strong></td>
+                        <td>Rp15.000</td>
+                        <td>45 teks, 15 struk, edit/hapus</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Starter</strong></td>
+                        <td>Rp29.000</td>
+                        <td>90 teks, 30 struk, export CSV, +1 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Premium</strong></td>
+                        <td>Rp59.000</td>
+                        <td>190 teks, 60 struk, Analisis Keuangan, +2 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro</strong></td>
+                        <td>Rp129.000</td>
+                        <td>380 teks, 115 struk, Analisis Keuangan, +4 nomor</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Untuk pemakaian harian ringan, <strong>Lite</strong> sudah pas. Kalau butuh export laporan dan dipakai
+                berdua dengan kasir, <strong>Starter</strong> pilihan ideal. Untuk analisa mendalam, naik ke
+                <strong>Premium</strong>.</p>
+
+            <h2>Tips Memaksimalkan Rekap Otomatis</h2>
+            <ul>
+                <li><strong>Catat langsung saat transaksi.</strong> Agar rekap harian selalu akurat.</li>
+                <li><strong>Cek rekap tiap akhir hari.</strong> Pastikan tidak ada transaksi tertinggal.</li>
+                <li><strong>Evaluasi rekap bulanan tiap awal bulan.</strong> Bandingkan dengan bulan sebelumnya.</li>
+                <li><strong>Pisahkan kategori pribadi &amp; usaha.</strong> Agar laporan laba usaha murni.</li>
+            </ul>
+
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <details class="faq">
+                <summary>Apakah aplikasi pembukuan WhatsApp ini bisa buat rekap otomatis?</summary>
+                <p>Ya. Setiap transaksi yang kamu catat lewat chat akan otomatis masuk ke rekap harian dan bulanan. Kamu
+                    cukup ketik "rekap" atau "saldo" di WhatsApp untuk melihat ringkasan pemasukan, pengeluaran, dan
+                    laba tanpa menyusunnya manual.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah rekap bulanannya dikirim otomatis atau harus diminta?</summary>
+                <p>Ringkasan rekap harian dan bulanan bisa kamu minta kapan saja lewat chat. Detail lengkap per
+                    kategori dan per transaksi juga tersedia rapi di dashboard web untuk diedit maupun di-export.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah aplikasi pembukuan WhatsApp ini gratis?</summary>
+                <p>Ada paket Free gratis selamanya (10 teks & 3 struk per bulan). Untuk rekap ekspor dan volume
+                    transaksi lebih besar, tersedia paket berbayar mulai Rp15.000/bulan.</p>
+            </details>
+            <details class="faq">
+                <summary>Bisakah data rekap di-export untuk laporan ke bank atau koperasi?</summary>
+                <p>Bisa. Paket Starter ke atas mendukung export rekap ke CSV/Excel, sehingga kamu bisa langsung
+                    mengirim laporan keuangan yang rapi ke bank, koperasi, atau untuk urusan pajak.</p>
+            </details>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Siap punya rekap otomatis tiap hari &amp; tiap bulan?<br>Cukup
+                            dari WhatsApp, tanpa Excel.</strong></p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20daftar%20paket%20aplikasi%20pembukuan%20WhatsApp"
+                    class="btn-cta" target="_blank" rel="noopener">Chat Bot WhatsApp →</a>
+            </div>
+
+            <div class="related">
+                <h2>Artikel Terkait</h2>
+                <ul>
+                    <li>→ <a href="rekap-keuangan-bulanan-otomatis.html">Cara Membuat Rekap Keuangan Bulanan
+                            Otomatis</a></li>
+                    <li>→ <a href="aplikasi-pembukuan-online.html">Aplikasi Pembukuan Online yang Praktis</a></li>
+                    <li>→ <a href="aplikasi-catatan-keuangan-harian.html">Aplikasi Catatan Keuangan Harian Digital</a>
+                    </li>
+                    <li>→ <a href="laporan-arus-kas-otomatis-umkm.html">Laporan Arus Kas Otomatis untuk UMKM</a></li>
+                </ul>
+            </div>
+
+            <div class="article-footer">
+                <p><strong>Catat Uang WA</strong> — catat keuangan pribadi & usaha langsung dari WhatsApp. <a
+                        href="../">Kembali ke Beranda</a> · <a href="index.html">Lihat semua artikel</a></p>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

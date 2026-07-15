@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aplikasi pembukuan dropshipper via WhatsApp. Catat margin, modal supplier, dan ongkir per order tanpa stok barang. Tanpa install app, mulai gratis.">
+    <title>Aplikasi Pembukuan untuk Dropshipper | Catat Uang WA">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://catatwa.de/articles/aplikasi-pembukuan-dropshipper">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://catatwa.de/articles/aplikasi-pembukuan-dropshipper">
+    <meta property="og:title" content="Aplikasi Pembukuan untuk Dropshipper">
+    <meta property="og:description"
+        content="Aplikasi pembukuan dropshipper via WhatsApp. Catat margin, modal supplier, dan ongkir per order tanpa stok barang. Tanpa install app, mulai gratis.">
+    <meta property="og:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+    <meta property="og:site_name" content="Catat Uang WA">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://catatwa.de/articles/aplikasi-pembukuan-dropshipper">
+    <meta name="twitter:title" content="Aplikasi Pembukuan untuk Dropshipper">
+    <meta name="twitter:description"
+        content="Aplikasi pembukuan dropshipper via WhatsApp. Catat margin, modal supplier, dan ongkir per order tanpa stok barang. Tanpa install app, mulai gratis.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+
+    <!-- JSON-LD Structured Data: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Aplikasi Pembukuan untuk Dropshipper",
+        "description": "Aplikasi pembukuan dropshipper via WhatsApp. Catat margin, modal supplier, dan ongkir per order tanpa stok barang. Tanpa install app, mulai gratis.",
+        "url": "https://catatwa.de/articles/aplikasi-pembukuan-dropshipper",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Catat Uang WA",
+            "url": "https://catatwa.de/"
+        },
+        "datePublished": "2026-07-15",
+        "dateModified": "2026-07-15"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Apakah aplikasi pembukuan dropshipper ini gratis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ada paket Free yang gratis selamanya (10 teks & 3 struk per bulan) untuk coba-coba. Untuk dropshipper aktif, tersedia paket berbayar mulai Rp15.000/bulan dengan kuota jauh lebih besar."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bagaimana cara mencatat margin per order dropship?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cukup ketik modal supplier, harga jual, dan ongkir dalam satu chat, contohnya 'order kaos 2 pcs modal supplier 40 ribu jual 75 ribu ongkir 12 ribu'. Sistem otomatis menghitung margin dan mencatatnya sebagai transaksi."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah bisa catat ongkir dan biaya admin marketplace?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Ongkir, biaya admin marketplace, dan cashback bisa kamu catat sebagai pengeluaran dengan kategori sendiri sehingga margin yang tampil benar-benar bersih."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah saya perlu install aplikasi tambahan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tidak. Cukup chat nomor bot WhatsApp seperti chat teman. Tidak ada aplikasi yang harus didownload atau diinstall di HP kamu."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah datanya aman dan bisa diakses kapan saja?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ya. Semua transaksi tersimpan rapi dan bisa kamu cek kapan saja melalui dashboard web, termasuk edit, hapus, dan export laporan ke CSV/Excel."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #fff;
+            font-size: 17px
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 1.3
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 32px 0 16px
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 20px 0 8px
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #333
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #555
+        }
+
+        .highlight {
+            background: linear-gradient(180deg, transparent 50%, #FFF176 50%);
+            padding: 0 4px;
+            font-weight: 600
+        }
+
+        .cta-box {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: center
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px
+        }
+
+        .btn-cta:hover {
+            background: #20bd5a
+        }
+
+        ul,
+        ol {
+            margin: 16px 0 16px 24px
+        }
+
+        li {
+            margin-bottom: 12px
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px
+        }
+
+        .back-link:hover {
+            color: #25D366
+        }
+
+        .paket-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 15px
+        }
+
+        .paket-table th,
+        .paket-table td {
+            border: 1px solid #e5e5e5;
+            padding: 10px;
+            text-align: left
+        }
+
+        .paket-table th {
+            background: #f8f9fa;
+            font-weight: 600
+        }
+
+        details.faq {
+            border-bottom: 1px solid #eee;
+            padding: 14px 0
+        }
+
+        details.faq summary {
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none
+        }
+
+        details.faq summary::before {
+            content: "▸ ";
+            color: #25D366
+        }
+
+        details.faq[open] summary::before {
+            content: "▾ "
+        }
+
+        details.faq p {
+            margin-top: 10px;
+            color: #555
+        }
+
+        .related {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 32px 0
+        }
+
+        .related h2 {
+            margin-top: 0
+        }
+
+        .related ul {
+            margin: 8px 0 0
+        }
+
+        .related a {
+            color: #1a1a1a;
+            text-decoration: none
+        }
+
+        .related a:hover {
+            color: #25D366
+        }
+
+        .article-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            font-size: 14px;
+            color: #999
+        }
+
+        .article-footer a {
+            color: #25D366;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Kembali ke Beranda</a>
+
+        <article>
+            <h1>Aplikasi Pembukuan untuk <span class="highlight">Dropshipper</span></h1>
+
+            <p class="lead">Jualan dropship tanpa pegang stok, tapi keuangan malah berantakan? Dengan <strong>aplikasi
+                    pembukuan dropshipper</strong> berbasis WhatsApp, kamu bisa mencatat setiap order, modal supplier,
+                ongkir, dan margin per transaksi langsung dari chat — tanpa install app, tanpa bikin rumus Excel.</p>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Coba gratis sekarang, langsung dari WhatsApp!</strong></p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20coba%20aplikasi%20pembukuan%20untuk%20dropshipper"
+                    class="btn-cta" target="_blank" rel="noopener">Mulai Catat Margin →</a>
+            </div>
+
+            <h2>Tantangan Pembukuan untuk Dropshipper</h2>
+            <p>Dropship punya keunikan dibanding model jualan lain: kamu gak menyimpan stok, produk diambil dari katalog
+                supplier, dan setiap order punya komposisi biaya yang beda-beda. Sayangnya banyak dropshipper justru
+                kerepotan saat mencatat keuangan. Beberapa masalah yang sering muncul:</p>
+            <ul>
+                <li><strong>Modal tiap order beda-beda.</strong> Harga supplier plus ongkir supplier bikin sulit dibuat
+                    rumus satu baris.</li>
+                <li><strong>Margin tipis, salah hitung langsung rugi.</strong> Lupa memasukkan ongkir atau biaya admin
+                    marketplace membuat untung seolah besar.</li>
+                <li><strong>Penjualan dari banyak platform.</strong> Shopee, Tokopedia, Instagram, TikTok — uang masuk
+                    di waktu yang berbeda.</li>
+                <li><strong>Cashback & biaya admin potong margin.</strong> Sering luput dicatat sehingga laporan menipu.</li>
+                <li><strong>Susuk melacak status order.</strong> Bingung mana yang sudah lunas, mana yang masih diproses
+                    supplier.</li>
+            </ul>
+            <p>Solusinya bukan menghindari dropship, tapi pakai alat pencatat yang <span class="highlight">paham struktur
+                    biaya per order</span> dan dipakai setiap hari. Karena pekerjaan dropshipper mayoritas di HP, maka
+                catat paling enak di WhatsApp.</p>
+
+            <h2>Kenapa WhatsApp Cocok untuk Dropshipper</h2>
+            <p>Sebagai dropshipper, kamu pasti sudah berlama-lama di WhatsApp: ngobrol sama pembeli, koordinasi sama
+                supplier, cek resi. Mencatat keuangan di tempat yang sama bikin semuanya jadi satu ritme:</p>
+            <ul>
+                <li>✅ <strong>Gak perlu install app baru</strong> — WhatsApp sudah ada di HP kamu.</li>
+                <li>✅ <strong>Catat tiap order begitu deal</strong> — sebelum nominalnya lupa.</li>
+                <li>✅ <strong>Catat sambil ngobrol</strong> — barengan dengan pembeli dan supplier.</li>
+                <li>✅ <strong>Bisa dipakai bareng mitra</strong> — pasangan atau admin dropship bisa input order juga.</li>
+                <li>✅ <strong>Kirim foto bukti transfer</strong> — screenshot order dan bukti bayar supplier langsung
+                    tersimpan.</li>
+            </ul>
+
+            <h2>Cara Kerja Pembukuan Dropshipper di WhatsApp</h2>
+            <p>Mulainya cepat banget, cukup tiga langkah:</p>
+            <ol>
+                <li><strong>Chat nomor bot.</strong> Kirim pesan seperti chat biasa ke nomor WhatsApp resmi.</li>
+                <li><strong>Catat order.</strong> Ketik <code>order kaos 2 pcs, modal supplier 40rb, jual 75rb, ongkir
+                        12rb</code> atau kirim voice note <em>"tadi dropship sepatu modal 80 ribu jual 130 ribu"</em>.
+                    Sistem otomatis mengenali nominal dan menghitung margin.</li>
+                <li><strong>Cek margin & rekap.</strong> Ketik <code>rekap</code> untuk melihat total modal, omzet, dan
+                    profit bersih. Detail lengkap bisa dicek di dashboard web.</li>
+            </ol>
+            <p>Kamu juga bisa mengirim <strong>foto bukti transfer atau screenshot order marketplace</strong>. Sistem
+                akan membaca datanya dan mencatatnya sebagai transaksi, lengkap dengan nominal dan keterangan.</p>
+
+            <h2>Beda Pencatatan Dropship dan Reseller</h2>
+            <p>Banyak yang mengira dropship dan reseller sama. Dari sisi pembukuan, keduanya cukup berbeda dan harus
+                diperlakukan berbeda:</p>
+            <ul>
+                <li><strong>Reseller</strong> membeli stok dulu, jadi ada nilai persediaan/aset. Pencatatannya perlu
+                    melacak sisa barang dan harga pokok per batch.</li>
+                <li><strong>Dropshipper</strong> gak punya stok. Tiap order langsung punya modal (harga supplier + ongkir
+                    supplier) dan omzet (harga jual ke pembeli). Fokus pencatatan adalah <span class="highlight">margin
+                        per order</span>, bukan nilai persediaan.</li>
+            </ul>
+            <p>Karena itu, <strong>aplikasi pembukuan dropshipper</strong> yang baik harus bisa menangkap komposisi
+                biaya per order dalam satu input, menghitung margin otomatis, dan mengelompokkannya per kategori seperti
+                modal, ongkir, dan biaya admin marketplace.</p>
+
+            <h2>Fitur Penting untuk Dropshipper</h2>
+            <p>Walaupun dicatat lewat chat, fiturnya lengkap untuk kebutuhan dropship harian:</p>
+            <ul>
+                <li><strong>Catat dengan AI (bahasa bebas)</strong> — paham gaya bahasa Indonesia & slang dropshipper.</li>
+                <li><strong>Scan struk otomatis</strong> — kirim foto bukti transfer, data langsung terekam.</li>
+                <li><strong>Catat via suara</strong> — voice note saat sibuk balas chat pembeli.</li>
+                <li><strong>Kategori otomatis</strong> — modal, ongkir, jualan, biaya admin, jadi rapi.</li>
+                <li><strong>Rekap harian & bulanan otomatis</strong> — lihat total margin tiap periode.</li>
+                <li><strong>Export CSV/Excel</strong> — untuk audit atau evaluasi performa produk.</li>
+                <li><strong>Utang & piutang + pengingat</strong> — tagih COD tertunggak gak akan lupa.</li>
+            </ul>
+
+            <h2>Pilihan Paket untuk Dropshipper</h2>
+            <p>Pilih sesuai volume order. Semua paket bisa aktif dalam 1 menit setelah pembayaran:</p>
+            <table class="paket-table">
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga/Bulan</th>
+                        <th>Kuota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Free</strong></td>
+                        <td>Gratis</td>
+                        <td>10 teks, 3 struk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lite</strong></td>
+                        <td>Rp15.000</td>
+                        <td>45 teks, 15 struk, edit/hapus</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Starter</strong></td>
+                        <td>Rp29.000</td>
+                        <td>90 teks, 30 struk, export CSV, +1 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Premium</strong></td>
+                        <td>Rp59.000</td>
+                        <td>190 teks, 60 struk, Analisis Keuangan, +2 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro</strong></td>
+                        <td>Rp129.000</td>
+                        <td>380 teks, 115 struk, Analisis Keuangan, +4 nomor</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Untuk dropshipper pemula yang baru rajin mencatat, paket <strong>Lite</strong> sudah cukup. Untuk dropship
+                dengan puluhan order per hari dan butuh analisa margin per produk, naik ke <strong>Premium</strong> atau
+                <strong>Pro</strong> supaya bisa pakai fitur Analisis Keuangan.</p>
+
+            <h2>Tips Mengelola Keuangan Dropship</h2>
+            <ul>
+                <li><strong>Catat order begitu deal.</strong> Jangan tunggu akhir hari, nominal ongkir gampang lupa.</li>
+                <li><strong>Pisahkan kategori biaya.</strong> Modal, ongkir, dan biaya admin marketplace dibuat terpisah
+                    biar margin bersih jelas.</li>
+                <li><strong>Rekap margin per produk.</strong> Cek produk mana yang margin-nya paling tebal, fokuskan
+                    promosi ke sana.</li>
+                <li><strong>Pantau piutang COD.</strong> Pakai pengingat tagihan biar pembeli gak lupa bayar.</li>
+                <li><strong>Evaluasi tiap awal bulan.</strong> Bandingkan total margin dengan target untuk lihat tren.</li>
+            </ul>
+
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <details class="faq">
+                <summary>Apakah aplikasi pembukuan dropshipper ini gratis?</summary>
+                <p>Ada paket Free yang gratis selamanya (10 teks & 3 struk per bulan) untuk coba-coba. Untuk dropshipper
+                    aktif, tersedia paket berbayar mulai Rp15.000/bulan dengan kuota jauh lebih besar.</p>
+            </details>
+            <details class="faq">
+                <summary>Bagaimana cara mencatat margin per order dropship?</summary>
+                <p>Cukup ketik modal supplier, harga jual, dan ongkir dalam satu chat, contohnya "order kaos 2 pcs modal
+                    supplier 40 ribu jual 75 ribu ongkir 12 ribu". Sistem otomatis menghitung margin dan mencatatnya
+                    sebagai transaksi.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah bisa catat ongkir dan biaya admin marketplace?</summary>
+                <p>Bisa. Ongkir, biaya admin marketplace, dan cashback bisa kamu catat sebagai pengeluaran dengan
+                    kategori sendiri sehingga margin yang tampil benar-benar bersih.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah saya perlu install aplikasi tambahan?</summary>
+                <p>Tidak. Cukup chat nomor bot WhatsApp seperti chat teman. Tidak ada aplikasi yang harus didownload atau
+                    diinstall di HP kamu.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah datanya aman dan bisa diakses kapan saja?</summary>
+                <p>Ya. Semua transaksi tersimpan rapi dan bisa kamu cek kapan saja melalui dashboard web, termasuk edit,
+                    hapus, dan export laporan ke CSV/Excel.</p>
+            </details>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Siap rapihin margin dropship kamu?</strong><br>Mulai sekarang,
+                    cukup dari WhatsApp.</p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20daftar%20paket%20pembukuan%20dropshipper"
+                    class="btn-cta" target="_blank" rel="noopener">Chat Bot WhatsApp →</a>
+            </div>
+
+            <div class="related">
+                <h2>Artikel Terkait</h2>
+                <ul>
+                    <li>→ <a href="aplikasi-pembukuan-online-shop.html">Aplikasi Pembukuan Online Shop yang Praktis</a>
+                    </li>
+                    <li>→ <a href="aplikasi-pembukuan-reseller.html">Aplikasi Pembukuan untuk Reseller</a></li>
+                    <li>→ <a href="aplikasi-catat-keuangan-jualan.html">Aplikasi Catat Keuangan Jualan Harian via
+                            WhatsApp</a></li>
+                    <li>→ <a href="aplikasi-pembukuan-bisnis-kecil.html">Aplikasi Pembukuan untuk Bisnis Kecil</a></li>
+                </ul>
+            </div>
+
+            <div class="article-footer">
+                <p><strong>Catat Uang WA</strong> — catat keuangan pribadi & usaha langsung dari WhatsApp. <a
+                        href="../">Kembali ke Beranda</a> · <a href="index.html">Lihat semua artikel</a></p>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aplikasi pencatatan keuangan warung sembako lewat WhatsApp. Catat pemasukan & pengeluaran warung harian otomatis dari chat, tanpa install app. Mulai gratis.">
+    <title>Aplikasi Pencatatan Keuangan untuk Warung | Catat Uang WA</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://catatwa.de/articles/aplikasi-pencatatan-keuangan-warung">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://catatwa.de/articles/aplikasi-pencatatan-keuangan-warung">
+    <meta property="og:title" content="Aplikasi Pencatatan Keuangan untuk Warung">
+    <meta property="og:description"
+        content="Aplikasi pencatatan keuangan warung sembako lewat WhatsApp. Catat pemasukan & pengeluaran warung harian otomatis dari chat, tanpa install app. Mulai gratis.">
+    <meta property="og:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+    <meta property="og:site_name" content="Catat Uang WA">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://catatwa.de/articles/aplikasi-pencatatan-keuangan-warung">
+    <meta name="twitter:title" content="Aplikasi Pencatatan Keuangan untuk Warung">
+    <meta name="twitter:description"
+        content="Aplikasi pencatatan keuangan warung sembako lewat WhatsApp. Catat pemasukan & pengeluaran warung harian otomatis dari chat, tanpa install app. Mulai gratis.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+
+    <!-- JSON-LD Structured Data: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Aplikasi Pencatatan Keuangan untuk Warung",
+        "description": "Aplikasi pencatatan keuangan warung sembako lewat WhatsApp. Catat pemasukan & pengeluaran warung harian otomatis dari chat, tanpa install app. Mulai gratis.",
+        "url": "https://catatwa.de/articles/aplikasi-pencatatan-keuangan-warung",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Catat Uang WA",
+            "url": "https://catatwa.de/"
+        },
+        "datePublished": "2026-07-15",
+        "dateModified": "2026-07-15"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Apakah aplikasi pencatatan keuangan warung ini gratis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ada paket Free yang gratis selamanya (10 teks & 3 struk per bulan) untuk coba-coba. Untuk pencatatan warung harian, tersedia paket berbayar mulai Rp15.000/bulan dengan kuota jauh lebih besar."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah saya perlu install aplikasi tambahan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tidak. Cukup chat nomor bot WhatsApp seperti chat teman. Tidak ada aplikasi yang harus didownload atau diinstall di HP kamu."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bisakah catat penjualan warung pakai suara?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Kamu cukup kirim voice note ke bot, contohnya 'jual beras 12 kilo 120 ribu', dan sistem akan otomatis mencatatnya tanpa perlu mengetik."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah data warung saya aman dan bisa diakses kapan saja?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ya. Semua transaksi warung tersimpan rapi dan bisa kamu cek kapan saja melalui dashboard web, termasuk edit, hapus, dan export laporan ke CSV/Excel."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #fff;
+            font-size: 17px
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 1.3
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 32px 0 16px
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 20px 0 8px
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #333
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #555
+        }
+
+        .highlight {
+            background: linear-gradient(180deg, transparent 50%, #FFF176 50%);
+            padding: 0 4px;
+            font-weight: 600
+        }
+
+        .cta-box {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: center
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px
+        }
+
+        .btn-cta:hover {
+            background: #20bd5a
+        }
+
+        ul,
+        ol {
+            margin: 16px 0 16px 24px
+        }
+
+        li {
+            margin-bottom: 12px
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px
+        }
+
+        .back-link:hover {
+            color: #25D366
+        }
+
+        .paket-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 15px
+        }
+
+        .paket-table th,
+        .paket-table td {
+            border: 1px solid #e5e5e5;
+            padding: 10px;
+            text-align: left
+        }
+
+        .paket-table th {
+            background: #f8f9fa;
+            font-weight: 600
+        }
+
+        details.faq {
+            border-bottom: 1px solid #eee;
+            padding: 14px 0
+        }
+
+        details.faq summary {
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none
+        }
+
+        details.faq summary::before {
+            content: "▸ ";
+            color: #25D366
+        }
+
+        details.faq[open] summary::before {
+            content: "▾ "
+        }
+
+        details.faq p {
+            margin-top: 10px;
+            color: #555
+        }
+
+        .related {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 32px 0
+        }
+
+        .related h2 {
+            margin-top: 0
+        }
+
+        .related ul {
+            margin: 8px 0 0
+        }
+
+        .related a {
+            color: #1a1a1a;
+            text-decoration: none
+        }
+
+        .related a:hover {
+            color: #25D366
+        }
+
+        .article-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            font-size: 14px;
+            color: #999
+        }
+
+        .article-footer a {
+            color: #25D366;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Kembali ke Beranda</a>
+
+        <article>
+            <h1>Aplikasi Pencatatan Keuangan untuk <span class="highlight">Warung</span></h1>
+
+            <p class="lead">Jualan sembako tiap hari tapi catatannya masih dicoret di kertas atau malah gak dicatat?
+                Dengan <strong>aplikasi pencatatan keuangan warung</strong> berbasis WhatsApp, pemasukan dan pengeluaran
+                harian warung otomatis tersimpan rapi hanya dari chat — tanpa install aplikasi, tanpa ribet buka buku
+                besar tiap malam.</p>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Coba gratis sekarang, langsung dari WhatsApp!</strong></p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20coba%20aplikasi%20pencatatan%20keuangan%20warung"
+                    class="btn-cta" target="_blank" rel="noopener">Mulai Catat Warung →</a>
+            </div>
+
+            <h2>Masalah Pencatatan Warung yang Sering Terjadi</h2>
+            <p>Warung sembako adalah usaha dengan transaksi kecil tapi sangat sering. Sayangnya, pencatatannya hampir
+                selalu berantakan karena alasan klasik berikut:</p>
+            <ul>
+                <li><strong>Transaksi terlalu banyak &amp; kecil-kecil.</strong> Satu pelanggan beli minyak, beras, dan
+                    gula dalam beberapa kali transaksi — gak mungkin dicatat manual satu per satu.</li>
+                <li><strong>Campur uang jualan &amp; uang beli sayur pribadi.</strong> Pada akhirnya modal warung ikut
+                    habis tanpa terasa.</li>
+                <li><strong>Belanja grosir besar gak dicatat.</strong> Modal beli karung beras atau dos mie gak masuk
+                    catatan, jadi untung jadi keliru.</li>
+                <li><strong>Utang dagang ke langganan gak kecatat.</strong> Sering lupa siapa yang belum lunas.</li>
+                <li><strong>Gak sempat rekap harian.</strong>capek buka warung seharian, malamnya cuma tidur.</li>
+            </ul>
+            <p>Solusinya bukan menyempatkan diri nulis buku tiap malam, tapi pakai cara yang <span class="highlight">bisa
+                    dicatat sambil jualan</span>. Cara paling natural adalah chat WhatsApp.</p>
+
+            <h2>Kenapa WhatsApp Pas untuk Pencatatan Warung</h2>
+            <p>Memilih <strong>aplikasi pencatatan keuangan warung</strong> berbasis WhatsApp punya keunggulan nyata
+                untuk pemilik warung yang tiap hari sibuk:</p>
+            <ul>
+                <li>✅ <strong>Gak perlu install app baru</strong> — WhatsApp sudah ada di HP, tinggal chat.</li>
+                <li>✅ <strong>Catat seperti ngobrol</strong> — ketik bebas atau voice note sambil kasir.</li>
+                <li>✅ <strong>Otomatis kecatat</strong> — gak perlu pindah ke buku atau Excel di akhir hari.</li>
+                <li>✅ <strong>Gampang diingat</strong> — WA dibuka tiap hari, jadi catat jadi kebiasaan.</li>
+                <li>✅ <strong>Bisa bareng suami/istri atau anak</strong> — catat di nomor yang sama, rapi bareng.</li>
+            </ul>
+
+            <h2>Cara Kerja Pencatatan Keuangan Warung di WhatsApp</h2>
+            <p>Mulainya sangat cepat, cukup tiga langkah:</p>
+            <ol>
+                <li><strong>Chat nomor bot.</strong> Kirim pesan seperti chat biasa ke nomor WhatsApp resmi.</li>
+                <li><strong>Catat transaksi.</strong> Ketik <code>jual beras 12kg 120rb</code> atau kirim voice note
+                    <em>"tadi beli 2 karung gula pasir 600 ribu"</em>. Sistem otomatis mengenali nominal dan
+                    kategori.</li>
+                <li><strong>Cek &amp; rekap.</strong> Ketik <code>saldo</code> atau <code>rekap</code> untuk melihat
+                    ringkasan harian dan bulanan. Detail lengkap bisa dicek di dashboard web.</li>
+            </ol>
+            <p>Kamu juga bisa mengirim <strong>foto nota belanja grosir</strong>, lalu sistem otomatis membaca dan
+                mencatatnya. Cocok untuk warung yang sering belanja stok di pasar grosir dengan nota panjang.</p>
+
+            <h2>Fitur Penting untuk Warung Sembako</h2>
+            <p>Walaupun dicatat lewat chat, fiturnya lengkap layaknya aplikasi pembukuan modern:</p>
+            <ul>
+                <li><strong>Catat dengan AI (bahasa bebas)</strong> — paham gaya bicara penjaga warung, termasuk slang.
+                </li>
+                <li><strong>Scan struk otomatis</strong> — kirim foto nota grosir, data langsung terekam.</li>
+                <li><strong>Catat via suara</strong> — cukup voice note, tanpa mengetik, sambil kasir.</li>
+                <li><strong>Utang &amp; piutang + pengingat</strong> — langganan ngutang pun gak lupa ditagih.</li>
+                <li><strong>Rekap harian &amp; bulanan otomatis</strong> — ringkasan penjualan dikirim otomatis.</li>
+                <li><strong>Export CSV/Excel</strong> — untuk laporan ke koperasi, bank, atau pengajuan kredit.</li>
+                <li><strong>Dashboard web</strong> — cek detail, edit, dan hapus transaksi dengan mudah.</li>
+                <li><strong>Tabungan &amp; pengingat tagihan</strong> — nabung modal warung dan ingat jatuh tempo.</li>
+            </ul>
+
+            <h2>Manfaat Rutin Mencatat Keuangan Warung</h2>
+            <p>Warung yang catatannya rapi punya keunggulan yang nyata:</p>
+            <ul>
+                <li><strong>Tahu untung asli</strong> — gak cuma lihat isi laci, tapi tahu berapa benar-benar laba.</li>
+                <li><strong>Modal belanja terkontrol</strong> — tahu berapa harus ditarik untuk beli stok ulang.</li>
+                <li><strong>Gak mudah boncos</strong> — pola pemasukan dan pengeluaran jadi kelihatan jelas.</li>
+                <li><strong>Mudah urus bantuan atau kredit modal</strong> — laporannya sudah siap kapan saja.</li>
+            </ul>
+
+            <h2>Tips Pencatatan Warung biar Selalu Konsisten</h2>
+            <ul>
+                <li><strong>Catat tiap ada transaksi.</strong> Sedikit-sedikit asal konsisten lebih baik daripada
+                    numpuk seminggu.</li>
+                <li><strong>Pisahkan uang warung &amp; rumah tangga.</strong> Supaya untung warung kelihatan jelas.</li>
+                <li><strong>Manfaatkan voice note.</strong> Saat ramai, cukup omong, nanti direkap malam hari.</li>
+                <li><strong>Cek rekap tiap awal bulan.</strong> Bandingkan dengan bulan sebelumnya untuk lihat tren.</li>
+            </ul>
+
+            <h2>Pilihan Paket untuk Pemilik Warung</h2>
+            <p>Pilih sesuai ramainya warung. Semua paket bisa aktif dalam 1 menit setelah pembayaran:</p>
+            <table class="paket-table">
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga/Bulan</th>
+                        <th>Kuota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Free</strong></td>
+                        <td>Gratis</td>
+                        <td>10 teks, 3 struk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lite</strong></td>
+                        <td>Rp15.000</td>
+                        <td>45 teks, 15 struk, edit/hapus</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Starter</strong></td>
+                        <td>Rp29.000</td>
+                        <td>90 teks, 30 struk, export CSV, +1 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Premium</strong></td>
+                        <td>Rp59.000</td>
+                        <td>190 teks, 60 struk, Analisis Keuangan, +2 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro</strong></td>
+                        <td>Rp129.000</td>
+                        <td>380 teks, 115 struk, Analisis Keuangan, +4 nomor</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Untuk warung yang baru mulai rajin mencatat, paket <strong>Lite</strong> sudah sangat cukup. Untuk
+                warung ramai dengan banyak transaksi dan butuh analisa untung-rugi, naik ke <strong>Premium</strong>
+                atau <strong>Pro</strong>.</p>
+
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <details class="faq">
+                <summary>Apakah aplikasi pencatatan keuangan warung ini gratis?</summary>
+                <p>Ada paket Free yang gratis selamanya (10 teks &amp; 3 struk per bulan) untuk coba-coba. Untuk
+                    pencatatan warung harian, tersedia paket berbayar mulai Rp15.000/bulan dengan kuota jauh lebih
+                    besar.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah saya perlu install aplikasi tambahan?</summary>
+                <p>Tidak. Cukup chat nomor bot WhatsApp seperti chat teman. Tidak ada aplikasi yang harus didownload
+                    atau diinstall di HP kamu.</p>
+            </details>
+            <details class="faq">
+                <summary>Bisakah catat penjualan warung pakai suara?</summary>
+                <p>Bisa. Kamu cukup kirim voice note ke bot, contohnya "jual beras 12 kilo 120 ribu", dan sistem akan
+                    otomatis mencatatnya tanpa perlu mengetik.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah data warung saya aman dan bisa diakses kapan saja?</summary>
+                <p>Ya. Semua transaksi warung tersimpan rapi dan bisa kamu cek kapan saja melalui dashboard web,
+                    termasuk edit, hapus, dan export laporan ke CSV/Excel.</p>
+            </details>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Siap rapihin keuangan warung kamu?</strong><br>Mulai sekarang,
+                    cukup dari WhatsApp.</p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20daftar%20paket%20pencatatan%20keuangan%20warung"
+                    class="btn-cta" target="_blank" rel="noopener">Chat Bot WhatsApp →</a>
+            </div>
+
+            <div class="related">
+                <h2>Artikel Terkait</h2>
+                <ul>
+                    <li>→ <a href="aplikasi-pembukuan-toko.html">Pembukuan Toko Otomatis Lewat WhatsApp</a></li>
+                    <li>→ <a href="cara-catat-penjualan-harian-whatsapp.html">Cara Mencatat Penjualan Harian Lewat
+                            WhatsApp</a></li>
+                    <li>→ <a href="keuangan-toko-kelontong-whatsapp.html">Cara Mengelola Keuangan Toko Kelontong dengan
+                            WhatsApp</a></li>
+                    <li>→ <a href="aplikasi-pembukuan-warung.html">Aplikasi Pembukuan Warung Praktis via WhatsApp</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="article-footer">
+                <p><strong>Catat Uang WA</strong> — catat keuangan pribadi &amp; usaha langsung dari WhatsApp. <a
+                        href="../">Kembali ke Beranda</a> · <a href="index.html">Lihat semua artikel</a></p>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>

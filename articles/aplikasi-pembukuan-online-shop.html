@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aplikasi pembukuan online shop di WhatsApp. Catat order, COD, dan ongkir langsung dari chat pakai teks atau suara. Rekap untung otomatis, tanpa install app.">
+    <title>Aplikasi Pembukuan Online Shop di WhatsApp | Catat Uang WA</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://catatwa.de/articles/aplikasi-pembukuan-online-shop">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://catatwa.de/articles/aplikasi-pembukuan-online-shop">
+    <meta property="og:title" content="Aplikasi Pembukuan Online Shop di WhatsApp">
+    <meta property="og:description"
+        content="Aplikasi pembukuan online shop di WhatsApp. Catat order, COD, dan ongkir langsung dari chat pakai teks atau suara. Rekap untung otomatis, tanpa install app.">
+    <meta property="og:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+    <meta property="og:site_name" content="Catat Uang WA">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://catatwa.de/articles/aplikasi-pembukuan-online-shop">
+    <meta name="twitter:title" content="Aplikasi Pembukuan Online Shop di WhatsApp">
+    <meta name="twitter:description"
+        content="Aplikasi pembukuan online shop di WhatsApp. Catat order, COD, dan ongkir langsung dari chat pakai teks atau suara. Rekap untung otomatis, tanpa install app.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dne6dkrlp/image/upload/v1767739408/favicon_dq72kp.jpg">
+
+    <!-- JSON-LD Structured Data: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Aplikasi Pembukuan Online Shop di WhatsApp",
+        "description": "Aplikasi pembukuan online shop di WhatsApp. Catat order, COD, dan ongkir langsung dari chat pakai teks atau suara. Rekap untung otomatis, tanpa install app.",
+        "url": "https://catatwa.de/articles/aplikasi-pembukuan-online-shop",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Catat Uang WA",
+            "url": "https://catatwa.de/"
+        },
+        "datePublished": "2026-07-15",
+        "dateModified": "2026-07-15"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Apakah aplikasi ini bisa mencatat ongkir dan biaya COD?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Kamu bisa mencatat ongkir sebagai pengeluaran dan biaya COD sebagai biaya jualan, sehingga untung bersih per order langsung terlihat di rekap bulanan."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bisakah catat order yang masuk lewat chat WhatsApp?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa banget. Karena pencatatannya juga di WhatsApp, kamu bisa langsung salin order pelanggan ke bot, lengkap dengan nama produk, harga, dan ongkir, lalu sistem mencatatnya otomatis."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Apakah saya perlu install aplikasi tambahan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tidak. Cukup chat nomor bot WhatsApp seperti chat teman. Tidak ada aplikasi yang harus didownload atau diinstall di HP kamu."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bisa export laporan untuk evaluasi untung per produk?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bisa. Pakai paket Starter ke atas, kamu bisa export laporan ke CSV/Excel lewat dashboard web untuk lihat produk mana yang paling untung."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #fff;
+            font-size: 17px
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 1.3
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 32px 0 16px
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 20px 0 8px
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #333
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #555
+        }
+
+        .highlight {
+            background: linear-gradient(180deg, transparent 50%, #FFF176 50%);
+            padding: 0 4px;
+            font-weight: 600
+        }
+
+        .cta-box {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: center
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px
+        }
+
+        .btn-cta:hover {
+            background: #20bd5a
+        }
+
+        ul,
+        ol {
+            margin: 16px 0 16px 24px
+        }
+
+        li {
+            margin-bottom: 12px
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px
+        }
+
+        .back-link:hover {
+            color: #25D366
+        }
+
+        .paket-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 15px
+        }
+
+        .paket-table th,
+        .paket-table td {
+            border: 1px solid #e5e5e5;
+            padding: 10px;
+            text-align: left
+        }
+
+        .paket-table th {
+            background: #f8f9fa;
+            font-weight: 600
+        }
+
+        details.faq {
+            border-bottom: 1px solid #eee;
+            padding: 14px 0
+        }
+
+        details.faq summary {
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none
+        }
+
+        details.faq summary::before {
+            content: "▸ ";
+            color: #25D366
+        }
+
+        details.faq[open] summary::before {
+            content: "▾ "
+        }
+
+        details.faq p {
+            margin-top: 10px;
+            color: #555
+        }
+
+        .related {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 32px 0
+        }
+
+        .related h2 {
+            margin-top: 0
+        }
+
+        .related ul {
+            margin: 8px 0 0
+        }
+
+        .related a {
+            color: #1a1a1a;
+            text-decoration: none
+        }
+
+        .related a:hover {
+            color: #25D366
+        }
+
+        .article-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            font-size: 14px;
+            color: #999
+        }
+
+        .article-footer a {
+            color: #25D366;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Kembali ke Beranda</a>
+
+        <article>
+            <h1>Aplikasi <span class="highlight">Pembukuan Online Shop</span> di WhatsApp</h1>
+
+            <p class="lead">Jualan online tapi bingung catat order, COD, dan ongkir yang bolak-balik? Dengan
+                <strong>aplikasi pembukuan online shop</strong> berbasis WhatsApp, kamu bisa mencatat tiap order,
+                biaya ekspedisi, dan harga jual produk langsung dari chat — tanpa install aplikasi tambahan.</p>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Coba gratis sekarang, langsung dari WhatsApp!</strong></p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20coba%20aplikasi%20pembukuan%20online%20shop%20di%20WhatsApp"
+                    class="btn-cta" target="_blank" rel="noopener">Mulai Catat Order →</a>
+            </div>
+
+            <h2>Masalah Pencatatan Keuangan Online Shop</h2>
+            <p>Online shop punya alur uang yang cukup ribet. Uang masuk dari banyak channel (transfer, COD, e-wallet),
+                uang keluar untuk restok, ongkir, bubble wrap, sampai biaya admin marketplace. Banyak seller online
+                shop menghadapi masalah klasik berikut:</p>
+            <ul>
+                <li><strong>Order via chat gak tercatat.</strong> Pelanggan order lewat WA, tapi lupa dimasukkan ke
+                    catatan, akhirnya bingung udah dikirim apa belum.</li>
+                <li><strong>Ongkir dan biaya COD tercampur.</strong> Untung kelihatan besar, padahal banyak yang
+                    termakan ongkir dan potongan COD.</li>
+                <li><strong>Gak tahu untung per produk.</strong> Produk A kelihatan laku, tapi setelah dipotong modal
+                    dan ongkir ternyata tipis.</li>
+                <li><strong>Stok dan keuangan gak nyambung.</strong> Uang masuk, tapi lupa buat restok, akhirnya modal
+                    dipakai untuk yang lain.</li>
+                <li><strong>Piutang pelanggan tertinggal.</strong> Ada yang utang setengah bayar atau dp dulu, tapi
+                    gak diikuti.</li>
+            </ul>
+            <p>Solusinya bukan pindah ke spreadsheet yang ribet, tapi pakai alat yang <span class="highlight">secepat
+                    chat</span> dan bisa ngikutin ritme order online shop.</p>
+
+            <h2>Kenapa WhatsApp Cocok Buat Online Shop</h2>
+            <p>Buat seller, WhatsApp udah jadi tempat pelanggan order. Jadi catat keuangan di tempat yang sama sangat
+                masuk akal:</p>
+            <ul>
+                <li>✅ <strong>Gak perlu install app baru</strong> — WhatsApp sudah jadi alat jualan utamamu.</li>
+                <li>✅ <strong>Catat langsung dari chat order</strong> — salin order pelanggan ke bot, langsung
+                    tercatat.</li>
+                <li>✅ <strong>Paham bahasa bebas</strong> — ketik <code>jual dress 2 pcs 150rb ongkir 15rb</code> atau
+                    <em>"COD tas 200 ribu ongkir 12 ribu"</em>, AI tetap paham.</li>
+                <li>✅ <strong>Bisa pakai suara</strong> — voice note pas packing barang biar gak berhenti ngetik.</li>
+                <li>✅ <strong>Bisa dikelola bareng admin</strong> — kamu dan admin toko catat di nomor bot yang sama.
+                </li>
+                <li>✅ <strong>Rekap otomatis tiap hari</strong> — total omzet dan estimasi untung dikirim tanpa diutik.
+                </li>
+                <li>✅ <strong>Aman dan tercadang</strong> — datanya gak hilang walau HP ganti atau hilang.</li>
+            </ul>
+            <p>Pendek singkat, semua kebutuhan administrasi online shop kamu bisa diatur dari satu chat yang sama,
+                tanpa pindah-pindah aplikasi atau buka laptop.</p>
+
+            <h2>Cara Kerja: Catat Order Online Shop Lewat Chat</h2>
+            <p>Mulainya super cepat, cukup tiga langkah:</p>
+            <ol>
+                <li><strong>Chat nomor bot.</strong> Kirim pesan seperti chat biasa ke nomor WhatsApp resmi Catat Uang
+                    WA.</li>
+                <li><strong>Catat order & biaya.</strong> Ketik <code>jual hijab 3 pcs 90rb ongkir 10rb</code> atau
+                    kirim voice note <em>"baru aja kirim COD sepatu 250 ribu ongkir 18 ribu"</em>. Sistem otomatis
+                    mengenali nominal, ongkir, dan kategori.</li>
+                <li><strong>Cek & rekap.</strong> Ketik <code>saldo</code> atau <code>rekap</code> untuk lihat total
+                    omzet dan estimasi untung hari ini. Detail lengkapnya bisa dicek di dashboard web.</li>
+            </ol>
+            <p>Butuh catat restok atau biaya packaging? Cukup ketik <code>beli bubble wrap 30 ribu</code> dan sistem
+                akan menandainya sebagai pengeluaran, terpisah dari omzet jualan.</p>
+
+            <h2>Fitur Penting untuk Online Shop</h2>
+            <p>Walaupun dicatat lewat chat, fiturnya lengkap layaknya aplikasi pembukuan modern:</p>
+            <ul>
+                <li><strong>Catat dengan AI (bahasa bebas)</strong> — paham gaya bahasa Indonesia & slang seller.</li>
+                <li><strong>Scan struk otomatis</strong> — foto resi atau nota supplier, data langsung terekam.</li>
+                <li><strong>Catat suara / voice note</strong> — tinggal cerita pas packing, gak perlu ngetik.</li>
+                <li><strong>Kategori otomatis</strong> — omzet, ongkir, restok, COD, biaya admin, terpisah rapi.</li>
+                <li><strong>Utang & piutang + pengingat</strong> — jangan sampai lupa tagih pelanggan dp.</li>
+                <li><strong>Rekap harian & bulanan otomatis</strong> — total omzet dan untung dikirim otomatis.</li>
+                <li><strong>Export CSV/Excel</strong> — untuk laporan dan analisa untung per produk.</li>
+                <li><strong>Dashboard web</strong> — lihat detail, edit, dan hapus transaksi dengan mudah.</li>
+            </ul>
+
+            <h2>Manfaat Buat Online Shop</h2>
+            <p>Dengan pencatatan rapi, online shop kamu jauh lebih gampang dikontrol:</p>
+            <ul>
+                <li><strong>Tahu untung bersih, bukan cuma omzet.</strong> Semua ongkir dan biaya sudah dipotong
+                    otomatis.</li>
+                <li><strong>Order gak bocor.</strong> Semua order via chat tercatat, gak ada yang tertinggal.</li>
+                <li><strong>Bisa evaluasi produk.</strong> Lihat produk mana yang paling untung dan paling laris.</li>
+                <li><strong>Modal jelas.</strong> Tahu berapa modal yang dipakai restok dan berapa yang aman
+                    ditarik.</li>
+                <li><strong>Tim bisa bantu catat.</strong> Admin toko juga bisa input order di nomor yang sama.</li>
+                <li><strong>Gak perlu install app apa pun.</strong> Semua jalan dari WhatsApp yang udah ada.</li>
+                <li><strong>Bisa dipakai seller mana pun.</strong> Makin gede orderan, tinggal naik paket.</li>
+            </ul>
+            <p>Intinya, <span class="highlight">aplikasi pembukuan online shop</span> ini bikin kamu tahu posisi
+                keuangan toko secara real-time, tanpa harus pusing nunggu akhir bulan.</p>
+
+            <h2>Contoh Hitung Untung Bersih Per Order</h2>
+            <p>Banyak seller online shop keliru soal untung karena cuma lihat harga jual. Padahal, di tiap order ada
+                potongan yang harus dihitung. Contohnya, kamu jual dress Rp150.000, ongkir Rp15.000, dan pembeli pilih
+                COD yang dipotong biaya Rp5.000.</p>
+            <p>Kalau cuma dicatat "jual dress 150rb", kamu bakal pikir untung besar. Tapi kalau dicatat rapi pakai
+                bot: <code>jual dress 150rb ongkir 15rb biaya COD 5rb</code>, sistem bakal memisahkan omzet dari biaya.
+                Modal dress misal Rp80.000 juga kamu catat saat restok.</p>
+            <p>Di rekap, kamu akan lihat: omzet Rp150.000, dikurangi modal Rp80.000, ongkir Rp15.000, dan biaya COD
+                Rp5.000. Untung bersih kamu sebenarnya Rp50.000 per order — bukan Rp70.000 seperti kalau ongkir gak
+                dihitung.</p>
+            <h3>Komponen yang Wajib Dicatat Tiap Order</h3>
+            <ul>
+                <li><strong>Harga jual</strong> — omzet yang masuk.</li>
+                <li><strong>Modal produk</strong> — harga beli plus ongkir masuk.</li>
+                <li><strong>Ongkir ke pembeli</strong> — sering bikin margin bocor.</li>
+                <li><strong>Biaya admin/COD</strong> — potongan marketplace atau ekspedisi.</li>
+                <li><strong>Biaya packaging</strong> — bubble wrap, lakban, karton.</li>
+            </ul>
+            <p>Dengan <span class="highlight">aplikasi pembukuan online shop</span> yang mencatat semua komponen ini,
+                kamu bisa pasang harga jual yang benar-benar menguntungkan, bukan asal murah.</p>
+
+            <h2>Tips Rapihin Keuangan Online Shop</h2>
+            <ul>
+                <li><strong>Catat order saat masuk, jangan ditunda.</strong> Karena ordernya banyak, kalau ditumpuk
+                    bakal chaos.</li>
+                <li><strong>Pisahkan ongkir dari omzet.</strong> Ini sering bikin seller keliru soal untung.</li>
+                <li><strong>Hitung modal + ongkir + biaya admin saat harga jual.</strong> Biar margin tetap aman.</li>
+                <li><strong>Pakai pengingat tagihan untuk pelanggan dp.</strong> Jangan sampai piutang ngendap.</li>
+                <li><strong>Evaluasi tiap awal bulan.</strong> Lihat tren produk dan sesuaikan strategi promosi.</li>
+            </ul>
+
+            <h2>Pilihan Paket untuk Online Shop</h2>
+            <p>Pilih sesuai volume ordermu. Semua paket bisa aktif dalam 1 menit setelah pembayaran:</p>
+            <table class="paket-table">
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga/Bulan</th>
+                        <th>Kuota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Free</strong></td>
+                        <td>Gratis</td>
+                        <td>10 teks, 3 struk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lite</strong></td>
+                        <td>Rp15.000</td>
+                        <td>45 teks, 15 struk, edit/hapus</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Starter</strong></td>
+                        <td>Rp29.000</td>
+                        <td>90 teks, 30 struk, export CSV, +1 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Premium</strong></td>
+                        <td>Rp59.000</td>
+                        <td>190 teks, 60 struk, Analisis Keuangan, +2 nomor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro</strong></td>
+                        <td>Rp129.000</td>
+                        <td>380 teks, 115 struk, Analisis Keuangan, +4 nomor</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Untuk online shop kecil yang baru rajin mencatat, paket <strong>Starter</strong> sudah pas. Untuk toko
+                dengan order padat dan butuh analisa untung per produk, naik ke <strong>Premium</strong> atau
+                <strong>Pro</strong>.</p>
+
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <details class="faq">
+                <summary>Apakah aplikasi ini bisa mencatat ongkir dan biaya COD?</summary>
+                <p>Bisa. Kamu bisa mencatat ongkir sebagai pengeluaran dan biaya COD sebagai biaya jualan, sehingga
+                    untung bersih per order langsung terlihat di rekap bulanan.</p>
+            </details>
+            <details class="faq">
+                <summary>Bisakah catat order yang masuk lewat chat WhatsApp?</summary>
+                <p>Bisa banget. Karena pencatatannya juga di WhatsApp, kamu bisa langsung salin order pelanggan ke bot,
+                    lengkap dengan nama produk, harga, dan ongkir, lalu sistem mencatatnya otomatis.</p>
+            </details>
+            <details class="faq">
+                <summary>Apakah saya perlu install aplikasi tambahan?</summary>
+                <p>Tidak. Cukup chat nomor bot WhatsApp seperti chat teman. Tidak ada aplikasi yang harus didownload
+                    atau diinstall di HP kamu.</p>
+            </details>
+            <details class="faq">
+                <summary>Bisa export laporan untuk evaluasi untung per produk?</summary>
+                <p>Bisa. Pakai paket Starter ke atas, kamu bisa export laporan ke CSV/Excel lewat dashboard web untuk
+                    lihat produk mana yang paling untung.</p>
+            </details>
+
+            <div class="cta-box">
+                <p style="margin-bottom:16px"><strong>Mau untung online shop kamu ketiban jelas tiap bulan?</strong><br>
+                    Mulai catat sekarang, cukup dari WhatsApp.</p>
+                <a href="https://wa.me/6285796731972?text=Halo%2C%20saya%20mau%20daftar%20paket%20catat%20keuangan%20untuk%20online%20shop%20saya"
+                    class="btn-cta" target="_blank" rel="noopener">Chat Bot WhatsApp →</a>
+            </div>
+
+            <div class="related">
+                <h2>Artikel Terkait</h2>
+                <ul>
+                    <li>→ <a href="aplikasi-pembukuan-toko.html">Aplikasi Pembukuan Toko Lewat WhatsApp</a></li>
+                    <li>→ <a href="aplikasi-pembukuan-reseller.html">Aplikasi Pembukuan Reseller di WhatsApp</a></li>
+                    <li>→ <a href="aplikasi-pembukuan-dropshipper.html">Aplikasi Pembukuan Dropshipper</a></li>
+                    <li>→ <a href="cara-catat-penjualan-harian-whatsapp.html">Cara Catat Penjualan Harian via WhatsApp</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="article-footer">
+                <p><strong>Catat Uang WA</strong> — catat keuangan pribadi & usaha langsung dari WhatsApp. <a
+                        href="../">Kembali ke Beranda</a> · <a href="index.html">Lihat semua artikel</a></p>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>
